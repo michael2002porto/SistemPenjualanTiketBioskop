@@ -1,3 +1,4 @@
-**/.vs/**
-**/bin/**
-**/obj/**
+.vs/
+SistemPenjualanTiketBioskop/bin
+SistemPenjualanTiketBioskop/obj/Debug
+SistemPenjualanTiketBioskop/obj/Release
