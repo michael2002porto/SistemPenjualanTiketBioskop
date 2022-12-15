@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="EditFilm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditJadwalTayang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditStudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Film.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HapusFilm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HapusJadwalTayang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HapusStudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HapusTiket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JadwalTayang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SignIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Studio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TambahFilm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TambahJadwalTayang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TambahStudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TambahTiket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tiket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
