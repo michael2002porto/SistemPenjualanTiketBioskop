@@ -22,9 +22,100 @@ Partial Class Film
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.BtnUpdateFilm = New System.Windows.Forms.Button()
+        Me.BtnSelect = New System.Windows.Forms.Button()
+        Me.BtnRemoveFilm = New System.Windows.Forms.Button()
+        Me.DGFilm = New System.Windows.Forms.DataGridView()
+        Me.BtnTambahFilm = New System.Windows.Forms.Button()
+        CType(Me.DGFilm, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'BtnUpdateFilm
+        '
+        Me.BtnUpdateFilm.BackColor = System.Drawing.Color.Teal
+        Me.BtnUpdateFilm.FlatAppearance.BorderSize = 0
+        Me.BtnUpdateFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnUpdateFilm.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnUpdateFilm.ForeColor = System.Drawing.Color.White
+        Me.BtnUpdateFilm.Location = New System.Drawing.Point(841, 508)
+        Me.BtnUpdateFilm.Name = "BtnUpdateFilm"
+        Me.BtnUpdateFilm.Size = New System.Drawing.Size(112, 34)
+        Me.BtnUpdateFilm.TabIndex = 12
+        Me.BtnUpdateFilm.Text = "Update"
+        Me.BtnUpdateFilm.UseVisualStyleBackColor = False
+        '
+        'BtnSelect
+        '
+        Me.BtnSelect.BackColor = System.Drawing.Color.Teal
+        Me.BtnSelect.FlatAppearance.BorderSize = 0
+        Me.BtnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSelect.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnSelect.ForeColor = System.Drawing.Color.White
+        Me.BtnSelect.Location = New System.Drawing.Point(959, 508)
+        Me.BtnSelect.Name = "BtnSelect"
+        Me.BtnSelect.Size = New System.Drawing.Size(112, 34)
+        Me.BtnSelect.TabIndex = 11
+        Me.BtnSelect.Text = "Select"
+        Me.BtnSelect.UseVisualStyleBackColor = False
+        '
+        'BtnRemoveFilm
+        '
+        Me.BtnRemoveFilm.BackColor = System.Drawing.Color.Teal
+        Me.BtnRemoveFilm.FlatAppearance.BorderSize = 0
+        Me.BtnRemoveFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRemoveFilm.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnRemoveFilm.ForeColor = System.Drawing.Color.White
+        Me.BtnRemoveFilm.Location = New System.Drawing.Point(1077, 508)
+        Me.BtnRemoveFilm.Name = "BtnRemoveFilm"
+        Me.BtnRemoveFilm.Size = New System.Drawing.Size(112, 34)
+        Me.BtnRemoveFilm.TabIndex = 10
+        Me.BtnRemoveFilm.Text = "Remove"
+        Me.BtnRemoveFilm.UseVisualStyleBackColor = False
+        '
+        'DGFilm
+        '
+        Me.DGFilm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGFilm.Location = New System.Drawing.Point(45, 119)
+        Me.DGFilm.Name = "DGFilm"
+        Me.DGFilm.RowHeadersWidth = 62
+        Me.DGFilm.RowTemplate.Height = 33
+        Me.DGFilm.Size = New System.Drawing.Size(1144, 354)
+        Me.DGFilm.TabIndex = 9
+        '
+        'BtnTambahFilm
+        '
+        Me.BtnTambahFilm.BackColor = System.Drawing.Color.Teal
+        Me.BtnTambahFilm.FlatAppearance.BorderSize = 0
+        Me.BtnTambahFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnTambahFilm.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnTambahFilm.ForeColor = System.Drawing.Color.White
+        Me.BtnTambahFilm.Location = New System.Drawing.Point(723, 508)
+        Me.BtnTambahFilm.Name = "BtnTambahFilm"
+        Me.BtnTambahFilm.Size = New System.Drawing.Size(112, 34)
+        Me.BtnTambahFilm.TabIndex = 13
+        Me.BtnTambahFilm.Text = "Tambah"
+        Me.BtnTambahFilm.UseVisualStyleBackColor = False
+        '
+        'Film
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1220, 594)
+        Me.Controls.Add(Me.BtnTambahFilm)
+        Me.Controls.Add(Me.BtnUpdateFilm)
+        Me.Controls.Add(Me.BtnSelect)
+        Me.Controls.Add(Me.BtnRemoveFilm)
+        Me.Controls.Add(Me.DGFilm)
+        Me.Name = "Film"
         Me.Text = "Film"
+        CType(Me.DGFilm, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents BtnUpdateFilm As Button
+    Friend WithEvents BtnSelect As Button
+    Friend WithEvents BtnRemoveFilm As Button
+    Friend WithEvents DGFilm As DataGridView
+    Friend WithEvents BtnTambahFilm As Button
 End Class
