@@ -27,6 +27,7 @@ Partial Class Film
         Me.BtnRemoveFilm = New System.Windows.Forms.Button()
         Me.DGFilm = New System.Windows.Forms.DataGridView()
         Me.BtnTambahFilm = New System.Windows.Forms.Button()
+        Me.BtnSignOut = New System.Windows.Forms.Button()
         CType(Me.DGFilm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -96,11 +97,26 @@ Partial Class Film
         Me.BtnTambahFilm.Text = "Tambah"
         Me.BtnTambahFilm.UseVisualStyleBackColor = False
         '
+        'BtnSignOut
+        '
+        Me.BtnSignOut.BackColor = System.Drawing.Color.Teal
+        Me.BtnSignOut.FlatAppearance.BorderSize = 0
+        Me.BtnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSignOut.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnSignOut.ForeColor = System.Drawing.Color.White
+        Me.BtnSignOut.Location = New System.Drawing.Point(45, 508)
+        Me.BtnSignOut.Name = "BtnSignOut"
+        Me.BtnSignOut.Size = New System.Drawing.Size(112, 34)
+        Me.BtnSignOut.TabIndex = 14
+        Me.BtnSignOut.Text = "Sign Out"
+        Me.BtnSignOut.UseVisualStyleBackColor = False
+        '
         'Film
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1220, 594)
+        Me.Controls.Add(Me.BtnSignOut)
         Me.Controls.Add(Me.BtnTambahFilm)
         Me.Controls.Add(Me.BtnUpdateFilm)
         Me.Controls.Add(Me.BtnSelect)
@@ -118,4 +134,5 @@ Partial Class Film
     Friend WithEvents BtnRemoveFilm As Button
     Friend WithEvents DGFilm As DataGridView
     Friend WithEvents BtnTambahFilm As Button
+    Friend WithEvents BtnSignOut As Button
 End Class

@@ -33,13 +33,49 @@ Public Class Film
     End Sub
 
     Private Sub BtnUpdateFilm_Click(sender As Object, e As EventArgs) Handles BtnUpdateFilm.Click
-        Dim updateFilm = New EditFilm()
-        updateFilm.Show()
+        Try
+            Dim selectedKoleksi As List(Of String) = dataFilm.GetDataKoleksiByIDDatabase(selectedTableKoleksi)
+
+            dataFilm.GSFoto = selectedKoleksi(9)
+
+            dataFilm.GSNamaFilm = selectedKoleksi(1)
+            dataFilm.GSDeskripsi = selectedKoleksi(3)
+            dataFilm.GSDirector = selectedKoleksi(4)
+            dataFilm.GSDateRelease = selectedKoleksi(6)
+            dataFilm.GSDuration = selectedKoleksi(5)
+            dataFilm.GSHargaFilm = selectedKoleksi(8)
+            dataFilm.GSBahasa = selectedKoleksi(7)
+            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedKoleksi(2))
+
+            Dim updateFilm = New EditFilm()
+            updateFilm.Show()
+        Catch ex As Exception
+            MessageBox.Show("Please select data")
+        End Try
+
     End Sub
 
     Private Sub BtnRemoveFilm_Click(sender As Object, e As EventArgs) Handles BtnRemoveFilm.Click
-        Dim removeFilm = New HapusFilm()
-        removeFilm.Show()
+        Try
+            Dim selectedKoleksi As List(Of String) = dataFilm.GetDataKoleksiByIDDatabase(selectedTableKoleksi)
+
+            dataFilm.GSFoto = selectedKoleksi(9)
+
+            dataFilm.GSNamaFilm = selectedKoleksi(1)
+            dataFilm.GSDeskripsi = selectedKoleksi(3)
+            dataFilm.GSDirector = selectedKoleksi(4)
+            dataFilm.GSDateRelease = selectedKoleksi(6)
+            dataFilm.GSDuration = selectedKoleksi(5)
+            dataFilm.GSHargaFilm = selectedKoleksi(8)
+            dataFilm.GSBahasa = selectedKoleksi(7)
+            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedKoleksi(2))
+
+            Dim removeFilm = New HapusFilm()
+            removeFilm.Show()
+        Catch ex As Exception
+            MessageBox.Show("Please select data")
+        End Try
+
     End Sub
 
     Private Sub DGFilm_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGFilm.CellClick
@@ -55,5 +91,33 @@ Public Class Film
             'MessageBox.Show(ex.ToString())
             MessageBox.Show("Please select data")
         End Try
+    End Sub
+
+    Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles BtnSelect.Click
+        Try
+            Dim selectedKoleksi As List(Of String) = dataFilm.GetDataKoleksiByIDDatabase(selectedTableKoleksi)
+
+            dataFilm.GSFoto = selectedKoleksi(9)
+
+            dataFilm.GSNamaFilm = selectedKoleksi(1)
+            dataFilm.GSDeskripsi = selectedKoleksi(3)
+            dataFilm.GSDirector = selectedKoleksi(4)
+            dataFilm.GSDateRelease = selectedKoleksi(6)
+            dataFilm.GSDuration = selectedKoleksi(5)
+            dataFilm.GSHargaFilm = selectedKoleksi(8)
+            dataFilm.GSBahasa = selectedKoleksi(7)
+            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedKoleksi(2))
+
+            Dim infoFilm = New InfoFilm()
+            infoFilm.Show()
+        Catch ex As Exception
+            MessageBox.Show("Please select data")
+        End Try
+    End Sub
+
+    Private Sub BtnSignOut_Click(sender As Object, e As EventArgs) Handles BtnSignOut.Click
+        Dim signIn = New SignIn()
+        signIn.Show()
+        Me.Close()
     End Sub
 End Class

@@ -256,8 +256,8 @@ Public Class DataFilm
             'MessageBox.Show(ID)
 
             sqlCommand.Connection = dbConn
-            sqlCommand.CommandText = "SELECT id_koleksi, 
-                                      film, 
+            sqlCommand.CommandText = "SELECT id, 
+                                      nama_film, 
                                       genre, 
                                       deskripsi, 
                                       director, 
@@ -283,7 +283,6 @@ Public Class DataFilm
                 result.Add(sqlRead.GetString(7).ToString())
                 result.Add(sqlRead.GetString(8).ToString())
                 result.Add(sqlRead.GetString(9).ToString())
-                result.Add(sqlRead.GetString(10).ToString())
             End While
 
             'Return result
@@ -310,18 +309,18 @@ Public Class DataFilm
                                                   harga_film As Integer,
                                                   foto As String)
 
-        'tahun_terbit = tahun_terbit.ToString()
+        date_release = date_release.ToString()
 
         Try
             DBConnection()
 
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE film SET film='" & film & "', " &
+            sqlQuery = "UPDATE film SET nama_film='" & film & "', " &
                        "foto='" & foto & "', " &
                        "genre='" & genre & "', " &
                        "deskripsi='" & deskripsi_film & "', " &
-                       "directort='" & director & "', " &
+                       "director='" & director & "', " &
                        "duration='" & duration & "', " &
                        "date_release='" & date_release & "', " &
                        "bahasa='" & bahasa & "', " &

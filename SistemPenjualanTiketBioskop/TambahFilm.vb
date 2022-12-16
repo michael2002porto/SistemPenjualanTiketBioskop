@@ -9,7 +9,8 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
+        DateTimePickerRelease.Format = DateTimePickerFormat.Custom
+        DateTimePickerRelease.CustomFormat = "yyyy/MM/dd"
     End Sub
 
     Private Sub TambahFilm_Activated(sender As Object, e As EventArgs) Handles Me.Activated
@@ -124,7 +125,7 @@
                                           Film.dataFilm.GSHargaFilm,
                                           Film.dataFilm.GSFoto)
 
-        'Dim form_infoFilmi = New InfoFilm()
+        'Dim form_infoFilm = New InfoFilm()
         'form_infoFilm.Show()
 
         Me.Close()
