@@ -35,6 +35,8 @@ Partial Class Film
         Me.BtnFilm = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LblUsername = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Lblid = New System.Windows.Forms.Label()
         CType(Me.DGFilm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -214,12 +216,34 @@ Partial Class Film
         Me.LblUsername.TabIndex = 17
         Me.LblUsername.Text = "Username"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(1517, 112)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(50, 28)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "ID :"
+        '
+        'Lblid
+        '
+        Me.Lblid.AutoSize = True
+        Me.Lblid.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Lblid.Location = New System.Drawing.Point(1573, 112)
+        Me.Lblid.Name = "Lblid"
+        Me.Lblid.Size = New System.Drawing.Size(27, 28)
+        Me.Lblid.TabIndex = 19
+        Me.Lblid.Text = "1"
+        '
         'Film
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1714, 809)
+        Me.Controls.Add(Me.Lblid)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.LblUsername)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -249,4 +273,6 @@ Partial Class Film
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents LblUsername As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Lblid As Label
 End Class
