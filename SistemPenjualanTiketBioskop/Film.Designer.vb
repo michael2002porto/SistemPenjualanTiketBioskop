@@ -23,7 +23,6 @@ Partial Class Film
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.BtnUpdateFilm = New System.Windows.Forms.Button()
-        Me.BtnSelect = New System.Windows.Forms.Button()
         Me.BtnRemoveFilm = New System.Windows.Forms.Button()
         Me.DGFilm = New System.Windows.Forms.DataGridView()
         Me.BtnTambahFilm = New System.Windows.Forms.Button()
@@ -44,20 +43,6 @@ Partial Class Film
         Me.BtnUpdateFilm.TabIndex = 12
         Me.BtnUpdateFilm.Text = "Update"
         Me.BtnUpdateFilm.UseVisualStyleBackColor = False
-        '
-        'BtnSelect
-        '
-        Me.BtnSelect.BackColor = System.Drawing.Color.Teal
-        Me.BtnSelect.FlatAppearance.BorderSize = 0
-        Me.BtnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSelect.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnSelect.ForeColor = System.Drawing.Color.White
-        Me.BtnSelect.Location = New System.Drawing.Point(959, 508)
-        Me.BtnSelect.Name = "BtnSelect"
-        Me.BtnSelect.Size = New System.Drawing.Size(112, 34)
-        Me.BtnSelect.TabIndex = 11
-        Me.BtnSelect.Text = "Select"
-        Me.BtnSelect.UseVisualStyleBackColor = False
         '
         'BtnRemoveFilm
         '
@@ -119,7 +104,6 @@ Partial Class Film
         Me.Controls.Add(Me.BtnSignOut)
         Me.Controls.Add(Me.BtnTambahFilm)
         Me.Controls.Add(Me.BtnUpdateFilm)
-        Me.Controls.Add(Me.BtnSelect)
         Me.Controls.Add(Me.BtnRemoveFilm)
         Me.Controls.Add(Me.DGFilm)
         Me.Name = "Film"
@@ -130,7 +114,6 @@ Partial Class Film
     End Sub
 
     Friend WithEvents BtnUpdateFilm As Button
-    Friend WithEvents BtnSelect As Button
     Friend WithEvents BtnRemoveFilm As Button
     Friend WithEvents DGFilm As DataGridView
     Friend WithEvents BtnTambahFilm As Button

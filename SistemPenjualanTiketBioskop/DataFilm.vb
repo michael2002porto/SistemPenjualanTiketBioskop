@@ -141,7 +141,7 @@ Public Class DataFilm
     Public Function ConvertGenreToString(vals As List(Of String))
         Dim builder As StringBuilder = New StringBuilder()
         For Each val As String In vals
-            builder.Append(val).Append("|")
+            builder.Append(val).Append(",")
         Next
 
         ' Convert to string.
@@ -150,7 +150,7 @@ Public Class DataFilm
     End Function
 
     Public Function ConvertStringToGenre(value As String)
-        Dim arr() As String = value.Split("|")
+        Dim arr() As String = value.Split(",")
 
         ' Convert to List.
         Dim vals As List(Of String) = arr.ToList()
