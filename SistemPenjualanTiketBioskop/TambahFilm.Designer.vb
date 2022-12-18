@@ -29,11 +29,11 @@ Partial Class TambahFilm
         Me.ChckAdventure = New System.Windows.Forms.CheckBox()
         Me.ChckHoror = New System.Windows.Forms.CheckBox()
         Me.ChckKomedi = New System.Windows.Forms.CheckBox()
-        Me.ChckAction = New System.Windows.Forms.CheckBox()
+        Me.ChckDrama = New System.Windows.Forms.CheckBox()
         Me.GroupGenre = New System.Windows.Forms.GroupBox()
-        Me.ChckThriller = New System.Windows.Forms.CheckBox()
-        Me.ChckScifi = New System.Windows.Forms.CheckBox()
-        Me.ChckRomance = New System.Windows.Forms.CheckBox()
+        Me.ChckDokumenter = New System.Windows.Forms.CheckBox()
+        Me.ChckAnimasi = New System.Windows.Forms.CheckBox()
+        Me.ChckAction = New System.Windows.Forms.CheckBox()
         Me.RdBInggris = New System.Windows.Forms.RadioButton()
         Me.RdBIndonesia = New System.Windows.Forms.RadioButton()
         Me.GroupBahasa = New System.Windows.Forms.GroupBox()
@@ -53,6 +53,12 @@ Partial Class TambahFilm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtDirector = New System.Windows.Forms.TextBox()
+        Me.ChckRomance = New System.Windows.Forms.CheckBox()
+        Me.ChckScifi = New System.Windows.Forms.CheckBox()
+        Me.ChckThriller = New System.Windows.Forms.CheckBox()
+        Me.ChckMusical = New System.Windows.Forms.CheckBox()
+        Me.ChckBiografi = New System.Windows.Forms.CheckBox()
+        Me.ChckMistery = New System.Windows.Forms.CheckBox()
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupGenre.SuspendLayout()
         Me.GroupBahasa.SuspendLayout()
@@ -61,7 +67,7 @@ Partial Class TambahFilm
         'LblValueDeskripsi
         '
         Me.LblValueDeskripsi.AutoSize = True
-        Me.LblValueDeskripsi.Location = New System.Drawing.Point(773, 358)
+        Me.LblValueDeskripsi.Location = New System.Drawing.Point(825, 358)
         Me.LblValueDeskripsi.Name = "LblValueDeskripsi"
         Me.LblValueDeskripsi.Size = New System.Drawing.Size(42, 25)
         Me.LblValueDeskripsi.TabIndex = 53
@@ -87,7 +93,7 @@ Partial Class TambahFilm
         Me.BtnTambahFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambahFilm.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambahFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnTambahFilm.Location = New System.Drawing.Point(331, 1004)
+        Me.BtnTambahFilm.Location = New System.Drawing.Point(362, 1004)
         Me.BtnTambahFilm.Name = "BtnTambahFilm"
         Me.BtnTambahFilm.Size = New System.Drawing.Size(189, 34)
         Me.BtnTambahFilm.TabIndex = 50
@@ -124,61 +130,67 @@ Partial Class TambahFilm
         Me.ChckKomedi.Text = "Komedi"
         Me.ChckKomedi.UseVisualStyleBackColor = True
         '
-        'ChckAction
+        'ChckDrama
         '
-        Me.ChckAction.AutoSize = True
-        Me.ChckAction.Location = New System.Drawing.Point(6, 30)
-        Me.ChckAction.Name = "ChckAction"
-        Me.ChckAction.Size = New System.Drawing.Size(89, 29)
-        Me.ChckAction.TabIndex = 0
-        Me.ChckAction.Text = "Action"
-        Me.ChckAction.UseVisualStyleBackColor = True
+        Me.ChckDrama.AutoSize = True
+        Me.ChckDrama.Location = New System.Drawing.Point(6, 30)
+        Me.ChckDrama.Name = "ChckDrama"
+        Me.ChckDrama.Size = New System.Drawing.Size(91, 29)
+        Me.ChckDrama.TabIndex = 0
+        Me.ChckDrama.Text = "Drama"
+        Me.ChckDrama.UseVisualStyleBackColor = True
         '
         'GroupGenre
         '
+        Me.GroupGenre.Controls.Add(Me.ChckMistery)
+        Me.GroupGenre.Controls.Add(Me.ChckBiografi)
+        Me.GroupGenre.Controls.Add(Me.ChckMusical)
         Me.GroupGenre.Controls.Add(Me.ChckThriller)
         Me.GroupGenre.Controls.Add(Me.ChckScifi)
         Me.GroupGenre.Controls.Add(Me.ChckRomance)
+        Me.GroupGenre.Controls.Add(Me.ChckDokumenter)
+        Me.GroupGenre.Controls.Add(Me.ChckAnimasi)
+        Me.GroupGenre.Controls.Add(Me.ChckAction)
         Me.GroupGenre.Controls.Add(Me.ChckAdventure)
         Me.GroupGenre.Controls.Add(Me.ChckHoror)
         Me.GroupGenre.Controls.Add(Me.ChckKomedi)
-        Me.GroupGenre.Controls.Add(Me.ChckAction)
+        Me.GroupGenre.Controls.Add(Me.ChckDrama)
         Me.GroupGenre.Location = New System.Drawing.Point(467, 694)
         Me.GroupGenre.Name = "GroupGenre"
-        Me.GroupGenre.Size = New System.Drawing.Size(300, 286)
+        Me.GroupGenre.Size = New System.Drawing.Size(348, 286)
         Me.GroupGenre.TabIndex = 49
         Me.GroupGenre.TabStop = False
         Me.GroupGenre.Text = "Genre"
         '
-        'ChckThriller
+        'ChckDokumenter
         '
-        Me.ChckThriller.AutoSize = True
-        Me.ChckThriller.Location = New System.Drawing.Point(6, 240)
-        Me.ChckThriller.Name = "ChckThriller"
-        Me.ChckThriller.Size = New System.Drawing.Size(90, 29)
-        Me.ChckThriller.TabIndex = 6
-        Me.ChckThriller.Text = "Thriller"
-        Me.ChckThriller.UseVisualStyleBackColor = True
+        Me.ChckDokumenter.AutoSize = True
+        Me.ChckDokumenter.Location = New System.Drawing.Point(6, 240)
+        Me.ChckDokumenter.Name = "ChckDokumenter"
+        Me.ChckDokumenter.Size = New System.Drawing.Size(137, 29)
+        Me.ChckDokumenter.TabIndex = 6
+        Me.ChckDokumenter.Text = "Dokumenter"
+        Me.ChckDokumenter.UseVisualStyleBackColor = True
         '
-        'ChckScifi
+        'ChckAnimasi
         '
-        Me.ChckScifi.AutoSize = True
-        Me.ChckScifi.Location = New System.Drawing.Point(6, 205)
-        Me.ChckScifi.Name = "ChckScifi"
-        Me.ChckScifi.Size = New System.Drawing.Size(77, 29)
-        Me.ChckScifi.TabIndex = 5
-        Me.ChckScifi.Text = "Sci-fi"
-        Me.ChckScifi.UseVisualStyleBackColor = True
+        Me.ChckAnimasi.AutoSize = True
+        Me.ChckAnimasi.Location = New System.Drawing.Point(6, 205)
+        Me.ChckAnimasi.Name = "ChckAnimasi"
+        Me.ChckAnimasi.Size = New System.Drawing.Size(101, 29)
+        Me.ChckAnimasi.TabIndex = 5
+        Me.ChckAnimasi.Text = "Animasi"
+        Me.ChckAnimasi.UseVisualStyleBackColor = True
         '
-        'ChckRomance
+        'ChckAction
         '
-        Me.ChckRomance.AutoSize = True
-        Me.ChckRomance.Location = New System.Drawing.Point(6, 170)
-        Me.ChckRomance.Name = "ChckRomance"
-        Me.ChckRomance.Size = New System.Drawing.Size(111, 29)
-        Me.ChckRomance.TabIndex = 4
-        Me.ChckRomance.Text = "Romance"
-        Me.ChckRomance.UseVisualStyleBackColor = True
+        Me.ChckAction.AutoSize = True
+        Me.ChckAction.Location = New System.Drawing.Point(6, 170)
+        Me.ChckAction.Name = "ChckAction"
+        Me.ChckAction.Size = New System.Drawing.Size(89, 29)
+        Me.ChckAction.TabIndex = 4
+        Me.ChckAction.Text = "Action"
+        Me.ChckAction.UseVisualStyleBackColor = True
         '
         'RdBInggris
         '
@@ -208,7 +220,7 @@ Partial Class TambahFilm
         Me.GroupBahasa.Controls.Add(Me.RdBIndonesia)
         Me.GroupBahasa.Location = New System.Drawing.Point(467, 564)
         Me.GroupBahasa.Name = "GroupBahasa"
-        Me.GroupBahasa.Size = New System.Drawing.Size(300, 111)
+        Me.GroupBahasa.Size = New System.Drawing.Size(348, 111)
         Me.GroupBahasa.TabIndex = 48
         Me.GroupBahasa.TabStop = False
         Me.GroupBahasa.Text = "Bahasa"
@@ -217,21 +229,21 @@ Partial Class TambahFilm
         '
         Me.TxtHargaFilm.Location = New System.Drawing.Point(467, 505)
         Me.TxtHargaFilm.Name = "TxtHargaFilm"
-        Me.TxtHargaFilm.Size = New System.Drawing.Size(300, 31)
+        Me.TxtHargaFilm.Size = New System.Drawing.Size(348, 31)
         Me.TxtHargaFilm.TabIndex = 46
         '
         'TxtDuration
         '
         Me.TxtDuration.Location = New System.Drawing.Point(467, 404)
         Me.TxtDuration.Name = "TxtDuration"
-        Me.TxtDuration.Size = New System.Drawing.Size(300, 31)
+        Me.TxtDuration.Size = New System.Drawing.Size(348, 31)
         Me.TxtDuration.TabIndex = 44
         '
         'RichDeskripsiFilm
         '
         Me.RichDeskripsiFilm.Location = New System.Drawing.Point(467, 194)
         Me.RichDeskripsiFilm.Name = "RichDeskripsiFilm"
-        Me.RichDeskripsiFilm.Size = New System.Drawing.Size(300, 189)
+        Me.RichDeskripsiFilm.Size = New System.Drawing.Size(348, 189)
         Me.RichDeskripsiFilm.TabIndex = 43
         Me.RichDeskripsiFilm.Text = ""
         '
@@ -239,14 +251,14 @@ Partial Class TambahFilm
         '
         Me.DateTimePickerRelease.Location = New System.Drawing.Point(467, 455)
         Me.DateTimePickerRelease.Name = "DateTimePickerRelease"
-        Me.DateTimePickerRelease.Size = New System.Drawing.Size(300, 31)
+        Me.DateTimePickerRelease.Size = New System.Drawing.Size(348, 31)
         Me.DateTimePickerRelease.TabIndex = 42
         '
         'TxtFilm
         '
         Me.TxtFilm.Location = New System.Drawing.Point(467, 94)
         Me.TxtFilm.Name = "TxtFilm"
-        Me.TxtFilm.Size = New System.Drawing.Size(300, 31)
+        Me.TxtFilm.Size = New System.Drawing.Size(348, 31)
         Me.TxtFilm.TabIndex = 41
         '
         'Label11
@@ -299,7 +311,7 @@ Partial Class TambahFilm
         Me.BtnTambahGambar.BackColor = System.Drawing.Color.Teal
         Me.BtnTambahGambar.FlatAppearance.BorderSize = 0
         Me.BtnTambahGambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnTambahGambar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnTambahGambar.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambahGambar.ForeColor = System.Drawing.Color.White
         Me.BtnTambahGambar.Location = New System.Drawing.Point(12, 353)
         Me.BtnTambahGambar.Name = "BtnTambahGambar"
@@ -349,15 +361,75 @@ Partial Class TambahFilm
         '
         Me.TxtDirector.Location = New System.Drawing.Point(467, 143)
         Me.TxtDirector.Name = "TxtDirector"
-        Me.TxtDirector.Size = New System.Drawing.Size(300, 31)
+        Me.TxtDirector.Size = New System.Drawing.Size(348, 31)
         Me.TxtDirector.TabIndex = 54
+        '
+        'ChckRomance
+        '
+        Me.ChckRomance.AutoSize = True
+        Me.ChckRomance.Location = New System.Drawing.Point(211, 30)
+        Me.ChckRomance.Name = "ChckRomance"
+        Me.ChckRomance.Size = New System.Drawing.Size(111, 29)
+        Me.ChckRomance.TabIndex = 7
+        Me.ChckRomance.Text = "Romance"
+        Me.ChckRomance.UseVisualStyleBackColor = True
+        '
+        'ChckScifi
+        '
+        Me.ChckScifi.AutoSize = True
+        Me.ChckScifi.Location = New System.Drawing.Point(211, 65)
+        Me.ChckScifi.Name = "ChckScifi"
+        Me.ChckScifi.Size = New System.Drawing.Size(77, 29)
+        Me.ChckScifi.TabIndex = 8
+        Me.ChckScifi.Text = "Sci-fi"
+        Me.ChckScifi.UseVisualStyleBackColor = True
+        '
+        'ChckThriller
+        '
+        Me.ChckThriller.AutoSize = True
+        Me.ChckThriller.Location = New System.Drawing.Point(211, 100)
+        Me.ChckThriller.Name = "ChckThriller"
+        Me.ChckThriller.Size = New System.Drawing.Size(90, 29)
+        Me.ChckThriller.TabIndex = 9
+        Me.ChckThriller.Text = "Thriller"
+        Me.ChckThriller.UseVisualStyleBackColor = True
+        '
+        'ChckMusical
+        '
+        Me.ChckMusical.AutoSize = True
+        Me.ChckMusical.Location = New System.Drawing.Point(211, 205)
+        Me.ChckMusical.Name = "ChckMusical"
+        Me.ChckMusical.Size = New System.Drawing.Size(97, 29)
+        Me.ChckMusical.TabIndex = 10
+        Me.ChckMusical.Text = "Musical"
+        Me.ChckMusical.UseVisualStyleBackColor = True
+        '
+        'ChckBiografi
+        '
+        Me.ChckBiografi.AutoSize = True
+        Me.ChckBiografi.Location = New System.Drawing.Point(211, 170)
+        Me.ChckBiografi.Name = "ChckBiografi"
+        Me.ChckBiografi.Size = New System.Drawing.Size(99, 29)
+        Me.ChckBiografi.TabIndex = 11
+        Me.ChckBiografi.Text = "Biografi"
+        Me.ChckBiografi.UseVisualStyleBackColor = True
+        '
+        'ChckMistery
+        '
+        Me.ChckMistery.AutoSize = True
+        Me.ChckMistery.Location = New System.Drawing.Point(211, 135)
+        Me.ChckMistery.Name = "ChckMistery"
+        Me.ChckMistery.Size = New System.Drawing.Size(96, 29)
+        Me.ChckMistery.TabIndex = 12
+        Me.ChckMistery.Text = "Mistery"
+        Me.ChckMistery.UseVisualStyleBackColor = True
         '
         'TambahFilm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(850, 688)
+        Me.ClientSize = New System.Drawing.Size(901, 1050)
         Me.Controls.Add(Me.TxtDirector)
         Me.Controls.Add(Me.LblValueDeskripsi)
         Me.Controls.Add(Me.PicFoto)
@@ -399,7 +471,7 @@ Partial Class TambahFilm
     Friend WithEvents ChckAdventure As CheckBox
     Friend WithEvents ChckHoror As CheckBox
     Friend WithEvents ChckKomedi As CheckBox
-    Friend WithEvents ChckAction As CheckBox
+    Friend WithEvents ChckDrama As CheckBox
     Friend WithEvents GroupGenre As GroupBox
     Friend WithEvents RdBInggris As RadioButton
     Friend WithEvents RdBIndonesia As RadioButton
@@ -420,7 +492,13 @@ Partial Class TambahFilm
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtDirector As TextBox
+    Friend WithEvents ChckAction As CheckBox
+    Friend WithEvents ChckDokumenter As CheckBox
+    Friend WithEvents ChckAnimasi As CheckBox
     Friend WithEvents ChckRomance As CheckBox
-    Friend WithEvents ChckThriller As CheckBox
     Friend WithEvents ChckScifi As CheckBox
+    Friend WithEvents ChckThriller As CheckBox
+    Friend WithEvents ChckMusical As CheckBox
+    Friend WithEvents ChckMistery As CheckBox
+    Friend WithEvents ChckBiografi As CheckBox
 End Class

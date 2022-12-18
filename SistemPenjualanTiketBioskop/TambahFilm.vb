@@ -85,8 +85,8 @@
 
         Film.dataFilm.resetGenre()
 
-        If ChckAction.Checked() Then
-            Film.dataFilm.AddGenre("Action")
+        If ChckDrama.Checked() Then
+            Film.dataFilm.AddGenre("Drama")
         End If
 
         If ChckKomedi.Checked() Then
@@ -101,6 +101,18 @@
             Film.dataFilm.AddGenre("Adventure")
         End If
 
+        If ChckAction.Checked() Then
+            Film.dataFilm.AddGenre("Action")
+        End If
+
+        If ChckAnimasi.Checked() Then
+            Film.dataFilm.AddGenre("Animasi")
+        End If
+
+        If ChckDokumenter.Checked() Then
+            Film.dataFilm.AddGenre("Dokumenter")
+        End If
+
         If ChckRomance.Checked() Then
             Film.dataFilm.AddGenre("Romance")
         End If
@@ -111,6 +123,18 @@
 
         If ChckThriller.Checked() Then
             Film.dataFilm.AddGenre("Thriller")
+        End If
+
+        If ChckMistery.Checked() Then
+            Film.dataFilm.AddGenre("Mistery")
+        End If
+
+        If ChckBiografi.Checked() Then
+            Film.dataFilm.AddGenre("Biografi")
+        End If
+
+        If ChckMusical.Checked() Then
+            Film.dataFilm.AddGenre("Musical")
         End If
 
         Dim convertedGenre = Film.dataFilm.ConvertGenreToString(Film.dataFilm.getGenreItem)
