@@ -21,6 +21,7 @@ Public Class Film
 
     Private Sub Film_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabaseFilm()
+        LblUsername.Text = "admin"
     End Sub
 
     Private Sub ReloadDataTableDatabaseFilm()

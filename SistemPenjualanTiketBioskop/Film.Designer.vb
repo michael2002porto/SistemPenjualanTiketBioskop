@@ -33,18 +33,22 @@ Partial Class Film
         Me.BtnJadwalTayang = New System.Windows.Forms.Button()
         Me.BtnStudio = New System.Windows.Forms.Button()
         Me.BtnFilm = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LblUsername = New System.Windows.Forms.Label()
         CType(Me.DGFilm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'BtnUpdateFilm
         '
+        Me.BtnUpdateFilm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnUpdateFilm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.BtnUpdateFilm.FlatAppearance.BorderSize = 0
         Me.BtnUpdateFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnUpdateFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnUpdateFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnUpdateFilm.Location = New System.Drawing.Point(1290, 657)
+        Me.BtnUpdateFilm.Location = New System.Drawing.Point(1290, 7)
         Me.BtnUpdateFilm.Name = "BtnUpdateFilm"
         Me.BtnUpdateFilm.Size = New System.Drawing.Size(177, 50)
         Me.BtnUpdateFilm.TabIndex = 12
@@ -53,12 +57,13 @@ Partial Class Film
         '
         'BtnRemoveFilm
         '
+        Me.BtnRemoveFilm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnRemoveFilm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.BtnRemoveFilm.FlatAppearance.BorderSize = 0
         Me.BtnRemoveFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRemoveFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnRemoveFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnRemoveFilm.Location = New System.Drawing.Point(1490, 657)
+        Me.BtnRemoveFilm.Location = New System.Drawing.Point(1490, 7)
         Me.BtnRemoveFilm.Name = "BtnRemoveFilm"
         Me.BtnRemoveFilm.Size = New System.Drawing.Size(177, 50)
         Me.BtnRemoveFilm.TabIndex = 10
@@ -67,22 +72,27 @@ Partial Class Film
         '
         'DGFilm
         '
+        Me.DGFilm.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DGFilm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGFilm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGFilm.Location = New System.Drawing.Point(45, 119)
+        Me.DGFilm.Location = New System.Drawing.Point(45, 166)
         Me.DGFilm.Name = "DGFilm"
         Me.DGFilm.RowHeadersWidth = 62
         Me.DGFilm.RowTemplate.Height = 33
-        Me.DGFilm.Size = New System.Drawing.Size(1622, 514)
+        Me.DGFilm.Size = New System.Drawing.Size(1622, 546)
         Me.DGFilm.TabIndex = 9
         '
         'BtnTambahFilm
         '
+        Me.BtnTambahFilm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnTambahFilm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.BtnTambahFilm.FlatAppearance.BorderSize = 0
         Me.BtnTambahFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambahFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambahFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnTambahFilm.Location = New System.Drawing.Point(1095, 657)
+        Me.BtnTambahFilm.Location = New System.Drawing.Point(1095, 7)
         Me.BtnTambahFilm.Name = "BtnTambahFilm"
         Me.BtnTambahFilm.Size = New System.Drawing.Size(177, 50)
         Me.BtnTambahFilm.TabIndex = 13
@@ -91,6 +101,7 @@ Partial Class Film
         '
         'BtnSignOut
         '
+        Me.BtnSignOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnSignOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.BtnSignOut.FlatAppearance.BorderSize = 0
         Me.BtnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -112,7 +123,8 @@ Partial Class Film
         Me.Panel1.Controls.Add(Me.BtnJadwalTayang)
         Me.Panel1.Controls.Add(Me.BtnStudio)
         Me.Panel1.Controls.Add(Me.BtnFilm)
-        Me.Panel1.Location = New System.Drawing.Point(0, 1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1714, 92)
         Me.Panel1.TabIndex = 15
@@ -181,16 +193,36 @@ Partial Class Film
         Me.BtnFilm.Text = "Film"
         Me.BtnFilm.UseVisualStyleBackColor = True
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.BtnRemoveFilm)
+        Me.Panel2.Controls.Add(Me.BtnUpdateFilm)
+        Me.Panel2.Controls.Add(Me.BtnTambahFilm)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 732)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1714, 77)
+        Me.Panel2.TabIndex = 16
+        '
+        'LblUsername
+        '
+        Me.LblUsername.AutoSize = True
+        Me.LblUsername.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LblUsername.Location = New System.Drawing.Point(45, 112)
+        Me.LblUsername.Name = "LblUsername"
+        Me.LblUsername.Size = New System.Drawing.Size(130, 28)
+        Me.LblUsername.TabIndex = 17
+        Me.LblUsername.Text = "Username"
+        '
         'Film
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1714, 730)
+        Me.ClientSize = New System.Drawing.Size(1714, 809)
+        Me.Controls.Add(Me.LblUsername)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.BtnTambahFilm)
-        Me.Controls.Add(Me.BtnUpdateFilm)
-        Me.Controls.Add(Me.BtnRemoveFilm)
         Me.Controls.Add(Me.DGFilm)
         Me.Name = "Film"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -198,7 +230,9 @@ Partial Class Film
         CType(Me.DGFilm, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -213,4 +247,6 @@ Partial Class Film
     Friend WithEvents BtnJadwalTayang As Button
     Friend WithEvents BtnStudio As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents LblUsername As Label
 End Class
