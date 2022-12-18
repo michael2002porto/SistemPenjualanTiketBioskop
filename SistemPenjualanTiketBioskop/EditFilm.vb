@@ -35,8 +35,8 @@
 
         For Each genreItem In Film.dataFilm.GSGenre
 
-            If String.Compare(genreItem, "Action") = 0 Then
-                ChckAction.Checked = True
+            If String.Compare(genreItem, "Drama") = 0 Then
+                ChckDrama.Checked = True
 
             ElseIf String.Compare(genreItem, "Komedi") = 0 Then
                 ChckKomedi.Checked = True
@@ -47,6 +47,15 @@
             ElseIf String.Compare(genreItem, "Adventure") = 0 Then
                 ChckAdventure.Checked = True
 
+            ElseIf String.Compare(genreItem, "Action") = 0 Then
+                ChckAction.Checked = True
+
+            ElseIf String.Compare(genreItem, "Animasi") = 0 Then
+                ChckAnimasi.Checked = True
+
+            ElseIf String.Compare(genreItem, "Dokumenter") = 0 Then
+                ChckDokumenter.Checked = True
+
             ElseIf String.Compare(genreItem, "Romace") = 0 Then
                 ChckRomance.Checked = True
 
@@ -55,9 +64,16 @@
 
             ElseIf String.Compare(genreItem, "Thriller") = 0 Then
                 ChckThriller.Checked = True
+
+            ElseIf String.Compare(genreItem, "Mistery") = 0 Then
+                ChckMistery.Checked = True
+
+            ElseIf String.Compare(genreItem, "Biografi") = 0 Then
+                ChckBiografi.Checked = True
+
+            ElseIf String.Compare(genreItem, "Musical") = 0 Then
+                ChckMusical.Checked = True
             End If
-
-
 
         Next
         Film.dataFilm.resetGenre()
@@ -106,32 +122,56 @@
             Film.dataFilm.GSBahasa = "Bahasa Inggris"
         End If
 
-        If ChckAction.Checked = True Then
-            Film.dataFilm.AddGenre("Action")
+        If ChckDrama.Checked() Then
+            Film.dataFilm.AddGenre("Drama")
         End If
 
-        If ChckKomedi.Checked = True Then
+        If ChckKomedi.Checked() Then
             Film.dataFilm.AddGenre("Komedi")
         End If
 
-        If ChckHoror.Checked = True Then
+        If ChckHoror.Checked() Then
             Film.dataFilm.AddGenre("Horor")
         End If
 
-        If ChckAdventure.Checked = True Then
+        If ChckAdventure.Checked() Then
             Film.dataFilm.AddGenre("Adventure")
         End If
 
-        If ChckRomance.Checked = True Then
+        If ChckAction.Checked() Then
+            Film.dataFilm.AddGenre("Action")
+        End If
+
+        If ChckAnimasi.Checked() Then
+            Film.dataFilm.AddGenre("Animasi")
+        End If
+
+        If ChckDokumenter.Checked() Then
+            Film.dataFilm.AddGenre("Dokumenter")
+        End If
+
+        If ChckRomance.Checked() Then
             Film.dataFilm.AddGenre("Romance")
         End If
 
-        If ChckScifi.Checked = True Then
+        If ChckScifi.Checked() Then
             Film.dataFilm.AddGenre("Sci-fi")
         End If
 
-        If ChckThriller.Checked = True Then
+        If ChckThriller.Checked() Then
             Film.dataFilm.AddGenre("Thriller")
+        End If
+
+        If ChckMistery.Checked() Then
+            Film.dataFilm.AddGenre("Mistery")
+        End If
+
+        If ChckBiografi.Checked() Then
+            Film.dataFilm.AddGenre("Biografi")
+        End If
+
+        If ChckMusical.Checked() Then
+            Film.dataFilm.AddGenre("Musical")
         End If
 
         Dim convertedGenre = Film.dataFilm.ConvertGenreToString(Film.dataFilm.getGenreItem)
@@ -152,4 +192,5 @@
 
         Me.Close()
     End Sub
+
 End Class

@@ -47,7 +47,7 @@ Public Class DataFilm
         End Set
     End Property
 
-    ' Jenis
+    ' Genre
     Public Property GSGenre() As List(Of String)
         Get
             Return genre
@@ -73,7 +73,7 @@ Public Class DataFilm
         End Get
     End Property
 
-    ' Penerbit
+    ' Director
     Public Property GSDirector() As String
         Get
             Return director
@@ -83,7 +83,7 @@ Public Class DataFilm
         End Set
     End Property
 
-    ' Tahun Terbit
+    ' Duration
     Public Property GSDuration() As String
         Get
             Return duration
@@ -93,7 +93,7 @@ Public Class DataFilm
         End Set
     End Property
 
-    ' Tanggal Masuk Koleksi
+    ' Date Release
     Public Property GSDateRelease() As String
         Get
             Return date_release
@@ -103,7 +103,7 @@ Public Class DataFilm
         End Set
     End Property
 
-    ' Stock
+    ' Bahasa
     Public Property GSBahasa() As String
         Get
             Return bahasa
@@ -113,7 +113,7 @@ Public Class DataFilm
         End Set
     End Property
 
-    ' Bahasa
+    ' Harga
     Public Property GSHargaFilm() As String
         Get
             Return harga_film
@@ -165,7 +165,7 @@ Public Class DataFilm
                                    + "database =" + database
     End Function
 
-    '' Function untuk mengambil data koleksi database
+    '' Function untuk mengambil data film di database
     Public Function GetDataKoleksiDatabase() As DataTable
         Dim result As New DataTable
 
@@ -200,7 +200,7 @@ Public Class DataFilm
     End Function
 
 
-    '' Function untuk data koleksi database
+    '' Function untuk menambahkan data film di database
     Public Function AddDataFilmDatabase(film As String,
                                         genre As String,
                                         deskripsi As String,
@@ -244,7 +244,7 @@ Public Class DataFilm
         End Try
     End Function
 
-    '' Function untuk mengambil data koleksi database berdasarkan id
+    '' Function untuk mengambil data film di database berdasarkan id
     Public Function GetDataKoleksiByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
@@ -297,7 +297,7 @@ Public Class DataFilm
 
     End Function
 
-    '' Function untuk update data koleksi database
+    '' Function untuk update data film di database
     Public Function UpdateDataKoleksiByIDDatabase(id_film As Integer,
                                                   film As String,
                                                   genre As String,
@@ -341,7 +341,7 @@ Public Class DataFilm
 
     End Function
 
-    '' Function untuk delete data koleksi database
+    '' Function untuk delete data film di database
     Public Function DeleteDataKoleksiByIDDatabase(id_film As Integer)
 
         DBConnection()
@@ -356,7 +356,7 @@ Public Class DataFilm
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
-
+            MessageBox.Show("Data Deleted")
             dbConn.Close()
             sqlRead.Close()
         Catch ex As Exception
