@@ -43,6 +43,8 @@ Partial Class TambahFilm
         Me.RdBInggris = New System.Windows.Forms.RadioButton()
         Me.RdBIndonesia = New System.Windows.Forms.RadioButton()
         Me.GroupBahasa = New System.Windows.Forms.GroupBox()
+        Me.RdBKorea = New System.Windows.Forms.RadioButton()
+        Me.RdBJepang = New System.Windows.Forms.RadioButton()
         Me.TxtHargaFilm = New System.Windows.Forms.TextBox()
         Me.TxtDuration = New System.Windows.Forms.TextBox()
         Me.RichDeskripsiFilm = New System.Windows.Forms.RichTextBox()
@@ -283,10 +285,10 @@ Partial Class TambahFilm
         Me.RdBInggris.Location = New System.Drawing.Point(7, 57)
         Me.RdBInggris.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBInggris.Name = "RdBInggris"
-        Me.RdBInggris.Size = New System.Drawing.Size(164, 29)
+        Me.RdBInggris.Size = New System.Drawing.Size(95, 29)
         Me.RdBInggris.TabIndex = 1
         Me.RdBInggris.TabStop = True
-        Me.RdBInggris.Text = "Bahasa Inggris"
+        Me.RdBInggris.Text = "Inggris"
         Me.RdBInggris.UseVisualStyleBackColor = True
         '
         'RdBIndonesia
@@ -295,15 +297,17 @@ Partial Class TambahFilm
         Me.RdBIndonesia.Location = New System.Drawing.Point(7, 26)
         Me.RdBIndonesia.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBIndonesia.Name = "RdBIndonesia"
-        Me.RdBIndonesia.Size = New System.Drawing.Size(189, 29)
+        Me.RdBIndonesia.Size = New System.Drawing.Size(120, 29)
         Me.RdBIndonesia.TabIndex = 0
         Me.RdBIndonesia.TabStop = True
-        Me.RdBIndonesia.Text = "Bahasa Indonesia"
+        Me.RdBIndonesia.Text = "Indonesia"
         Me.RdBIndonesia.UseVisualStyleBackColor = True
         '
         'GroupBahasa
         '
         Me.GroupBahasa.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBahasa.Controls.Add(Me.RdBKorea)
+        Me.GroupBahasa.Controls.Add(Me.RdBJepang)
         Me.GroupBahasa.Controls.Add(Me.RdBInggris)
         Me.GroupBahasa.Controls.Add(Me.RdBIndonesia)
         Me.GroupBahasa.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
@@ -315,6 +319,30 @@ Partial Class TambahFilm
         Me.GroupBahasa.TabIndex = 48
         Me.GroupBahasa.TabStop = False
         Me.GroupBahasa.Text = "Bahasa"
+        '
+        'RdBKorea
+        '
+        Me.RdBKorea.AutoSize = True
+        Me.RdBKorea.Location = New System.Drawing.Point(232, 57)
+        Me.RdBKorea.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.RdBKorea.Name = "RdBKorea"
+        Me.RdBKorea.Size = New System.Drawing.Size(90, 29)
+        Me.RdBKorea.TabIndex = 3
+        Me.RdBKorea.TabStop = True
+        Me.RdBKorea.Text = "Korea"
+        Me.RdBKorea.UseVisualStyleBackColor = True
+        '
+        'RdBJepang
+        '
+        Me.RdBJepang.AutoSize = True
+        Me.RdBJepang.Location = New System.Drawing.Point(232, 26)
+        Me.RdBJepang.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.RdBJepang.Name = "RdBJepang"
+        Me.RdBJepang.Size = New System.Drawing.Size(97, 29)
+        Me.RdBJepang.TabIndex = 2
+        Me.RdBJepang.TabStop = True
+        Me.RdBJepang.Text = "Jepang"
+        Me.RdBJepang.UseVisualStyleBackColor = True
         '
         'TxtHargaFilm
         '
@@ -466,7 +494,7 @@ Partial Class TambahFilm
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(402, 15)
+        Me.Label1.Location = New System.Drawing.Point(378, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(201, 36)
         Me.Label1.TabIndex = 29
@@ -586,4 +614,6 @@ Partial Class TambahFilm
     Friend WithEvents ChckBiografi As CheckBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents RdBJepang As RadioButton
+    Friend WithEvents RdBKorea As RadioButton
 End Class

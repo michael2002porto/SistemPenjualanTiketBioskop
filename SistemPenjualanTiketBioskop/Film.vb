@@ -4,8 +4,8 @@ Public Class Film
 
     Public Shared dataFilm As DataFilm
 
-    Public Shared selectedTableKoleksi As Integer
-    Public Shared selectedTableKoleksiFilm As String
+    Public Shared selectedTableFilm As Integer
+    Public Shared selectedTableNamaFilm As String
     Private selectedRow As DataGridViewRow
 
     Public Sub New()
@@ -26,7 +26,7 @@ Public Class Film
     End Sub
 
     Private Sub ReloadDataTableDatabaseFilm()
-        DGFilm.DataSource = dataFilm.GetDataKoleksiDatabase()
+        DGFilm.DataSource = dataFilm.GetDataFilmDatabase()
     End Sub
 
     Private Sub BtnTambahFilm_Click(sender As Object, e As EventArgs) Handles BtnTambahFilm.Click
@@ -36,19 +36,18 @@ Public Class Film
 
     Private Sub BtnUpdateFilm_Click(sender As Object, e As EventArgs) Handles BtnUpdateFilm.Click
         Try
-            Dim selectedKoleksi As List(Of String) = dataFilm.GetDataKoleksiByIDDatabase(selectedTableKoleksi)
+            Dim selectedFilm As List(Of String) = dataFilm.GetDataFilmByIDDatabase(selectedTableFilm)
 
-            dataFilm.GSFoto = selectedKoleksi(9)
+            dataFilm.GSFoto = selectedFilm(9)
 
-            dataFilm.GSNamaFilm = selectedKoleksi(1)
-            dataFilm.GSDeskripsi = selectedKoleksi(3)
-            dataFilm.GSDirector = selectedKoleksi(4)
-            dataFilm.GSDateRelease = selectedKoleksi(6)
-            dataFilm.GSDuration = selectedKoleksi(5)
-            dataFilm.GSHargaFilm = selectedKoleksi(8)
-            dataFilm.GSBahasa = selectedKoleksi(7)
-            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedKoleksi(2))
-
+            dataFilm.GSNamaFilm = selectedFilm(1)
+            dataFilm.GSDeskripsi = selectedFilm(3)
+            dataFilm.GSDirector = selectedFilm(4)
+            dataFilm.GSDateRelease = selectedFilm(6)
+            dataFilm.GSDuration = selectedFilm(5)
+            dataFilm.GSHargaFilm = selectedFilm(8)
+            dataFilm.GSBahasa = selectedFilm(7)
+            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedFilm(2))
             Dim updateFilm = New EditFilm()
             updateFilm.Show()
         Catch ex As Exception
@@ -59,18 +58,18 @@ Public Class Film
 
     Private Sub BtnRemoveFilm_Click(sender As Object, e As EventArgs) Handles BtnRemoveFilm.Click
         Try
-            Dim selectedKoleksi As List(Of String) = dataFilm.GetDataKoleksiByIDDatabase(selectedTableKoleksi)
+            Dim selectedFilm As List(Of String) = dataFilm.GetDataFilmByIDDatabase(selectedTableFilm)
 
-            dataFilm.GSFoto = selectedKoleksi(9)
+            dataFilm.GSFoto = selectedFilm(9)
 
-            dataFilm.GSNamaFilm = selectedKoleksi(1)
-            dataFilm.GSDeskripsi = selectedKoleksi(3)
-            dataFilm.GSDirector = selectedKoleksi(4)
-            dataFilm.GSDateRelease = selectedKoleksi(6)
-            dataFilm.GSDuration = selectedKoleksi(5)
-            dataFilm.GSHargaFilm = selectedKoleksi(8)
-            dataFilm.GSBahasa = selectedKoleksi(7)
-            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedKoleksi(2))
+            dataFilm.GSNamaFilm = selectedFilm(1)
+            dataFilm.GSDeskripsi = selectedFilm(3)
+            dataFilm.GSDirector = selectedFilm(4)
+            dataFilm.GSDateRelease = selectedFilm(6)
+            dataFilm.GSDuration = selectedFilm(5)
+            dataFilm.GSHargaFilm = selectedFilm(8)
+            dataFilm.GSBahasa = selectedFilm(7)
+            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedFilm(2))
 
             Dim removeFilm = New HapusFilm()
             removeFilm.Show()
@@ -86,11 +85,9 @@ Public Class Film
 
         Try
             selectedRow = DGFilm.Rows(index)
-            'selectedTableKoleksi = DataGridKoleksi.CurrentRow.Index
-            selectedTableKoleksi = selectedRow.Cells(0).Value
-            selectedTableKoleksiFilm = selectedRow.Cells(1).Value
+            selectedTableFilm = selectedRow.Cells(0).Value
+            selectedTableNamaFilm = selectedRow.Cells(1).Value
         Catch ex As Exception
-            'MessageBox.Show(ex.ToString())
             MessageBox.Show("Please select data")
         End Try
     End Sub

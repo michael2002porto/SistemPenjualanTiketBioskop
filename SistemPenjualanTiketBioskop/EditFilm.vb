@@ -27,10 +27,18 @@
         DateTimePickerRelease.Value = Film.dataFilm.GSDateRelease
         TxtHargaFilm.Text = Film.dataFilm.GSHargaFilm
 
-        If String.Compare(Film.dataFilm.GSBahasa, "Bahasa Indonesia") = 0 Then
+        If String.Compare(Film.dataFilm.GSBahasa, "Indonesia") = 0 Then
             RdBIndonesia.Checked = True
-        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Bahasa Inggris") = 0 Then
+
+        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Inggris") = 0 Then
             RdBInggris.Checked = True
+
+        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Jepang") = 0 Then
+            RdBJepang.Checked = True
+
+        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Korea") = 0 Then
+            RdBKorea.Checked = True
+
         End If
 
         For Each genreItem In Film.dataFilm.GSGenre
@@ -56,7 +64,7 @@
             ElseIf String.Compare(genreItem, "Dokumenter") = 0 Then
                 ChckDokumenter.Checked = True
 
-            ElseIf String.Compare(genreItem, "Romace") = 0 Then
+            ElseIf String.Compare(genreItem, "Romance") = 0 Then
                 ChckRomance.Checked = True
 
             ElseIf String.Compare(genreItem, "Sci-fi") = 0 Then
@@ -77,6 +85,8 @@
 
         Next
         Film.dataFilm.resetGenre()
+
+        LblValueDeskripsi.Text = max_char_deskripsi - RichDeskripsiFilm.Text.Length
     End Sub
 
     Private Sub BtnEditGambar_Click(sender As Object, e As EventArgs) Handles BtnEditGambar.Click
@@ -111,15 +121,22 @@
         Film.dataFilm.GSNamaFilm = TxtFilm.Text.ToString()
         Film.dataFilm.GSDeskripsi = RichDeskripsiFilm.Text.ToString()
         Film.dataFilm.GSDirector = TxtDirector.Text.ToString()
-
         Film.dataFilm.GSDuration = TxtDuration.Text.ToString()
         Film.dataFilm.GSDateRelease = DateTimePickerRelease.Value.ToString("yyyy/MM/dd")
         Film.dataFilm.GSHargaFilm = Integer.Parse(TxtHargaFilm.Text)
 
         If RdBIndonesia.Checked = True Then
-            Film.dataFilm.GSBahasa = "Bahasa Indonesia"
+            Film.dataFilm.GSBahasa = "Indonesia"
+
         ElseIf RdBInggris.Checked = True Then
-            Film.dataFilm.GSBahasa = "Bahasa Inggris"
+            Film.dataFilm.GSBahasa = "Inggris"
+
+        ElseIf RdBJepang.Checked = True Then
+            Film.dataFilm.GSBahasa = "Jepang"
+
+        ElseIf RdBKorea.Checked = True Then
+            Film.dataFilm.GSBahasa = "Korea"
+
         End If
 
         If ChckDrama.Checked() Then
@@ -176,19 +193,16 @@
 
         Dim convertedGenre = Film.dataFilm.ConvertGenreToString(Film.dataFilm.getGenreItem)
 
-        Film.dataFilm.UpdateDataKoleksiByIDDatabase(Film.selectedTableKoleksi,
-                                                    Film.dataFilm.GSNamaFilm,
-                                                    convertedGenre,
-                                                    Film.dataFilm.GSDeskripsi,
-                                                    Film.dataFilm.GSDirector,
-                                                    Film.dataFilm.GSDuration,
-                                                    Film.dataFilm.GSDateRelease,
-                                                    Film.dataFilm.GSBahasa,
-                                                    Film.dataFilm.GSHargaFilm,
-                                                    Film.dataFilm.GSFoto)
-
-        'Dim infoFilm = New InfoFilm()
-        'infoFilm.Show()
+        Film.dataFilm.UpdateDataFilmByIDDatabase(Film.selectedTableFilm,
+                                                 Film.dataFilm.GSNamaFilm,
+                                                 convertedGenre,
+                                                 Film.dataFilm.GSDeskripsi,
+                                                 Film.dataFilm.GSDirector,
+                                                 Film.dataFilm.GSDuration,
+                                                 Film.dataFilm.GSDateRelease,
+                                                 Film.dataFilm.GSBahasa,
+                                                 Film.dataFilm.GSHargaFilm,
+                                                 Film.dataFilm.GSFoto)
 
         Me.Close()
     End Sub

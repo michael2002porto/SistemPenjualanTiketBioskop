@@ -13,8 +13,6 @@ Public Class DataFilm
     Private bahasa As String
     Private harga_film As String
 
-    Private filmDataTable As New ArrayList()
-
     'Database Global Variable
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
@@ -166,7 +164,7 @@ Public Class DataFilm
     End Function
 
     '' Function untuk mengambil data film di database
-    Public Function GetDataKoleksiDatabase() As DataTable
+    Public Function GetDataFilmDatabase() As DataTable
         Dim result As New DataTable
 
         Try
@@ -245,7 +243,7 @@ Public Class DataFilm
     End Function
 
     '' Function untuk mengambil data film di database berdasarkan id
-    Public Function GetDataKoleksiByIDDatabase(ID As Integer) As List(Of String)
+    Public Function GetDataFilmByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
         Try
@@ -298,16 +296,16 @@ Public Class DataFilm
     End Function
 
     '' Function untuk update data film di database
-    Public Function UpdateDataKoleksiByIDDatabase(id_film As Integer,
-                                                  film As String,
-                                                  genre As String,
-                                                  deskripsi_film As String,
-                                                  director As String,
-                                                  duration As String,
-                                                  date_release As String,
-                                                  bahasa As String,
-                                                  harga_film As Integer,
-                                                  foto As String)
+    Public Function UpdateDataFilmByIDDatabase(id_film As Integer,
+                                               film As String,
+                                               genre As String,
+                                               deskripsi_film As String,
+                                               director As String,
+                                               duration As String,
+                                               date_release As String,
+                                               bahasa As String,
+                                               harga_film As Integer,
+                                               foto As String)
 
         date_release = date_release.ToString()
 
@@ -342,7 +340,7 @@ Public Class DataFilm
     End Function
 
     '' Function untuk delete data film di database
-    Public Function DeleteDataKoleksiByIDDatabase(id_film As Integer)
+    Public Function DeleteDataFilmByIDDatabase(id_film As Integer)
 
         DBConnection()
 

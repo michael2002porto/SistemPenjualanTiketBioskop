@@ -39,11 +39,19 @@
     End Sub
 
     Private Sub RdBIndonesia_CheckedChanged(sender As Object, e As EventArgs) Handles RdBIndonesia.CheckedChanged
-        Film.dataFilm.GSBahasa = "Bahasa Indonesia"
+        Film.dataFilm.GSBahasa = "Indonesia"
     End Sub
 
     Private Sub RdBInggris_CheckedChanged(sender As Object, e As EventArgs) Handles RdBInggris.CheckedChanged
-        Film.dataFilm.GSBahasa = "Bahasa Inggris"
+        Film.dataFilm.GSBahasa = "Inggris"
+    End Sub
+
+    Private Sub RdBJepang_CheckedChanged(sender As Object, e As EventArgs) Handles RdBJepang.CheckedChanged
+        Film.dataFilm.GSBahasa = "Jepang"
+    End Sub
+
+    Private Sub RdBKorea_CheckedChanged(sender As Object, e As EventArgs) Handles RdBKorea.CheckedChanged
+        Film.dataFilm.GSBahasa = "Korea"
     End Sub
 
     Private Sub BtnTambahGambar_Click(sender As Object, e As EventArgs) Handles BtnTambahGambar.Click
@@ -149,11 +157,7 @@
                                           Film.dataFilm.GSHargaFilm,
                                           Film.dataFilm.GSFoto)
 
-        'Dim form_infoFilm = New InfoFilm()
-        'form_infoFilm.Show()
-
         Me.Close()
-
     End Sub
 
 End Class

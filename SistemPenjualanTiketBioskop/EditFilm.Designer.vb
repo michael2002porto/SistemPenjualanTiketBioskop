@@ -60,6 +60,8 @@ Partial Class EditFilm
         Me.ChckHoror = New System.Windows.Forms.CheckBox()
         Me.ChckKomedi = New System.Windows.Forms.CheckBox()
         Me.ChckDrama = New System.Windows.Forms.CheckBox()
+        Me.RdBJepang = New System.Windows.Forms.RadioButton()
+        Me.RdBKorea = New System.Windows.Forms.RadioButton()
         Me.Panel1.SuspendLayout()
         Me.GroupBahasa.SuspendLayout()
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -251,6 +253,8 @@ Partial Class EditFilm
         'GroupBahasa
         '
         Me.GroupBahasa.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBahasa.Controls.Add(Me.RdBKorea)
+        Me.GroupBahasa.Controls.Add(Me.RdBJepang)
         Me.GroupBahasa.Controls.Add(Me.RdBInggris)
         Me.GroupBahasa.Controls.Add(Me.RdBIndonesia)
         Me.GroupBahasa.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
@@ -269,10 +273,10 @@ Partial Class EditFilm
         Me.RdBInggris.Location = New System.Drawing.Point(7, 57)
         Me.RdBInggris.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBInggris.Name = "RdBInggris"
-        Me.RdBInggris.Size = New System.Drawing.Size(164, 29)
+        Me.RdBInggris.Size = New System.Drawing.Size(95, 29)
         Me.RdBInggris.TabIndex = 1
         Me.RdBInggris.TabStop = True
-        Me.RdBInggris.Text = "Bahasa Inggris"
+        Me.RdBInggris.Text = "Inggris"
         Me.RdBInggris.UseVisualStyleBackColor = True
         '
         'RdBIndonesia
@@ -281,10 +285,10 @@ Partial Class EditFilm
         Me.RdBIndonesia.Location = New System.Drawing.Point(7, 26)
         Me.RdBIndonesia.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBIndonesia.Name = "RdBIndonesia"
-        Me.RdBIndonesia.Size = New System.Drawing.Size(189, 29)
+        Me.RdBIndonesia.Size = New System.Drawing.Size(120, 29)
         Me.RdBIndonesia.TabIndex = 0
         Me.RdBIndonesia.TabStop = True
-        Me.RdBIndonesia.Text = "Bahasa Indonesia"
+        Me.RdBIndonesia.Text = "Indonesia"
         Me.RdBIndonesia.UseVisualStyleBackColor = True
         '
         'BtnEditFilm
@@ -504,6 +508,30 @@ Partial Class EditFilm
         Me.ChckDrama.Text = "Drama"
         Me.ChckDrama.UseVisualStyleBackColor = True
         '
+        'RdBJepang
+        '
+        Me.RdBJepang.AutoSize = True
+        Me.RdBJepang.Location = New System.Drawing.Point(232, 26)
+        Me.RdBJepang.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.RdBJepang.Name = "RdBJepang"
+        Me.RdBJepang.Size = New System.Drawing.Size(97, 29)
+        Me.RdBJepang.TabIndex = 2
+        Me.RdBJepang.TabStop = True
+        Me.RdBJepang.Text = "Jepang"
+        Me.RdBJepang.UseVisualStyleBackColor = True
+        '
+        'RdBKorea
+        '
+        Me.RdBKorea.AutoSize = True
+        Me.RdBKorea.Location = New System.Drawing.Point(232, 57)
+        Me.RdBKorea.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.RdBKorea.Name = "RdBKorea"
+        Me.RdBKorea.Size = New System.Drawing.Size(90, 29)
+        Me.RdBKorea.TabIndex = 3
+        Me.RdBKorea.TabStop = True
+        Me.RdBKorea.Text = "Korea"
+        Me.RdBKorea.UseVisualStyleBackColor = True
+        '
         'EditFilm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
@@ -587,4 +615,6 @@ Partial Class EditFilm
     Friend WithEvents ChckHoror As CheckBox
     Friend WithEvents ChckKomedi As CheckBox
     Friend WithEvents ChckDrama As CheckBox
+    Friend WithEvents RdBJepang As RadioButton
+    Friend WithEvents RdBKorea As RadioButton
 End Class
