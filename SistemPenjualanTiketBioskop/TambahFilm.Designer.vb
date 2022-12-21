@@ -40,11 +40,6 @@ Partial Class TambahFilm
         Me.ChckDokumenter = New System.Windows.Forms.CheckBox()
         Me.ChckAnimasi = New System.Windows.Forms.CheckBox()
         Me.ChckAction = New System.Windows.Forms.CheckBox()
-        Me.RdBInggris = New System.Windows.Forms.RadioButton()
-        Me.RdBIndonesia = New System.Windows.Forms.RadioButton()
-        Me.GroupBahasa = New System.Windows.Forms.GroupBox()
-        Me.RdBKorea = New System.Windows.Forms.RadioButton()
-        Me.RdBJepang = New System.Windows.Forms.RadioButton()
         Me.TxtHargaFilm = New System.Windows.Forms.TextBox()
         Me.TxtDuration = New System.Windows.Forms.TextBox()
         Me.RichDeskripsiFilm = New System.Windows.Forms.RichTextBox()
@@ -62,9 +57,11 @@ Partial Class TambahFilm
         Me.TxtDirector = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ComboBoxRatingUsia = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxBahasa = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupGenre.SuspendLayout()
-        Me.GroupBahasa.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,7 +70,7 @@ Partial Class TambahFilm
         Me.LblValueDeskripsi.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LblValueDeskripsi.AutoSize = True
         Me.LblValueDeskripsi.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LblValueDeskripsi.Location = New System.Drawing.Point(909, 350)
+        Me.LblValueDeskripsi.Location = New System.Drawing.Point(909, 401)
         Me.LblValueDeskripsi.Name = "LblValueDeskripsi"
         Me.LblValueDeskripsi.Size = New System.Drawing.Size(45, 25)
         Me.LblValueDeskripsi.TabIndex = 53
@@ -279,76 +276,11 @@ Partial Class TambahFilm
         Me.ChckAction.Text = "Action"
         Me.ChckAction.UseVisualStyleBackColor = True
         '
-        'RdBInggris
-        '
-        Me.RdBInggris.AutoSize = True
-        Me.RdBInggris.Location = New System.Drawing.Point(7, 57)
-        Me.RdBInggris.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.RdBInggris.Name = "RdBInggris"
-        Me.RdBInggris.Size = New System.Drawing.Size(95, 29)
-        Me.RdBInggris.TabIndex = 1
-        Me.RdBInggris.TabStop = True
-        Me.RdBInggris.Text = "Inggris"
-        Me.RdBInggris.UseVisualStyleBackColor = True
-        '
-        'RdBIndonesia
-        '
-        Me.RdBIndonesia.AutoSize = True
-        Me.RdBIndonesia.Location = New System.Drawing.Point(7, 26)
-        Me.RdBIndonesia.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.RdBIndonesia.Name = "RdBIndonesia"
-        Me.RdBIndonesia.Size = New System.Drawing.Size(120, 29)
-        Me.RdBIndonesia.TabIndex = 0
-        Me.RdBIndonesia.TabStop = True
-        Me.RdBIndonesia.Text = "Indonesia"
-        Me.RdBIndonesia.UseVisualStyleBackColor = True
-        '
-        'GroupBahasa
-        '
-        Me.GroupBahasa.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.GroupBahasa.Controls.Add(Me.RdBKorea)
-        Me.GroupBahasa.Controls.Add(Me.RdBJepang)
-        Me.GroupBahasa.Controls.Add(Me.RdBInggris)
-        Me.GroupBahasa.Controls.Add(Me.RdBIndonesia)
-        Me.GroupBahasa.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBahasa.Location = New System.Drawing.Point(521, 547)
-        Me.GroupBahasa.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBahasa.Name = "GroupBahasa"
-        Me.GroupBahasa.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBahasa.Size = New System.Drawing.Size(382, 98)
-        Me.GroupBahasa.TabIndex = 48
-        Me.GroupBahasa.TabStop = False
-        Me.GroupBahasa.Text = "Bahasa"
-        '
-        'RdBKorea
-        '
-        Me.RdBKorea.AutoSize = True
-        Me.RdBKorea.Location = New System.Drawing.Point(232, 57)
-        Me.RdBKorea.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.RdBKorea.Name = "RdBKorea"
-        Me.RdBKorea.Size = New System.Drawing.Size(90, 29)
-        Me.RdBKorea.TabIndex = 3
-        Me.RdBKorea.TabStop = True
-        Me.RdBKorea.Text = "Korea"
-        Me.RdBKorea.UseVisualStyleBackColor = True
-        '
-        'RdBJepang
-        '
-        Me.RdBJepang.AutoSize = True
-        Me.RdBJepang.Location = New System.Drawing.Point(232, 26)
-        Me.RdBJepang.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.RdBJepang.Name = "RdBJepang"
-        Me.RdBJepang.Size = New System.Drawing.Size(97, 29)
-        Me.RdBJepang.TabIndex = 2
-        Me.RdBJepang.TabStop = True
-        Me.RdBJepang.Text = "Jepang"
-        Me.RdBJepang.UseVisualStyleBackColor = True
-        '
         'TxtHargaFilm
         '
         Me.TxtHargaFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtHargaFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtHargaFilm.Location = New System.Drawing.Point(521, 497)
+        Me.TxtHargaFilm.Location = New System.Drawing.Point(521, 548)
         Me.TxtHargaFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtHargaFilm.Name = "TxtHargaFilm"
         Me.TxtHargaFilm.Size = New System.Drawing.Size(382, 35)
@@ -358,7 +290,7 @@ Partial Class TambahFilm
         '
         Me.TxtDuration.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtDuration.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtDuration.Location = New System.Drawing.Point(521, 393)
+        Me.TxtDuration.Location = New System.Drawing.Point(521, 444)
         Me.TxtDuration.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtDuration.Name = "TxtDuration"
         Me.TxtDuration.Size = New System.Drawing.Size(382, 35)
@@ -368,7 +300,7 @@ Partial Class TambahFilm
         '
         Me.RichDeskripsiFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.RichDeskripsiFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.RichDeskripsiFilm.Location = New System.Drawing.Point(521, 208)
+        Me.RichDeskripsiFilm.Location = New System.Drawing.Point(521, 259)
         Me.RichDeskripsiFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RichDeskripsiFilm.Name = "RichDeskripsiFilm"
         Me.RichDeskripsiFilm.Size = New System.Drawing.Size(382, 167)
@@ -379,7 +311,7 @@ Partial Class TambahFilm
         '
         Me.DateTimePickerRelease.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.DateTimePickerRelease.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePickerRelease.Location = New System.Drawing.Point(521, 445)
+        Me.DateTimePickerRelease.Location = New System.Drawing.Point(521, 496)
         Me.DateTimePickerRelease.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePickerRelease.Name = "DateTimePickerRelease"
         Me.DateTimePickerRelease.Size = New System.Drawing.Size(382, 35)
@@ -411,7 +343,7 @@ Partial Class TambahFilm
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.Location = New System.Drawing.Point(301, 560)
+        Me.Label10.Location = New System.Drawing.Point(301, 611)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(75, 25)
         Me.Label10.TabIndex = 39
@@ -422,7 +354,7 @@ Partial Class TambahFilm
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(301, 501)
+        Me.Label7.Location = New System.Drawing.Point(301, 552)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 25)
         Me.Label7.TabIndex = 36
@@ -433,7 +365,7 @@ Partial Class TambahFilm
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(301, 452)
+        Me.Label6.Location = New System.Drawing.Point(301, 503)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(129, 25)
         Me.Label6.TabIndex = 35
@@ -444,7 +376,7 @@ Partial Class TambahFilm
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(301, 397)
+        Me.Label5.Location = New System.Drawing.Point(301, 448)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(89, 25)
         Me.Label5.TabIndex = 34
@@ -471,7 +403,7 @@ Partial Class TambahFilm
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(301, 208)
+        Me.Label4.Location = New System.Drawing.Point(301, 259)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(97, 25)
         Me.Label4.TabIndex = 32
@@ -482,7 +414,7 @@ Partial Class TambahFilm
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(301, 160)
+        Me.Label3.Location = New System.Drawing.Point(301, 211)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(85, 25)
         Me.Label3.TabIndex = 31
@@ -504,7 +436,7 @@ Partial Class TambahFilm
         '
         Me.TxtDirector.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtDirector.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtDirector.Location = New System.Drawing.Point(521, 156)
+        Me.TxtDirector.Location = New System.Drawing.Point(521, 207)
         Me.TxtDirector.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtDirector.Name = "TxtDirector"
         Me.TxtDirector.Size = New System.Drawing.Size(382, 35)
@@ -531,20 +463,55 @@ Partial Class TambahFilm
         Me.Panel1.Size = New System.Drawing.Size(1000, 68)
         Me.Panel1.TabIndex = 55
         '
+        'ComboBoxRatingUsia
+        '
+        Me.ComboBoxRatingUsia.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ComboBoxRatingUsia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxRatingUsia.FormattingEnabled = True
+        Me.ComboBoxRatingUsia.Items.AddRange(New Object() {"SU", "R13+", "D17+"})
+        Me.ComboBoxRatingUsia.Location = New System.Drawing.Point(521, 157)
+        Me.ComboBoxRatingUsia.Name = "ComboBoxRatingUsia"
+        Me.ComboBoxRatingUsia.Size = New System.Drawing.Size(382, 30)
+        Me.ComboBoxRatingUsia.TabIndex = 56
+        '
+        'ComboBoxBahasa
+        '
+        Me.ComboBoxBahasa.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ComboBoxBahasa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxBahasa.FormattingEnabled = True
+        Me.ComboBoxBahasa.Items.AddRange(New Object() {"Indonesia", "Inggris", "Jepang", "Korea", "Mandarin"})
+        Me.ComboBoxBahasa.Location = New System.Drawing.Point(521, 611)
+        Me.ComboBoxBahasa.Name = "ComboBoxBahasa"
+        Me.ComboBoxBahasa.Size = New System.Drawing.Size(382, 30)
+        Me.ComboBoxBahasa.TabIndex = 57
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(301, 157)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(114, 25)
+        Me.Label8.TabIndex = 58
+        Me.Label8.Text = "Rating Usia"
+        '
         'TambahFilm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1000, 967)
+        Me.ClientSize = New System.Drawing.Size(1000, 978)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.ComboBoxBahasa)
+        Me.Controls.Add(Me.ComboBoxRatingUsia)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TxtDirector)
         Me.Controls.Add(Me.LblValueDeskripsi)
         Me.Controls.Add(Me.PicFoto)
         Me.Controls.Add(Me.BtnTambahFilm)
         Me.Controls.Add(Me.GroupGenre)
-        Me.Controls.Add(Me.GroupBahasa)
         Me.Controls.Add(Me.TxtHargaFilm)
         Me.Controls.Add(Me.TxtDuration)
         Me.Controls.Add(Me.RichDeskripsiFilm)
@@ -567,8 +534,6 @@ Partial Class TambahFilm
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupGenre.ResumeLayout(False)
         Me.GroupGenre.PerformLayout()
-        Me.GroupBahasa.ResumeLayout(False)
-        Me.GroupBahasa.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -585,9 +550,6 @@ Partial Class TambahFilm
     Friend WithEvents ChckKomedi As CheckBox
     Friend WithEvents ChckDrama As CheckBox
     Friend WithEvents GroupGenre As GroupBox
-    Friend WithEvents RdBInggris As RadioButton
-    Friend WithEvents RdBIndonesia As RadioButton
-    Friend WithEvents GroupBahasa As GroupBox
     Friend WithEvents TxtHargaFilm As TextBox
     Friend WithEvents TxtDuration As TextBox
     Friend WithEvents RichDeskripsiFilm As RichTextBox
@@ -614,6 +576,7 @@ Partial Class TambahFilm
     Friend WithEvents ChckBiografi As CheckBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents RdBJepang As RadioButton
-    Friend WithEvents RdBKorea As RadioButton
+    Friend WithEvents ComboBoxRatingUsia As ComboBox
+    Friend WithEvents ComboBoxBahasa As ComboBox
+    Friend WithEvents Label8 As Label
 End Class

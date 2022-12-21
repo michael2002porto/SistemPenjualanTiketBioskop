@@ -6,7 +6,6 @@ Public Class Film
 
     Public Shared selectedTableFilm As Integer
     Public Shared selectedTableNamaFilm As String
-    Private selectedRow As DataGridViewRow
 
     Public Sub New()
 
@@ -38,16 +37,17 @@ Public Class Film
         Try
             Dim selectedFilm As List(Of String) = dataFilm.GetDataFilmByIDDatabase(selectedTableFilm)
 
-            dataFilm.GSFoto = selectedFilm(9)
+            dataFilm.GSFoto = selectedFilm(10)
 
             dataFilm.GSNamaFilm = selectedFilm(1)
-            dataFilm.GSDeskripsi = selectedFilm(3)
-            dataFilm.GSDirector = selectedFilm(4)
-            dataFilm.GSDateRelease = selectedFilm(6)
-            dataFilm.GSDuration = selectedFilm(5)
-            dataFilm.GSHargaFilm = selectedFilm(8)
-            dataFilm.GSBahasa = selectedFilm(7)
-            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedFilm(2))
+            dataFilm.GSRatingUsia = selectedFilm(2)
+            dataFilm.GSDeskripsi = selectedFilm(4)
+            dataFilm.GSDirector = selectedFilm(5)
+            dataFilm.GSDateRelease = selectedFilm(7)
+            dataFilm.GSDuration = selectedFilm(6)
+            dataFilm.GSHargaFilm = selectedFilm(9)
+            dataFilm.GSBahasa = selectedFilm(8)
+            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedFilm(3))
             Dim updateFilm = New EditFilm()
             updateFilm.Show()
         Catch ex As Exception
@@ -60,16 +60,17 @@ Public Class Film
         Try
             Dim selectedFilm As List(Of String) = dataFilm.GetDataFilmByIDDatabase(selectedTableFilm)
 
-            dataFilm.GSFoto = selectedFilm(9)
+            dataFilm.GSFoto = selectedFilm(10)
 
             dataFilm.GSNamaFilm = selectedFilm(1)
-            dataFilm.GSDeskripsi = selectedFilm(3)
-            dataFilm.GSDirector = selectedFilm(4)
-            dataFilm.GSDateRelease = selectedFilm(6)
-            dataFilm.GSDuration = selectedFilm(5)
-            dataFilm.GSHargaFilm = selectedFilm(8)
-            dataFilm.GSBahasa = selectedFilm(7)
-            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedFilm(2))
+            dataFilm.GSRatingUsia = selectedFilm(2)
+            dataFilm.GSDeskripsi = selectedFilm(4)
+            dataFilm.GSDirector = selectedFilm(5)
+            dataFilm.GSDateRelease = selectedFilm(7)
+            dataFilm.GSDuration = selectedFilm(6)
+            dataFilm.GSHargaFilm = selectedFilm(9)
+            dataFilm.GSBahasa = selectedFilm(8)
+            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedFilm(3))
 
             Dim removeFilm = New HapusFilm()
             removeFilm.Show()

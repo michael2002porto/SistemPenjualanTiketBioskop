@@ -21,25 +21,13 @@
         DateTimePickerRelease.Format = DateTimePickerFormat.Custom
         DateTimePickerRelease.CustomFormat = "yyyy/MM/dd"
         TxtFilm.Text = Film.dataFilm.GSNamaFilm
+        ComboBoxRatingUsia.SelectedItem() = Film.dataFilm.GSRatingUsia
         RichDeskripsiFilm.Text = Film.dataFilm.GSDeskripsi
         TxtDirector.Text = Film.dataFilm.GSDirector
         TxtDuration.Text = Film.dataFilm.GSDuration
         DateTimePickerRelease.Value = Film.dataFilm.GSDateRelease
+        ComboBoxBahasa.SelectedItem() = Film.dataFilm.GSBahasa
         TxtHargaFilm.Text = Film.dataFilm.GSHargaFilm
-
-        If String.Compare(Film.dataFilm.GSBahasa, "Indonesia") = 0 Then
-            RdBIndonesia.Checked = True
-
-        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Inggris") = 0 Then
-            RdBInggris.Checked = True
-
-        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Jepang") = 0 Then
-            RdBJepang.Checked = True
-
-        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Korea") = 0 Then
-            RdBKorea.Checked = True
-
-        End If
 
         For Each genreItem In Film.dataFilm.GSGenre
 
@@ -119,25 +107,13 @@
 
     Private Sub BtnEditFilm_Click(sender As Object, e As EventArgs) Handles BtnEditFilm.Click
         Film.dataFilm.GSNamaFilm = TxtFilm.Text.ToString()
+        ComboBoxRatingUsia.SelectedItem() = Film.dataFilm.GSRatingUsia
         Film.dataFilm.GSDeskripsi = RichDeskripsiFilm.Text.ToString()
         Film.dataFilm.GSDirector = TxtDirector.Text.ToString()
         Film.dataFilm.GSDuration = TxtDuration.Text.ToString()
         Film.dataFilm.GSDateRelease = DateTimePickerRelease.Value.ToString("yyyy/MM/dd")
+        ComboBoxBahasa.SelectedItem() = Film.dataFilm.GSBahasa
         Film.dataFilm.GSHargaFilm = Integer.Parse(TxtHargaFilm.Text)
-
-        If RdBIndonesia.Checked = True Then
-            Film.dataFilm.GSBahasa = "Indonesia"
-
-        ElseIf RdBInggris.Checked = True Then
-            Film.dataFilm.GSBahasa = "Inggris"
-
-        ElseIf RdBJepang.Checked = True Then
-            Film.dataFilm.GSBahasa = "Jepang"
-
-        ElseIf RdBKorea.Checked = True Then
-            Film.dataFilm.GSBahasa = "Korea"
-
-        End If
 
         If ChckDrama.Checked() Then
             Film.dataFilm.AddGenre("Drama")
@@ -195,6 +171,7 @@
 
         Film.dataFilm.UpdateDataFilmByIDDatabase(Film.selectedTableFilm,
                                                  Film.dataFilm.GSNamaFilm,
+                                                 Film.dataFilm.GSRatingUsia,
                                                  convertedGenre,
                                                  Film.dataFilm.GSDeskripsi,
                                                  Film.dataFilm.GSDirector,

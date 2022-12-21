@@ -12,6 +12,7 @@ Public Class DataFilm
     Private date_release
     Private bahasa As String
     Private harga_film As String
+    Private rating_usia As String
 
     'Database Global Variable
     Public Shared dbConn As New MySqlConnection
@@ -121,6 +122,16 @@ Public Class DataFilm
         End Set
     End Property
 
+    ' Rating Usia
+    Public Property GSRatingUsia() As String
+        Get
+            Return rating_usia
+        End Get
+        Set(ByVal value As String)
+            rating_usia = value
+        End Set
+    End Property
+
     Public Function AddGenre(value As String)
         genre.Add(value)
         Return ""
@@ -174,7 +185,9 @@ Public Class DataFilm
             sqlCommand.Connection = dbConn
             sqlCommand.CommandText = "SELECT id AS 'ID',
                                       nama_film AS 'Film',
+                                      rating_usia AS 'Rating Usia',
                                       genre AS 'Genre',
+                                      deskripsi AS 'Deskripsi',
                                       director AS 'Director',
                                       duration AS 'Duration',
                                       date_release AS 'Date Release',
@@ -200,6 +213,7 @@ Public Class DataFilm
 
     '' Function untuk menambahkan data film di database
     Public Function AddDataFilmDatabase(film As String,
+                                        rating_usia As String,
                                         genre As String,
                                         deskripsi As String,
                                         director As String,
@@ -216,11 +230,12 @@ Public Class DataFilm
             dbConn.Open()
             sqlCommand.Connection = dbConn
 
-            sqlQuery = "INSERT INTO FILM(nama_film, genre,
-                        deskripsi, director, duration, 
+            sqlQuery = "INSERT INTO FILM(nama_film, rating_usia,
+                        genre, deskripsi, director, duration, 
                         date_release, bahasa, harga_film,
                         foto) VALUE('" _
                         & film & "', '" _
+                        & rating_usia & "', '" _
                         & genre & "', '" _
                         & deskripsi & "', '" _
                         & director & "', '" _
@@ -256,6 +271,7 @@ Public Class DataFilm
             sqlCommand.Connection = dbConn
             sqlCommand.CommandText = "SELECT id, 
                                       nama_film, 
+                                      rating_usia,
                                       genre, 
                                       deskripsi, 
                                       director, 
@@ -281,6 +297,7 @@ Public Class DataFilm
                 result.Add(sqlRead.GetString(7).ToString())
                 result.Add(sqlRead.GetString(8).ToString())
                 result.Add(sqlRead.GetString(9).ToString())
+                result.Add(sqlRead.GetString(10).ToString())
             End While
 
             'Return result
@@ -298,6 +315,7 @@ Public Class DataFilm
     '' Function untuk update data film di database
     Public Function UpdateDataFilmByIDDatabase(id_film As Integer,
                                                film As String,
+                                               rating_usia As String,
                                                genre As String,
                                                deskripsi_film As String,
                                                director As String,
@@ -315,6 +333,7 @@ Public Class DataFilm
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "UPDATE film SET nama_film='" & film & "', " &
+                       "rating_usia='" & rating_usia & "', " &
                        "foto='" & foto & "', " &
                        "genre='" & genre & "', " &
                        "deskripsi='" & deskripsi_film & "', " &

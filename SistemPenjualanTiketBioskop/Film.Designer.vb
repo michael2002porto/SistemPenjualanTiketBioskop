@@ -149,9 +149,9 @@ Partial Class Film
         Me.BtnTiket.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTiket.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTiket.ForeColor = System.Drawing.Color.White
-        Me.BtnTiket.Location = New System.Drawing.Point(1035, 2)
+        Me.BtnTiket.Location = New System.Drawing.Point(1035, 3)
         Me.BtnTiket.Name = "BtnTiket"
-        Me.BtnTiket.Size = New System.Drawing.Size(112, 90)
+        Me.BtnTiket.Size = New System.Drawing.Size(112, 88)
         Me.BtnTiket.TabIndex = 3
         Me.BtnTiket.Text = "Tiket"
         Me.BtnTiket.UseVisualStyleBackColor = True
@@ -162,9 +162,9 @@ Partial Class Film
         Me.BtnJadwalTayang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnJadwalTayang.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnJadwalTayang.ForeColor = System.Drawing.Color.White
-        Me.BtnJadwalTayang.Location = New System.Drawing.Point(541, 0)
+        Me.BtnJadwalTayang.Location = New System.Drawing.Point(541, 2)
         Me.BtnJadwalTayang.Name = "BtnJadwalTayang"
-        Me.BtnJadwalTayang.Size = New System.Drawing.Size(201, 90)
+        Me.BtnJadwalTayang.Size = New System.Drawing.Size(201, 87)
         Me.BtnJadwalTayang.TabIndex = 2
         Me.BtnJadwalTayang.Text = "Jadwal Tayang"
         Me.BtnJadwalTayang.UseVisualStyleBackColor = True
@@ -175,9 +175,9 @@ Partial Class Film
         Me.BtnStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStudio.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnStudio.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BtnStudio.Location = New System.Drawing.Point(902, 2)
+        Me.BtnStudio.Location = New System.Drawing.Point(902, 3)
         Me.BtnStudio.Name = "BtnStudio"
-        Me.BtnStudio.Size = New System.Drawing.Size(112, 87)
+        Me.BtnStudio.Size = New System.Drawing.Size(112, 86)
         Me.BtnStudio.TabIndex = 1
         Me.BtnStudio.Text = "Studio"
         Me.BtnStudio.UseVisualStyleBackColor = True
@@ -188,9 +188,9 @@ Partial Class Film
         Me.BtnFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnFilm.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnFilm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.BtnFilm.Location = New System.Drawing.Point(757, 2)
+        Me.BtnFilm.Location = New System.Drawing.Point(757, 3)
         Me.BtnFilm.Name = "BtnFilm"
-        Me.BtnFilm.Size = New System.Drawing.Size(112, 87)
+        Me.BtnFilm.Size = New System.Drawing.Size(112, 86)
         Me.BtnFilm.TabIndex = 0
         Me.BtnFilm.Text = "Film"
         Me.BtnFilm.UseVisualStyleBackColor = True

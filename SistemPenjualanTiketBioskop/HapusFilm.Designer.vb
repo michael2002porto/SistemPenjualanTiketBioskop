@@ -45,14 +45,14 @@ Partial Class HapusFilm
         'LblFilm
         '
         Me.LblFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.LblFilm.AutoSize = True
         Me.LblFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.LblFilm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.LblFilm.Location = New System.Drawing.Point(219, 131)
+        Me.LblFilm.Location = New System.Drawing.Point(52, 131)
         Me.LblFilm.Name = "LblFilm"
-        Me.LblFilm.Size = New System.Drawing.Size(20, 26)
+        Me.LblFilm.Size = New System.Drawing.Size(696, 26)
         Me.LblFilm.TabIndex = 4
         Me.LblFilm.Text = "-"
+        Me.LblFilm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
