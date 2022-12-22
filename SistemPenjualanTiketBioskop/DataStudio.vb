@@ -1,9 +1,7 @@
 ﻿Imports System.Text
 Imports MySql.Data.MySqlClient
 Public Class DataStudio
-    Private id_studio As Integer
     Private nama_studio As String
-    Private jenis_studio As String
     Private kapasitas_studio As Integer
     Private harga_kursi As Integer
     Private list_studio As New List(Of String)
@@ -20,30 +18,12 @@ Public Class DataStudio
     Private password_db As String = ""
     Private database As String = "bioskop"
 
-    Public Property GSId() As Integer
-        Get
-            Return id_studio
-        End Get
-        Set(value As Integer)
-            id_studio = value
-        End Set
-    End Property
-
     Public Property GSNama() As String
         Get
             Return nama_studio
         End Get
         Set(value As String)
             nama_studio = value
-        End Set
-    End Property
-
-    Public Property GSJenis() As String
-        Get
-            Return jenis_studio
-        End Get
-        Set(value As String)
-            jenis_studio = value
         End Set
     End Property
 
@@ -88,10 +68,9 @@ Public Class DataStudio
 
     'Public Function AddListStudioDataTable(id_studio As Integer,
     '                                      nama_studio As String,
-    '                                      jenis_studio As String,
     '                                      kapasitas_studio As Integer,
     '                                      harga_kursi As Integer)
-    '    ListStudioDataTable.Add({id_studio, nama_studio, jenis_studio, kapasitas_studio, harga_kursi})
+    '    ListStudioDataTable.Add({id_studio, nama_studio, kapasitas_studio, harga_kursi})
     'End Function
 
     'Public Function RemoveListStudioDatabase(index As Integer)
@@ -104,6 +83,16 @@ Public Class DataStudio
     '    End Get
     'End Property
 
+    Public Function AddStudio(value As String)
+        list_studio.Add(value)
+        Return ""
+    End Function
+
+    Public ReadOnly Property getStudioItem() As List(Of String)
+        Get
+            Return list_studio
+        End Get
+    End Property
     Public Function ConvertKoleksiToString(vals As List(Of String))
         Dim builder As StringBuilder = New StringBuilder()
         For Each val As String In vals
@@ -129,11 +118,10 @@ Public Class DataStudio
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" + "password=" + password_db + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_studio AS 'ID', 
-                                 nama_studio AS 'Nama Koleksi',
-                                 jenis_studio AS 'Jenis Koleksi', 
+        sqlCommand.CommandText = "SELECT id AS 'ID', 
+                                 nama_studio AS 'Nama Studio', 
                                  kapasitas AS 'Kapasitas Studio', 
-                                 harga_kursi AS 'Harga Studio',  
+                                 harga_kursi AS 'Harga Kursi' 
                                  FROM studio "
 
         sqlRead = sqlCommand.ExecuteReader
@@ -144,9 +132,7 @@ Public Class DataStudio
         Return result
     End Function
 
-    Public Function AddDataStudioDatabase(id_studio As Integer,
-                                          nama_studio As String,
-                                          jenis_studio As String,
+    Public Function AddDataStudioDatabase(nama_studio As String,
                                           kapasitas_studio As Integer,
                                           harga_kursi As Integer)
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" + "password=" + password_db + ";" + "database =" + database
@@ -154,11 +140,9 @@ Public Class DataStudio
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO STUDIO(id, nama_studio, jenis_studio, kapasitas, harga_kursi)
+            sqlQuery = "INSERT INTO STUDIO(nama_studio, kapasitas, harga_kursi)
                         VALUE('" _
-                                    & id_studio & "', '" _
                                     & nama_studio & "', '" _
-                                    & jenis_studio & "', '" _
                                     & kapasitas_studio & "', '" _
                                     & harga_kursi & "')"
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
@@ -176,7 +160,6 @@ Public Class DataStudio
 
     Public Function UpdateDataStudioByIDDatabase(id_studio As Integer,
                                                 nama_studio As String,
-                                                jenis_studio As String,
                                                 kapasitas_studio As Integer,
                                                 harga_kursi As Integer)
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" + "password=" + password_db + ";" + "database =" + database
@@ -185,11 +168,10 @@ Public Class DataStudio
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "UPDATE studio SET " &
-                        "id='" & id_studio & "', " &
                         "nama_studio='" & nama_studio & "', " &
-                        "jenis_studio='" & jenis_studio & "', " &
                         "kapasitas='" & kapasitas_studio & "', " &
-                        "harga_kursi='" & harga_kursi & "'"
+                        "harga_kursi='" & harga_kursi & "' " &
+                        "WHERE id='" & id_studio & "'"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -213,7 +195,6 @@ Public Class DataStudio
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id, 
                                   nama_studio, 
-                                  jenis_studio, 
                                   kapasitas, 
                                   harga_kursi
                                   FROM studio 
@@ -226,7 +207,6 @@ Public Class DataStudio
             result.Add(sqlRead.GetString(1).ToString())
             result.Add(sqlRead.GetString(2).ToString())
             result.Add(sqlRead.GetString(3).ToString())
-            result.Add(sqlRead.GetString(4).ToString())
         End While
 
         sqlRead.Close()

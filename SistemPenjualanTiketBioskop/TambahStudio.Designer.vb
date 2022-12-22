@@ -23,66 +23,48 @@ Partial Class TambahStudio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.BtnSave = New System.Windows.Forms.Button()
-        Me.TxtHargaKursiValue = New System.Windows.Forms.TextBox()
-        Me.CbxJenisStudio = New System.Windows.Forms.ComboBox()
+        Me.CbxKapasitasStudio = New System.Windows.Forms.ComboBox()
         Me.TxtNamaStudioValue = New System.Windows.Forms.TextBox()
-        Me.LblHarga = New System.Windows.Forms.Label()
-        Me.LblJenis = New System.Windows.Forms.Label()
+        Me.LblKapasitas = New System.Windows.Forms.Label()
         Me.LblNamaStudio = New System.Windows.Forms.Label()
         Me.LblJudulCreate = New System.Windows.Forms.Label()
-        Me.TxtId = New System.Windows.Forms.TextBox()
-        Me.LblId = New System.Windows.Forms.Label()
+        Me.LblHargaKursi = New System.Windows.Forms.Label()
+        Me.CbxHargaKursi = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'BtnSave
         '
-        Me.BtnSave.Location = New System.Drawing.Point(482, 250)
+        Me.BtnSave.Location = New System.Drawing.Point(492, 230)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(113, 34)
         Me.BtnSave.TabIndex = 15
         Me.BtnSave.Text = "Save"
         Me.BtnSave.UseVisualStyleBackColor = True
         '
-        'TxtHargaKursiValue
+        'CbxKapasitasStudio
         '
-        Me.TxtHargaKursiValue.Location = New System.Drawing.Point(220, 200)
-        Me.TxtHargaKursiValue.Name = "TxtHargaKursiValue"
-        Me.TxtHargaKursiValue.Size = New System.Drawing.Size(375, 31)
-        Me.TxtHargaKursiValue.TabIndex = 14
-        '
-        'CbxJenisStudio
-        '
-        Me.CbxJenisStudio.FormattingEnabled = True
-        Me.CbxJenisStudio.Items.AddRange(New Object() {"Deluxe", "Dolby Atmos", "IMAX", "The Premiere"})
-        Me.CbxJenisStudio.Location = New System.Drawing.Point(220, 160)
-        Me.CbxJenisStudio.Name = "CbxJenisStudio"
-        Me.CbxJenisStudio.Size = New System.Drawing.Size(375, 33)
-        Me.CbxJenisStudio.TabIndex = 13
+        Me.CbxKapasitasStudio.FormattingEnabled = True
+        Me.CbxKapasitasStudio.Items.AddRange(New Object() {"136", "146", "200", "259"})
+        Me.CbxKapasitasStudio.Location = New System.Drawing.Point(230, 130)
+        Me.CbxKapasitasStudio.Name = "CbxKapasitasStudio"
+        Me.CbxKapasitasStudio.Size = New System.Drawing.Size(375, 33)
+        Me.CbxKapasitasStudio.TabIndex = 13
         '
         'TxtNamaStudioValue
         '
-        Me.TxtNamaStudioValue.Location = New System.Drawing.Point(220, 80)
+        Me.TxtNamaStudioValue.Location = New System.Drawing.Point(230, 80)
         Me.TxtNamaStudioValue.Name = "TxtNamaStudioValue"
         Me.TxtNamaStudioValue.Size = New System.Drawing.Size(375, 31)
         Me.TxtNamaStudioValue.TabIndex = 12
         '
-        'LblHarga
+        'LblKapasitas
         '
-        Me.LblHarga.AutoSize = True
-        Me.LblHarga.Location = New System.Drawing.Point(70, 200)
-        Me.LblHarga.Name = "LblHarga"
-        Me.LblHarga.Size = New System.Drawing.Size(132, 25)
-        Me.LblHarga.TabIndex = 11
-        Me.LblHarga.Text = "Harga Kursi     :"
-        '
-        'LblJenis
-        '
-        Me.LblJenis.AutoSize = True
-        Me.LblJenis.Location = New System.Drawing.Point(70, 160)
-        Me.LblJenis.Name = "LblJenis"
-        Me.LblJenis.Size = New System.Drawing.Size(134, 25)
-        Me.LblJenis.TabIndex = 10
-        Me.LblJenis.Text = "Jenis Studio     :"
+        Me.LblKapasitas.AutoSize = True
+        Me.LblKapasitas.Location = New System.Drawing.Point(70, 130)
+        Me.LblKapasitas.Name = "LblKapasitas"
+        Me.LblKapasitas.Size = New System.Drawing.Size(151, 25)
+        Me.LblKapasitas.TabIndex = 10
+        Me.LblKapasitas.Text = "Kapasitas Studio :"
         '
         'LblNamaStudio
         '
@@ -103,35 +85,35 @@ Partial Class TambahStudio
         Me.LblJudulCreate.TabIndex = 8
         Me.LblJudulCreate.Text = "Tambah Data Studio"
         '
-        'TxtId
+        'LblHargaKursi
         '
-        Me.TxtId.Location = New System.Drawing.Point(220, 120)
-        Me.TxtId.Name = "TxtId"
-        Me.TxtId.Size = New System.Drawing.Size(375, 31)
-        Me.TxtId.TabIndex = 19
+        Me.LblHargaKursi.AutoSize = True
+        Me.LblHargaKursi.Location = New System.Drawing.Point(70, 180)
+        Me.LblHargaKursi.Name = "LblHargaKursi"
+        Me.LblHargaKursi.Size = New System.Drawing.Size(152, 25)
+        Me.LblHargaKursi.TabIndex = 16
+        Me.LblHargaKursi.Text = "Harga Kursi         :"
         '
-        'LblId
+        'CbxHargaKursi
         '
-        Me.LblId.AutoSize = True
-        Me.LblId.Location = New System.Drawing.Point(70, 120)
-        Me.LblId.Name = "LblId"
-        Me.LblId.Size = New System.Drawing.Size(134, 25)
-        Me.LblId.TabIndex = 18
-        Me.LblId.Text = "ID                    :"
+        Me.CbxHargaKursi.FormattingEnabled = True
+        Me.CbxHargaKursi.Items.AddRange(New Object() {"30000", "50000", "75000", "100000"})
+        Me.CbxHargaKursi.Location = New System.Drawing.Point(230, 180)
+        Me.CbxHargaKursi.Name = "CbxHargaKursi"
+        Me.CbxHargaKursi.Size = New System.Drawing.Size(375, 33)
+        Me.CbxHargaKursi.TabIndex = 17
         '
         'TambahStudio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(679, 303)
-        Me.Controls.Add(Me.TxtId)
-        Me.Controls.Add(Me.LblId)
+        Me.ClientSize = New System.Drawing.Size(679, 277)
+        Me.Controls.Add(Me.CbxHargaKursi)
+        Me.Controls.Add(Me.LblHargaKursi)
         Me.Controls.Add(Me.BtnSave)
-        Me.Controls.Add(Me.TxtHargaKursiValue)
-        Me.Controls.Add(Me.CbxJenisStudio)
+        Me.Controls.Add(Me.CbxKapasitasStudio)
         Me.Controls.Add(Me.TxtNamaStudioValue)
-        Me.Controls.Add(Me.LblHarga)
-        Me.Controls.Add(Me.LblJenis)
+        Me.Controls.Add(Me.LblKapasitas)
         Me.Controls.Add(Me.LblNamaStudio)
         Me.Controls.Add(Me.LblJudulCreate)
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -143,13 +125,13 @@ Partial Class TambahStudio
     End Sub
 
     Friend WithEvents BtnSave As Button
-    Friend WithEvents TxtHargaKursiValue As TextBox
-    Friend WithEvents CbxJenisStudio As ComboBox
+    Friend WithEvents CbxKapasitasStudio As ComboBox
     Friend WithEvents TxtNamaStudioValue As TextBox
-    Friend WithEvents LblHarga As Label
-    Friend WithEvents LblJenis As Label
+    Friend WithEvents LblKapasitas As Label
     Friend WithEvents LblNamaStudio As Label
     Friend WithEvents LblJudulCreate As Label
     Friend WithEvents TxtId As TextBox
     Friend WithEvents LblId As Label
+    Friend WithEvents LblHargaKursi As Label
+    Friend WithEvents CbxHargaKursi As ComboBox
 End Class
