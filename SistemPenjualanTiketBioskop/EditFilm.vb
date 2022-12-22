@@ -69,6 +69,10 @@
 
             ElseIf String.Compare(genreItem, "Musical") = 0 Then
                 ChckMusical.Checked = True
+
+            ElseIf String.Compare(genreItem, "Crime") = 0 Then
+                ChckCrime.Checked = True
+
             End If
 
         Next
@@ -165,6 +169,10 @@
 
         If ChckMusical.Checked() Then
             Film.dataFilm.AddGenre("Musical")
+        End If
+
+        If ChckCrime.Checked() Then
+            Film.dataFilm.AddGenre("Crime")
         End If
 
         Dim convertedGenre = Film.dataFilm.ConvertGenreToString(Film.dataFilm.getGenreItem)

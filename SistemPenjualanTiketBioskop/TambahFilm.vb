@@ -131,6 +131,10 @@
             Film.dataFilm.AddGenre("Musical")
         End If
 
+        If ChckCrime.Checked() Then
+            Film.dataFilm.AddGenre("Crime")
+        End If
+
         Dim convertedGenre = Film.dataFilm.ConvertGenreToString(Film.dataFilm.getGenreItem)
 
         Film.dataFilm.AddDataFilmDatabase(Film.dataFilm.GSNamaFilm,

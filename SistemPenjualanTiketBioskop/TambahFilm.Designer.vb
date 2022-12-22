@@ -60,6 +60,7 @@ Partial Class TambahFilm
         Me.ComboBoxRatingUsia = New System.Windows.Forms.ComboBox()
         Me.ComboBoxBahasa = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.ChckCrime = New System.Windows.Forms.CheckBox()
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupGenre.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -87,7 +88,7 @@ Partial Class TambahFilm
         Me.PicFoto.Location = New System.Drawing.Point(37, 106)
         Me.PicFoto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PicFoto.Name = "PicFoto"
-        Me.PicFoto.Size = New System.Drawing.Size(231, 255)
+        Me.PicFoto.Size = New System.Drawing.Size(231, 279)
         Me.PicFoto.TabIndex = 51
         Me.PicFoto.TabStop = False
         '
@@ -154,6 +155,7 @@ Partial Class TambahFilm
         'GroupGenre
         '
         Me.GroupGenre.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupGenre.Controls.Add(Me.ChckCrime)
         Me.GroupGenre.Controls.Add(Me.ChckMistery)
         Me.GroupGenre.Controls.Add(Me.ChckBiografi)
         Me.GroupGenre.Controls.Add(Me.ChckMusical)
@@ -343,7 +345,7 @@ Partial Class TambahFilm
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.Location = New System.Drawing.Point(301, 611)
+        Me.Label10.Location = New System.Drawing.Point(301, 614)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(75, 25)
         Me.Label10.TabIndex = 39
@@ -390,7 +392,7 @@ Partial Class TambahFilm
         Me.BtnTambahGambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambahGambar.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambahGambar.ForeColor = System.Drawing.Color.White
-        Me.BtnTambahGambar.Location = New System.Drawing.Point(37, 377)
+        Me.BtnTambahGambar.Location = New System.Drawing.Point(37, 389)
         Me.BtnTambahGambar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnTambahGambar.Name = "BtnTambahGambar"
         Me.BtnTambahGambar.Size = New System.Drawing.Size(231, 37)
@@ -467,22 +469,24 @@ Partial Class TambahFilm
         '
         Me.ComboBoxRatingUsia.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ComboBoxRatingUsia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxRatingUsia.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ComboBoxRatingUsia.FormattingEnabled = True
         Me.ComboBoxRatingUsia.Items.AddRange(New Object() {"SU", "R13+", "D17+"})
         Me.ComboBoxRatingUsia.Location = New System.Drawing.Point(521, 157)
         Me.ComboBoxRatingUsia.Name = "ComboBoxRatingUsia"
-        Me.ComboBoxRatingUsia.Size = New System.Drawing.Size(382, 30)
+        Me.ComboBoxRatingUsia.Size = New System.Drawing.Size(382, 33)
         Me.ComboBoxRatingUsia.TabIndex = 56
         '
         'ComboBoxBahasa
         '
         Me.ComboBoxBahasa.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ComboBoxBahasa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxBahasa.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ComboBoxBahasa.FormattingEnabled = True
         Me.ComboBoxBahasa.Items.AddRange(New Object() {"Indonesia", "Inggris", "Jepang", "Korea", "Mandarin"})
         Me.ComboBoxBahasa.Location = New System.Drawing.Point(521, 611)
         Me.ComboBoxBahasa.Name = "ComboBoxBahasa"
-        Me.ComboBoxBahasa.Size = New System.Drawing.Size(382, 30)
+        Me.ComboBoxBahasa.Size = New System.Drawing.Size(382, 33)
         Me.ComboBoxBahasa.TabIndex = 57
         '
         'Label8
@@ -490,11 +494,22 @@ Partial Class TambahFilm
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(301, 157)
+        Me.Label8.Location = New System.Drawing.Point(297, 160)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(114, 25)
         Me.Label8.TabIndex = 58
         Me.Label8.Text = "Rating Usia"
+        '
+        'ChckCrime
+        '
+        Me.ChckCrime.AutoSize = True
+        Me.ChckCrime.Location = New System.Drawing.Point(232, 211)
+        Me.ChckCrime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckCrime.Name = "ChckCrime"
+        Me.ChckCrime.Size = New System.Drawing.Size(92, 29)
+        Me.ChckCrime.TabIndex = 14
+        Me.ChckCrime.Text = "Crime"
+        Me.ChckCrime.UseVisualStyleBackColor = True
         '
         'TambahFilm
         '
@@ -579,4 +594,5 @@ Partial Class TambahFilm
     Friend WithEvents ComboBoxRatingUsia As ComboBox
     Friend WithEvents ComboBoxBahasa As ComboBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents ChckCrime As CheckBox
 End Class

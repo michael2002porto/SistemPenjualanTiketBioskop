@@ -60,6 +60,7 @@ Partial Class EditFilm
         Me.ComboBoxBahasa = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ComboBoxRatingUsia = New System.Windows.Forms.ComboBox()
+        Me.ChckCrime = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupGenre.SuspendLayout()
@@ -129,7 +130,7 @@ Partial Class EditFilm
         Me.BtnEditGambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEditGambar.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnEditGambar.ForeColor = System.Drawing.Color.White
-        Me.BtnEditGambar.Location = New System.Drawing.Point(37, 377)
+        Me.BtnEditGambar.Location = New System.Drawing.Point(37, 399)
         Me.BtnEditGambar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditGambar.Name = "BtnEditGambar"
         Me.BtnEditGambar.Size = New System.Drawing.Size(231, 37)
@@ -270,7 +271,7 @@ Partial Class EditFilm
         Me.PicFoto.Location = New System.Drawing.Point(37, 106)
         Me.PicFoto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PicFoto.Name = "PicFoto"
-        Me.PicFoto.Size = New System.Drawing.Size(231, 255)
+        Me.PicFoto.Size = New System.Drawing.Size(231, 289)
         Me.PicFoto.TabIndex = 73
         Me.PicFoto.TabStop = False
         '
@@ -298,6 +299,7 @@ Partial Class EditFilm
         'GroupGenre
         '
         Me.GroupGenre.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupGenre.Controls.Add(Me.ChckCrime)
         Me.GroupGenre.Controls.Add(Me.ChckMistery)
         Me.GroupGenre.Controls.Add(Me.ChckBiografi)
         Me.GroupGenre.Controls.Add(Me.ChckMusical)
@@ -499,6 +501,17 @@ Partial Class EditFilm
         Me.ComboBoxRatingUsia.Size = New System.Drawing.Size(382, 33)
         Me.ComboBoxRatingUsia.TabIndex = 79
         '
+        'ChckCrime
+        '
+        Me.ChckCrime.AutoSize = True
+        Me.ChckCrime.Location = New System.Drawing.Point(232, 211)
+        Me.ChckCrime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckCrime.Name = "ChckCrime"
+        Me.ChckCrime.Size = New System.Drawing.Size(92, 29)
+        Me.ChckCrime.TabIndex = 13
+        Me.ChckCrime.Text = "Crime"
+        Me.ChckCrime.UseVisualStyleBackColor = True
+        '
         'EditFilm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
@@ -582,4 +595,5 @@ Partial Class EditFilm
     Friend WithEvents ComboBoxBahasa As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents ComboBoxRatingUsia As ComboBox
+    Friend WithEvents ChckCrime As CheckBox
 End Class
