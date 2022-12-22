@@ -83,8 +83,8 @@
             Film.dataFilm.AddGenre("Drama")
         End If
 
-        If ChckKomedi.Checked() Then
-            Film.dataFilm.AddGenre("Komedi")
+        If ChckComedy.Checked() Then
+            Film.dataFilm.AddGenre("Comedy")
         End If
 
         If ChckHoror.Checked() Then
@@ -99,12 +99,12 @@
             Film.dataFilm.AddGenre("Action")
         End If
 
-        If ChckAnimasi.Checked() Then
-            Film.dataFilm.AddGenre("Animasi")
+        If ChckAnimation.Checked() Then
+            Film.dataFilm.AddGenre("Animation")
         End If
 
-        If ChckDokumenter.Checked() Then
-            Film.dataFilm.AddGenre("Dokumenter")
+        If ChckDocumenter.Checked() Then
+            Film.dataFilm.AddGenre("Documenter")
         End If
 
         If ChckRomance.Checked() Then

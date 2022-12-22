@@ -28,17 +28,18 @@ Partial Class TambahFilm
         Me.BtnTambahFilm = New System.Windows.Forms.Button()
         Me.ChckAdventure = New System.Windows.Forms.CheckBox()
         Me.ChckHoror = New System.Windows.Forms.CheckBox()
-        Me.ChckKomedi = New System.Windows.Forms.CheckBox()
+        Me.ChckComedy = New System.Windows.Forms.CheckBox()
         Me.ChckDrama = New System.Windows.Forms.CheckBox()
         Me.GroupGenre = New System.Windows.Forms.GroupBox()
+        Me.ChckCrime = New System.Windows.Forms.CheckBox()
         Me.ChckMistery = New System.Windows.Forms.CheckBox()
         Me.ChckBiografi = New System.Windows.Forms.CheckBox()
         Me.ChckMusical = New System.Windows.Forms.CheckBox()
         Me.ChckThriller = New System.Windows.Forms.CheckBox()
         Me.ChckScifi = New System.Windows.Forms.CheckBox()
         Me.ChckRomance = New System.Windows.Forms.CheckBox()
-        Me.ChckDokumenter = New System.Windows.Forms.CheckBox()
-        Me.ChckAnimasi = New System.Windows.Forms.CheckBox()
+        Me.ChckDocumenter = New System.Windows.Forms.CheckBox()
+        Me.ChckAnimation = New System.Windows.Forms.CheckBox()
         Me.ChckAction = New System.Windows.Forms.CheckBox()
         Me.TxtHargaFilm = New System.Windows.Forms.TextBox()
         Me.TxtDuration = New System.Windows.Forms.TextBox()
@@ -60,7 +61,6 @@ Partial Class TambahFilm
         Me.ComboBoxRatingUsia = New System.Windows.Forms.ComboBox()
         Me.ComboBoxBahasa = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ChckCrime = New System.Windows.Forms.CheckBox()
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupGenre.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -130,16 +130,16 @@ Partial Class TambahFilm
         Me.ChckHoror.Text = "Horor"
         Me.ChckHoror.UseVisualStyleBackColor = True
         '
-        'ChckKomedi
+        'ChckComedy
         '
-        Me.ChckKomedi.AutoSize = True
-        Me.ChckKomedi.Location = New System.Drawing.Point(7, 57)
-        Me.ChckKomedi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ChckKomedi.Name = "ChckKomedi"
-        Me.ChckKomedi.Size = New System.Drawing.Size(107, 29)
-        Me.ChckKomedi.TabIndex = 1
-        Me.ChckKomedi.Text = "Komedi"
-        Me.ChckKomedi.UseVisualStyleBackColor = True
+        Me.ChckComedy.AutoSize = True
+        Me.ChckComedy.Location = New System.Drawing.Point(7, 57)
+        Me.ChckComedy.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckComedy.Name = "ChckComedy"
+        Me.ChckComedy.Size = New System.Drawing.Size(112, 29)
+        Me.ChckComedy.TabIndex = 1
+        Me.ChckComedy.Text = "Comedy"
+        Me.ChckComedy.UseVisualStyleBackColor = True
         '
         'ChckDrama
         '
@@ -162,12 +162,12 @@ Partial Class TambahFilm
         Me.GroupGenre.Controls.Add(Me.ChckThriller)
         Me.GroupGenre.Controls.Add(Me.ChckScifi)
         Me.GroupGenre.Controls.Add(Me.ChckRomance)
-        Me.GroupGenre.Controls.Add(Me.ChckDokumenter)
-        Me.GroupGenre.Controls.Add(Me.ChckAnimasi)
+        Me.GroupGenre.Controls.Add(Me.ChckDocumenter)
+        Me.GroupGenre.Controls.Add(Me.ChckAnimation)
         Me.GroupGenre.Controls.Add(Me.ChckAction)
         Me.GroupGenre.Controls.Add(Me.ChckAdventure)
         Me.GroupGenre.Controls.Add(Me.ChckHoror)
-        Me.GroupGenre.Controls.Add(Me.ChckKomedi)
+        Me.GroupGenre.Controls.Add(Me.ChckComedy)
         Me.GroupGenre.Controls.Add(Me.ChckDrama)
         Me.GroupGenre.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupGenre.Location = New System.Drawing.Point(521, 661)
@@ -178,6 +178,17 @@ Partial Class TambahFilm
         Me.GroupGenre.TabIndex = 49
         Me.GroupGenre.TabStop = False
         Me.GroupGenre.Text = "Genre"
+        '
+        'ChckCrime
+        '
+        Me.ChckCrime.AutoSize = True
+        Me.ChckCrime.Location = New System.Drawing.Point(232, 211)
+        Me.ChckCrime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckCrime.Name = "ChckCrime"
+        Me.ChckCrime.Size = New System.Drawing.Size(92, 29)
+        Me.ChckCrime.TabIndex = 14
+        Me.ChckCrime.Text = "Crime"
+        Me.ChckCrime.UseVisualStyleBackColor = True
         '
         'ChckMistery
         '
@@ -245,27 +256,27 @@ Partial Class TambahFilm
         Me.ChckRomance.Text = "Romance"
         Me.ChckRomance.UseVisualStyleBackColor = True
         '
-        'ChckDokumenter
+        'ChckDocumenter
         '
-        Me.ChckDokumenter.AutoSize = True
-        Me.ChckDokumenter.Location = New System.Drawing.Point(7, 211)
-        Me.ChckDokumenter.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ChckDokumenter.Name = "ChckDokumenter"
-        Me.ChckDokumenter.Size = New System.Drawing.Size(146, 29)
-        Me.ChckDokumenter.TabIndex = 6
-        Me.ChckDokumenter.Text = "Dokumenter"
-        Me.ChckDokumenter.UseVisualStyleBackColor = True
+        Me.ChckDocumenter.AutoSize = True
+        Me.ChckDocumenter.Location = New System.Drawing.Point(7, 211)
+        Me.ChckDocumenter.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckDocumenter.Name = "ChckDocumenter"
+        Me.ChckDocumenter.Size = New System.Drawing.Size(145, 29)
+        Me.ChckDocumenter.TabIndex = 6
+        Me.ChckDocumenter.Text = "Documenter"
+        Me.ChckDocumenter.UseVisualStyleBackColor = True
         '
-        'ChckAnimasi
+        'ChckAnimation
         '
-        Me.ChckAnimasi.AutoSize = True
-        Me.ChckAnimasi.Location = New System.Drawing.Point(7, 180)
-        Me.ChckAnimasi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ChckAnimasi.Name = "ChckAnimasi"
-        Me.ChckAnimasi.Size = New System.Drawing.Size(111, 29)
-        Me.ChckAnimasi.TabIndex = 5
-        Me.ChckAnimasi.Text = "Animasi"
-        Me.ChckAnimasi.UseVisualStyleBackColor = True
+        Me.ChckAnimation.AutoSize = True
+        Me.ChckAnimation.Location = New System.Drawing.Point(7, 180)
+        Me.ChckAnimation.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckAnimation.Name = "ChckAnimation"
+        Me.ChckAnimation.Size = New System.Drawing.Size(129, 29)
+        Me.ChckAnimation.TabIndex = 5
+        Me.ChckAnimation.Text = "Animation"
+        Me.ChckAnimation.UseVisualStyleBackColor = True
         '
         'ChckAction
         '
@@ -483,7 +494,7 @@ Partial Class TambahFilm
         Me.ComboBoxBahasa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxBahasa.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ComboBoxBahasa.FormattingEnabled = True
-        Me.ComboBoxBahasa.Items.AddRange(New Object() {"Indonesia", "Inggris", "Jepang", "Korea", "Mandarin"})
+        Me.ComboBoxBahasa.Items.AddRange(New Object() {"Bahasa Indonesia", "Bahasa Inggris", "Bahasa Jepang", "Bahasa Korea", "Bahasa Mandarin"})
         Me.ComboBoxBahasa.Location = New System.Drawing.Point(521, 611)
         Me.ComboBoxBahasa.Name = "ComboBoxBahasa"
         Me.ComboBoxBahasa.Size = New System.Drawing.Size(382, 33)
@@ -499,17 +510,6 @@ Partial Class TambahFilm
         Me.Label8.Size = New System.Drawing.Size(114, 25)
         Me.Label8.TabIndex = 58
         Me.Label8.Text = "Rating Usia"
-        '
-        'ChckCrime
-        '
-        Me.ChckCrime.AutoSize = True
-        Me.ChckCrime.Location = New System.Drawing.Point(232, 211)
-        Me.ChckCrime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ChckCrime.Name = "ChckCrime"
-        Me.ChckCrime.Size = New System.Drawing.Size(92, 29)
-        Me.ChckCrime.TabIndex = 14
-        Me.ChckCrime.Text = "Crime"
-        Me.ChckCrime.UseVisualStyleBackColor = True
         '
         'TambahFilm
         '
@@ -562,7 +562,7 @@ Partial Class TambahFilm
     Friend WithEvents BtnTambahFilm As Button
     Friend WithEvents ChckAdventure As CheckBox
     Friend WithEvents ChckHoror As CheckBox
-    Friend WithEvents ChckKomedi As CheckBox
+    Friend WithEvents ChckComedy As CheckBox
     Friend WithEvents ChckDrama As CheckBox
     Friend WithEvents GroupGenre As GroupBox
     Friend WithEvents TxtHargaFilm As TextBox
@@ -581,8 +581,8 @@ Partial Class TambahFilm
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtDirector As TextBox
     Friend WithEvents ChckAction As CheckBox
-    Friend WithEvents ChckDokumenter As CheckBox
-    Friend WithEvents ChckAnimasi As CheckBox
+    Friend WithEvents ChckDocumenter As CheckBox
+    Friend WithEvents ChckAnimation As CheckBox
     Friend WithEvents ChckRomance As CheckBox
     Friend WithEvents ChckScifi As CheckBox
     Friend WithEvents ChckThriller As CheckBox
