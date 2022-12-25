@@ -43,7 +43,7 @@ Partial Class JadwalTayang
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewJadwalTayang = New System.Windows.Forms.DataGridView()
         Me.FotoFilm = New System.Windows.Forms.DataGridViewImageColumn()
         Me.NamaFilm = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Studio = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,7 +51,7 @@ Partial Class JadwalTayang
         Me.WaktuSelesai = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewJadwalTayang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -352,17 +352,17 @@ Partial Class JadwalTayang
         Me.Button5.Text = "View All"
         Me.Button5.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'DataGridViewJadwalTayang
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FotoFilm, Me.NamaFilm, Me.Studio, Me.WaktuMulai, Me.WaktuSelesai})
-        Me.DataGridView1.Location = New System.Drawing.Point(281, 277)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 82
-        Me.DataGridView1.RowTemplate.Height = 41
-        Me.DataGridView1.Size = New System.Drawing.Size(1661, 335)
-        Me.DataGridView1.TabIndex = 30
+        Me.DataGridViewJadwalTayang.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.DataGridViewJadwalTayang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewJadwalTayang.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FotoFilm, Me.NamaFilm, Me.Studio, Me.WaktuMulai, Me.WaktuSelesai})
+        Me.DataGridViewJadwalTayang.Location = New System.Drawing.Point(281, 277)
+        Me.DataGridViewJadwalTayang.Name = "DataGridViewJadwalTayang"
+        Me.DataGridViewJadwalTayang.RowHeadersWidth = 82
+        Me.DataGridViewJadwalTayang.RowTemplate.Height = 41
+        Me.DataGridViewJadwalTayang.Size = New System.Drawing.Size(1661, 335)
+        Me.DataGridViewJadwalTayang.TabIndex = 30
         '
         'FotoFilm
         '
@@ -405,7 +405,7 @@ Partial Class JadwalTayang
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(2228, 1036)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DataGridViewJadwalTayang)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -419,7 +419,7 @@ Partial Class JadwalTayang
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewJadwalTayang, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -446,7 +446,7 @@ Partial Class JadwalTayang
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Button5 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridViewJadwalTayang As DataGridView
     Friend WithEvents FotoFilm As DataGridViewImageColumn
     Friend WithEvents NamaFilm As DataGridViewTextBoxColumn
     Friend WithEvents Studio As DataGridViewTextBoxColumn
