@@ -24,15 +24,18 @@ Partial Class SignIn
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
+        '
         'SignIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(615, 352)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "SignIn"
-        Me.Text = "Sign In"
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents Button1 As Button
 End Class

@@ -10,13 +10,12 @@
         CbxHargaKursi.SelectedItem() = Studio.data_studio.GSHarga
     End Sub
 
-
-    Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
+    Private Sub BtnSave_Click_1(sender As Object, e As EventArgs) Handles BtnSave.Click
         Studio.data_studio.GSNama = TxtNamaStudioValue.Text.ToString()
         Studio.data_studio.GSKapasitas = CbxKapasitasStudio.SelectedItem()
         Studio.data_studio.GSHarga = CbxHargaKursi.SelectedItem()
 
-        Studio.data_studio.AddStudio(TxtNamaStudioValue.Text.ToString())
+        'Studio.data_studio.AddStudio(TxtNamaStudioValue.Text.ToString())
         Studio.data_studio.UpdateDataStudioByIDDatabase(Studio.SelectedTableStudio,
                                                                 Studio.data_studio.GSNama,
                                                                 Studio.data_studio.GSKapasitas,

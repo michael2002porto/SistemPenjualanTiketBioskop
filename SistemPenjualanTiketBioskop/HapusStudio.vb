@@ -7,7 +7,7 @@ Public Class HapusStudio
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        LabelKonfirmasi.Text = Studio.data_studio.GSNama
+        LabelKonfirmasi.Text = Studio.SelectedTableNamaStudio
     End Sub
     Private Sub BtnHapusDataStudio_Click(sender As Object, e As EventArgs) Handles BtnHapusDataStudio.Click
         Studio.data_studio.DeleteDataStudioByIDDatabase(Studio.SelectedTableStudio)

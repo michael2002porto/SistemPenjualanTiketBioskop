@@ -24,4 +24,5 @@
             MessageBox.Show("Just insert string or number only")
         End If
     End Sub
+
 End Class

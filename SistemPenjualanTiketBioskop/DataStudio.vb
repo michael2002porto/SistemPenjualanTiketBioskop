@@ -4,8 +4,7 @@ Public Class DataStudio
     Private nama_studio As String
     Private kapasitas_studio As Integer
     Private harga_kursi As Integer
-    Private list_studio As New List(Of String)
-    Private ListStudioDataTable As New ArrayList()
+    'Private list_studio As New List(Of String)
 
     ' Database Global
     Public Shared dbConn As New MySqlConnection
@@ -83,34 +82,34 @@ Public Class DataStudio
     '    End Get
     'End Property
 
-    Public Function AddStudio(value As String)
-        list_studio.Add(value)
-        Return ""
-    End Function
+    'Public Function AddStudio(value As String)
+    '    list_studio.Add(value)
+    '    Return ""
+    'End Function
 
-    Public ReadOnly Property getStudioItem() As List(Of String)
-        Get
-            Return list_studio
-        End Get
-    End Property
-    Public Function ConvertKoleksiToString(vals As List(Of String))
-        Dim builder As StringBuilder = New StringBuilder()
-        For Each val As String In vals
-            builder.Append(val).Append("|")
-        Next
+    'Public ReadOnly Property getStudioItem() As List(Of String)
+    '    Get
+    '        Return list_studio
+    '    End Get
+    'End Property
+    'Public Function ConvertKoleksiToString(vals As List(Of String))
+    '    Dim builder As StringBuilder = New StringBuilder()
+    '    For Each val As String In vals
+    '        builder.Append(val).Append("|")
+    '    Next
 
-        ' Convert to string.
-        Dim res = builder.ToString()
-        Return res
-    End Function
+    '    ' Convert to string.
+    '    Dim res = builder.ToString()
+    '    Return res
+    'End Function
 
-    Public Function ConvertStringToKoleksi(value As String)
-        Dim arr() As String = value.Split("|")
+    'Public Function ConvertStringToKoleksi(value As String)
+    '    Dim arr() As String = value.Split("|")
 
-        ' Convert to list.
-        Dim vals As List(Of String) = arr.ToList()
-        Return vals
-    End Function
+    '    ' Convert to list.
+    '    Dim vals As List(Of String) = arr.ToList()
+    '    Return vals
+    'End Function
 
     Public Function GetDataStudioDatabase() As DataTable
         Dim result As New DataTable

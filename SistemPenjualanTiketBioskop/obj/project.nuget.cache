@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AY5EqMyFfbzusDMHg0XBoB5325n5q5mAAUU/AHuaGCTX/j3rdImoEvtNeDNVRIX7RZTsdQ0SX4Ngn5ZFeU7J5Q==",
+  "dgSpecHash": "WCMzqqVONh5ymZPkcAcrcepF6XAFcd3IUHGl5Sb4xzu+8KtVcVRRNLDqdITkDGgIhqlNrqwSXqW6GxFnBSHx/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\annis\\Desktop\\KULIAH\\Semester 3\\5. Pemrograman Visual\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop.vbproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\annis\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\k4os.hash.xxhash.1.0.6.nupkg.sha512",
     "C:\\Users\\annis\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\annis\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\annis\\.nuget\\packages\\mysql.data\\8.0.30\\mysql.data.8.0.30.nupkg.sha512",
+    "C:\\Users\\annis\\.nuget\\packages\\mysql.data\\8.0.31\\mysql.data.8.0.31.nupkg.sha512",
     "C:\\Users\\annis\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\annis\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\annis\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
