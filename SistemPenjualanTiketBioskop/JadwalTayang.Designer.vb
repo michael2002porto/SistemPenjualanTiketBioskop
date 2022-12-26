@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class JadwalTayang
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,9 @@ Partial Class JadwalTayang
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnRemoveFilm = New System.Windows.Forms.Button()
-        Me.BtnUpdateFilm = New System.Windows.Forms.Button()
-        Me.BtnTambahFilm = New System.Windows.Forms.Button()
         Me.BtnSignOut = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -36,22 +33,28 @@ Partial Class JadwalTayang
         Me.Lblid = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LblUsername = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.DataGridViewJadwalTayang = New System.Windows.Forms.DataGridView()
+        Me.ButtonViewAll = New System.Windows.Forms.Button()
+        Me.DataGridViewJadwalTayangNowPlaying = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewJadwalTayangUpcoming = New System.Windows.Forms.DataGridView()
         Me.FotoFilm = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.NamaFilm = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.JudulFilm = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Studio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WaktuMulai = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WaktuSelesai = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.JudulFilm1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TanggalTayang = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        CType(Me.DataGridViewJadwalTayang, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewJadwalTayangNowPlaying, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewJadwalTayangUpcoming, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -65,54 +68,6 @@ Partial Class JadwalTayang
         Me.Label1.Size = New System.Drawing.Size(266, 77)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Bioscoop"
-        '
-        'BtnRemoveFilm
-        '
-        Me.BtnRemoveFilm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnRemoveFilm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.BtnRemoveFilm.FlatAppearance.BorderSize = 0
-        Me.BtnRemoveFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnRemoveFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnRemoveFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnRemoveFilm.Location = New System.Drawing.Point(3965, 9)
-        Me.BtnRemoveFilm.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnRemoveFilm.Name = "BtnRemoveFilm"
-        Me.BtnRemoveFilm.Size = New System.Drawing.Size(230, 64)
-        Me.BtnRemoveFilm.TabIndex = 10
-        Me.BtnRemoveFilm.Text = "Hapus Film"
-        Me.BtnRemoveFilm.UseVisualStyleBackColor = False
-        '
-        'BtnUpdateFilm
-        '
-        Me.BtnUpdateFilm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnUpdateFilm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.BtnUpdateFilm.FlatAppearance.BorderSize = 0
-        Me.BtnUpdateFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnUpdateFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnUpdateFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnUpdateFilm.Location = New System.Drawing.Point(3705, 9)
-        Me.BtnUpdateFilm.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnUpdateFilm.Name = "BtnUpdateFilm"
-        Me.BtnUpdateFilm.Size = New System.Drawing.Size(230, 64)
-        Me.BtnUpdateFilm.TabIndex = 12
-        Me.BtnUpdateFilm.Text = "Edit Film"
-        Me.BtnUpdateFilm.UseVisualStyleBackColor = False
-        '
-        'BtnTambahFilm
-        '
-        Me.BtnTambahFilm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnTambahFilm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.BtnTambahFilm.FlatAppearance.BorderSize = 0
-        Me.BtnTambahFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnTambahFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnTambahFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnTambahFilm.Location = New System.Drawing.Point(3452, 9)
-        Me.BtnTambahFilm.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnTambahFilm.Name = "BtnTambahFilm"
-        Me.BtnTambahFilm.Size = New System.Drawing.Size(230, 64)
-        Me.BtnTambahFilm.TabIndex = 13
-        Me.BtnTambahFilm.Text = "Tambah Film"
-        Me.BtnTambahFilm.UseVisualStyleBackColor = False
         '
         'BtnSignOut
         '
@@ -253,69 +208,6 @@ Partial Class JadwalTayang
         Me.LblUsername.TabIndex = 23
         Me.LblUsername.Text = "Username"
         '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.BtnRemoveFilm)
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.BtnUpdateFilm)
-        Me.Panel2.Controls.Add(Me.BtnTambahFilm)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 937)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2228, 99)
-        Me.Panel2.TabIndex = 22
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(1972, 22)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(230, 64)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Hapus Film"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(1712, 22)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(230, 64)
-        Me.Button2.TabIndex = 27
-        Me.Button2.Text = "Edit Film"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(1459, 22)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(230, 64)
-        Me.Button3.TabIndex = 28
-        Me.Button3.Text = "Tambah Film"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Algerian", 13.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -333,36 +225,69 @@ Partial Class JadwalTayang
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(2228, 53)
         Me.Label4.TabIndex = 27
-        Me.Label4.Text = "==============================  Upcoming  ==============================" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label4.Text = "===============================  Upcoming  ================================" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button5
+        'ButtonViewAll
         '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(984, 865)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(230, 64)
-        Me.Button5.TabIndex = 29
-        Me.Button5.Text = "View All"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.ButtonViewAll.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonViewAll.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.ButtonViewAll.FlatAppearance.BorderSize = 0
+        Me.ButtonViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonViewAll.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ButtonViewAll.ForeColor = System.Drawing.Color.White
+        Me.ButtonViewAll.Location = New System.Drawing.Point(999, 1171)
+        Me.ButtonViewAll.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonViewAll.Name = "ButtonViewAll"
+        Me.ButtonViewAll.Size = New System.Drawing.Size(230, 64)
+        Me.ButtonViewAll.TabIndex = 29
+        Me.ButtonViewAll.Text = "View All"
+        Me.ButtonViewAll.UseVisualStyleBackColor = False
         '
-        'DataGridViewJadwalTayang
+        'DataGridViewJadwalTayangNowPlaying
         '
-        Me.DataGridViewJadwalTayang.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.DataGridViewJadwalTayang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewJadwalTayang.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FotoFilm, Me.NamaFilm, Me.Studio, Me.WaktuMulai, Me.WaktuSelesai})
-        Me.DataGridViewJadwalTayang.Location = New System.Drawing.Point(281, 277)
-        Me.DataGridViewJadwalTayang.Name = "DataGridViewJadwalTayang"
-        Me.DataGridViewJadwalTayang.RowHeadersWidth = 82
-        Me.DataGridViewJadwalTayang.RowTemplate.Height = 41
-        Me.DataGridViewJadwalTayang.Size = New System.Drawing.Size(1661, 335)
-        Me.DataGridViewJadwalTayang.TabIndex = 30
+        Me.DataGridViewJadwalTayangNowPlaying.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.DataGridViewJadwalTayangNowPlaying.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewJadwalTayangNowPlaying.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FotoFilm, Me.JudulFilm, Me.Studio, Me.WaktuMulai, Me.WaktuSelesai})
+        Me.DataGridViewJadwalTayangNowPlaying.Location = New System.Drawing.Point(281, 277)
+        Me.DataGridViewJadwalTayangNowPlaying.Name = "DataGridViewJadwalTayangNowPlaying"
+        Me.DataGridViewJadwalTayangNowPlaying.RowHeadersWidth = 82
+        Me.DataGridViewJadwalTayangNowPlaying.RowTemplate.Height = 41
+        Me.DataGridViewJadwalTayangNowPlaying.Size = New System.Drawing.Size(1661, 335)
+        Me.DataGridViewJadwalTayangNowPlaying.TabIndex = 30
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.HeaderText = "Foto Film"
+        Me.DataGridViewImageColumn1.MinimumWidth = 10
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.Width = 250
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Nama Film"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 10
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 685
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Studio"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 10
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 200
+        '
+        'DataGridViewJadwalTayangUpcoming
+        '
+        Me.DataGridViewJadwalTayangUpcoming.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.DataGridViewJadwalTayangUpcoming.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewJadwalTayangUpcoming.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn2, Me.JudulFilm1, Me.DataGridViewTextBoxColumn4, Me.TanggalTayang, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.DataGridViewJadwalTayangUpcoming.Location = New System.Drawing.Point(281, 732)
+        Me.DataGridViewJadwalTayangUpcoming.Name = "DataGridViewJadwalTayangUpcoming"
+        Me.DataGridViewJadwalTayangUpcoming.RowHeadersWidth = 82
+        Me.DataGridViewJadwalTayangUpcoming.RowTemplate.Height = 41
+        Me.DataGridViewJadwalTayangUpcoming.Size = New System.Drawing.Size(1661, 335)
+        Me.DataGridViewJadwalTayangUpcoming.TabIndex = 31
         '
         'FotoFilm
         '
@@ -371,12 +296,12 @@ Partial Class JadwalTayang
         Me.FotoFilm.Name = "FotoFilm"
         Me.FotoFilm.Width = 250
         '
-        'NamaFilm
+        'JudulFilm
         '
-        Me.NamaFilm.HeaderText = "Nama Film"
-        Me.NamaFilm.MinimumWidth = 10
-        Me.NamaFilm.Name = "NamaFilm"
-        Me.NamaFilm.Width = 685
+        Me.JudulFilm.HeaderText = "Judul Film"
+        Me.JudulFilm.MinimumWidth = 10
+        Me.JudulFilm.Name = "JudulFilm"
+        Me.JudulFilm.Width = 685
         '
         'Studio
         '
@@ -399,36 +324,75 @@ Partial Class JadwalTayang
         Me.WaktuSelesai.Name = "WaktuSelesai"
         Me.WaktuSelesai.Width = 220
         '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.HeaderText = "Foto Film"
+        Me.DataGridViewImageColumn2.MinimumWidth = 10
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.Width = 250
+        '
+        'JudulFilm1
+        '
+        Me.JudulFilm1.HeaderText = "Judul Film"
+        Me.JudulFilm1.MinimumWidth = 10
+        Me.JudulFilm1.Name = "JudulFilm1"
+        Me.JudulFilm1.Width = 685
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Studio"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 10
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 200
+        '
+        'TanggalTayang
+        '
+        Me.TanggalTayang.HeaderText = "Tanggal Tayang"
+        Me.TanggalTayang.MinimumWidth = 10
+        Me.TanggalTayang.Name = "TanggalTayang"
+        Me.TanggalTayang.Width = 220
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Mulai Tayang"
+        Me.DataGridViewTextBoxColumn5.MinimumWidth = 10
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.Width = 110
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Selesai Tayang"
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 10
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.Width = 110
+        '
         'JadwalTayang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(2228, 1036)
-        Me.Controls.Add(Me.DataGridViewJadwalTayang)
-        Me.Controls.Add(Me.Button5)
+        Me.ClientSize = New System.Drawing.Size(2228, 1273)
+        Me.Controls.Add(Me.DataGridViewJadwalTayangUpcoming)
+        Me.Controls.Add(Me.DataGridViewJadwalTayangNowPlaying)
+        Me.Controls.Add(Me.ButtonViewAll)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Lblid)
         Me.Controls.Add(Me.LblUsername)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Panel2)
         Me.Name = "JadwalTayang"
         Me.Text = "Jadwal Tayang"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        CType(Me.DataGridViewJadwalTayang, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewJadwalTayangNowPlaying, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewJadwalTayangUpcoming, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents BtnRemoveFilm As Button
-    Friend WithEvents BtnUpdateFilm As Button
-    Friend WithEvents BtnTambahFilm As Button
     Friend WithEvents BtnSignOut As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BtnTiket As Button
@@ -438,18 +402,24 @@ Partial Class JadwalTayang
     Friend WithEvents Lblid As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents LblUsername As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button5 As Button
-    Friend WithEvents DataGridViewJadwalTayang As DataGridView
+    Friend WithEvents ButtonViewAll As Button
+    Friend WithEvents DataGridViewJadwalTayangNowPlaying As DataGridView
+    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewJadwalTayangUpcoming As DataGridView
     Friend WithEvents FotoFilm As DataGridViewImageColumn
-    Friend WithEvents NamaFilm As DataGridViewTextBoxColumn
+    Friend WithEvents JudulFilm As DataGridViewTextBoxColumn
     Friend WithEvents Studio As DataGridViewTextBoxColumn
     Friend WithEvents WaktuMulai As DataGridViewTextBoxColumn
     Friend WithEvents WaktuSelesai As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
+    Friend WithEvents JudulFilm1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents TanggalTayang As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
 End Class

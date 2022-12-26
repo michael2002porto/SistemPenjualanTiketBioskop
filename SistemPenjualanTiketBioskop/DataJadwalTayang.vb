@@ -72,7 +72,7 @@ Public Class DataJadwalTayang
         End Set
     End Property
 
-    Public Function GetDataJadwalTayangDatabase()
+    Public Function GetDataJadwalTayangDatabase(Optional where As String = "")
         Dim result As New ArrayList()
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
@@ -86,7 +86,7 @@ Public Class DataJadwalTayang
             jt.tanggal, jt.waktu_mulai, jt.waktu_selesai
             FROM jadwal_tayang jt
             LEFT JOIN film f ON f.id = jt.id_film
-            LEFT JOIN studio s ON s.id = jt.id_studio"
+            LEFT JOIN studio s ON s.id = jt.id_studio " + where
 
         sqlRead = sqlCommand.ExecuteReader
 
