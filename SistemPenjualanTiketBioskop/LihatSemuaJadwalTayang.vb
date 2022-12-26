@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel.Design.ObjectSelectorEditor
+Imports Microsoft.VisualBasic.Logging
 Imports Mysqlx.XDevAPI.Common
 
 Public Class LihatSemuaJadwalTayang
@@ -44,19 +45,25 @@ Public Class LihatSemuaJadwalTayang
 
     End Sub
 
+    Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click
+        Dim jadwal_tayang = New JadwalTayang()
+        jadwal_tayang.Show()
+        Me.Close()
+    End Sub
+
     Private Sub ReloadDataTableDatabase()
         'DataGridViewJadwalTayang.DataSource = data_jadwal_tayang.GetDataJadwalTayangDatabase()
         DataGridViewJadwalTayangAll.Rows.Clear()
         DataGridViewJadwalTayangAll.RowTemplate.Height = 100
         Dim source = data_jadwal_tayang.GetDataJadwalTayangDatabase()
-        For Each rowKoleksi In source
+        For Each rowJadwalTayang In source
             Dim dataTable = {
-                Image.FromFile(rowKoleksi(3)), 'Foto FIlm
-                rowKoleksi(2), 'Nama Film
-                rowKoleksi(5), 'Studio
-                Convert.ToDateTime(rowKoleksi(7)).ToString("dd/MM/yyyy"), 'Tanggal Tayang
-                Convert.ToDateTime(rowKoleksi(8)).ToString("HH:mm"), 'Mulai Tayang
-                Convert.ToDateTime(rowKoleksi(9)).ToString("HH:mm") 'Selesai Tayang
+                Image.FromFile(rowJadwalTayang(3)), 'Foto Film
+                rowJadwalTayang(2), 'Nama Film
+                rowJadwalTayang(5) + " (" + "Kapasitas = " + rowJadwalTayang(6) + ", " + "Harga = Rp " + rowJadwalTayang(7) + ")", 'Studio
+                Convert.ToDateTime(rowJadwalTayang(8)).ToString("dd/MM/yyyy"), 'Tanggal Tayang
+                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm"), 'Mulai Tayang
+                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm") 'Selesai Tayang
             }
             DataGridViewJadwalTayangAll.Rows.Add(dataTable)
         Next

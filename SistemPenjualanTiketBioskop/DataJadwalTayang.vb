@@ -82,7 +82,7 @@ Public Class DataJadwalTayang
         sqlCommand.CommandText =
             "SELECT jt.id_jadwal_tayang,
             jt.id_film, f.film, f.foto,
-            jt.id_studio, s.kapasitas, s.harga_kursi,
+            jt.id_studio, s.nama_studio, s.kapasitas, s.harga_kursi,
             jt.tanggal, jt.waktu_mulai, jt.waktu_selesai
             FROM jadwal_tayang jt
             LEFT JOIN film f ON f.id = jt.id_film
@@ -98,11 +98,12 @@ Public Class DataJadwalTayang
                     sqlRead.GetString(2).ToString(), 'film
                     sqlRead.GetString(3).ToString(), 'foto
                     sqlRead.GetString(4).ToString(), 'id_studio
-                    sqlRead.GetString(5).ToString(), 'kapasitas
-                    sqlRead.GetString(6).ToString(), 'harga_kursi
-                    sqlRead.GetString(7).ToString(), 'tanggal
-                    sqlRead.GetString(8).ToString(), 'waktu_mulai
-                    sqlRead.GetString(9).ToString() 'waktu_selesai
+                    sqlRead.GetString(5).ToString(), 'nama_studio
+                    sqlRead.GetString(6).ToString(), 'kapasitas
+                    sqlRead.GetString(7).ToString(), 'harga_kursi
+                    sqlRead.GetString(8).ToString(), 'tanggal
+                    sqlRead.GetString(9).ToString(), 'waktu_mulai
+                    sqlRead.GetString(10).ToString() 'waktu_selesai
                 }
             )
         End While

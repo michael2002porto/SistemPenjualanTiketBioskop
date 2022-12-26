@@ -23,6 +23,12 @@ Partial Class LihatSemuaJadwalTayang
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridViewJadwalTayangAll = New System.Windows.Forms.DataGridView()
+        Me.FotoFilm = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.JudulFilm = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Studio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TanggalTayang = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.WaktuMulai = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.WaktuSelesai = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -44,12 +50,6 @@ Partial Class LihatSemuaJadwalTayang
         Me.BtnJadwalTayang = New System.Windows.Forms.Button()
         Me.BtnStudio = New System.Windows.Forms.Button()
         Me.BtnFilm = New System.Windows.Forms.Button()
-        Me.FotoFilm = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.JudulFilm = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Studio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TanggalTayang = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WaktuMulai = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WaktuSelesai = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridViewJadwalTayangAll, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -66,6 +66,50 @@ Partial Class LihatSemuaJadwalTayang
         Me.DataGridViewJadwalTayangAll.RowTemplate.Height = 41
         Me.DataGridViewJadwalTayangAll.Size = New System.Drawing.Size(2056, 413)
         Me.DataGridViewJadwalTayangAll.TabIndex = 40
+        '
+        'FotoFilm
+        '
+        Me.FotoFilm.HeaderText = "Foto Film"
+        Me.FotoFilm.MinimumWidth = 10
+        Me.FotoFilm.Name = "FotoFilm"
+        Me.FotoFilm.Width = 260
+        '
+        'JudulFilm
+        '
+        Me.JudulFilm.HeaderText = "Judul Film"
+        Me.JudulFilm.MinimumWidth = 10
+        Me.JudulFilm.Name = "JudulFilm"
+        Me.JudulFilm.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.JudulFilm.Width = 700
+        '
+        'Studio
+        '
+        Me.Studio.HeaderText = "Studio"
+        Me.Studio.MinimumWidth = 10
+        Me.Studio.Name = "Studio"
+        Me.Studio.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Studio.Width = 570
+        '
+        'TanggalTayang
+        '
+        Me.TanggalTayang.HeaderText = "Tanggal Tayang"
+        Me.TanggalTayang.MinimumWidth = 10
+        Me.TanggalTayang.Name = "TanggalTayang"
+        Me.TanggalTayang.Width = 220
+        '
+        'WaktuMulai
+        '
+        Me.WaktuMulai.HeaderText = "Mulai Tayang"
+        Me.WaktuMulai.MinimumWidth = 10
+        Me.WaktuMulai.Name = "WaktuMulai"
+        Me.WaktuMulai.Width = 110
+        '
+        'WaktuSelesai
+        '
+        Me.WaktuSelesai.HeaderText = "Selesai Tayang"
+        Me.WaktuSelesai.MinimumWidth = 10
+        Me.WaktuSelesai.Name = "WaktuSelesai"
+        Me.WaktuSelesai.Width = 110
         '
         'DataGridViewImageColumn1
         '
@@ -342,50 +386,6 @@ Partial Class LihatSemuaJadwalTayang
         Me.BtnFilm.TabIndex = 0
         Me.BtnFilm.Text = "Film"
         Me.BtnFilm.UseVisualStyleBackColor = True
-        '
-        'FotoFilm
-        '
-        Me.FotoFilm.HeaderText = "Foto Film"
-        Me.FotoFilm.MinimumWidth = 10
-        Me.FotoFilm.Name = "FotoFilm"
-        Me.FotoFilm.Width = 260
-        '
-        'JudulFilm
-        '
-        Me.JudulFilm.HeaderText = "Judul Film"
-        Me.JudulFilm.MinimumWidth = 10
-        Me.JudulFilm.Name = "JudulFilm"
-        Me.JudulFilm.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.JudulFilm.Width = 700
-        '
-        'Studio
-        '
-        Me.Studio.HeaderText = "Studio"
-        Me.Studio.MinimumWidth = 10
-        Me.Studio.Name = "Studio"
-        Me.Studio.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Studio.Width = 350
-        '
-        'TanggalTayang
-        '
-        Me.TanggalTayang.HeaderText = "Tanggal Tayang"
-        Me.TanggalTayang.MinimumWidth = 10
-        Me.TanggalTayang.Name = "TanggalTayang"
-        Me.TanggalTayang.Width = 220
-        '
-        'WaktuMulai
-        '
-        Me.WaktuMulai.HeaderText = "Mulai Tayang"
-        Me.WaktuMulai.MinimumWidth = 10
-        Me.WaktuMulai.Name = "WaktuMulai"
-        Me.WaktuMulai.Width = 220
-        '
-        'WaktuSelesai
-        '
-        Me.WaktuSelesai.HeaderText = "Selesai Tayang"
-        Me.WaktuSelesai.MinimumWidth = 10
-        Me.WaktuSelesai.Name = "WaktuSelesai"
-        Me.WaktuSelesai.Width = 220
         '
         'LihatSemuaJadwalTayang
         '
