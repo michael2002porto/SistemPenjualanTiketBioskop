@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\annis\\Desktop\\KULIAH\\Semester 3\\5. Pemrograman Visual\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop.vbproj": {}
+    "D:\\Kuli\\Semester 3\\Pemrograman Visual\\Project UAS Sistem Penjualan Tiket Bioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\annis\\Desktop\\KULIAH\\Semester 3\\5. Pemrograman Visual\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop.vbproj": {
+    "D:\\Kuli\\Semester 3\\Pemrograman Visual\\Project UAS Sistem Penjualan Tiket Bioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\annis\\Desktop\\KULIAH\\Semester 3\\5. Pemrograman Visual\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop.vbproj",
+        "projectUniqueName": "D:\\Kuli\\Semester 3\\Pemrograman Visual\\Project UAS Sistem Penjualan Tiket Bioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop.vbproj",
         "projectName": "SistemPenjualanTiketBioskop",
-        "projectPath": "C:\\Users\\annis\\Desktop\\KULIAH\\Semester 3\\5. Pemrograman Visual\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop.vbproj",
-        "packagesPath": "C:\\Users\\annis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\annis\\Desktop\\KULIAH\\Semester 3\\5. Pemrograman Visual\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\obj\\",
+        "projectPath": "D:\\Kuli\\Semester 3\\Pemrograman Visual\\Project UAS Sistem Penjualan Tiket Bioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop.vbproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\Kuli\\Semester 3\\Pemrograman Visual\\Project UAS Sistem Penjualan Tiket Bioskop\\SistemPenjualanTiketBioskop\\SistemPenjualanTiketBioskop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\annis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,7 +42,7 @@
           "dependencies": {
             "MySql.Data": {
               "target": "Package",
-              "version": "[8.0.30, )"
+              "version": "[8.0.31, )"
             }
           },
           "imports": [
