@@ -100,7 +100,7 @@ Public Class TambahTiket
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT jadwal_tayang.id_jadwal_tayang AS 'ID Jadwal Tayang',
-                                   studio.nama_studio AS 'Studio',
+                                   studio.nama_studio AS 'Nama Studio',
                                    film.harga_film AS 'Harga Film', 
                                    studio.harga_kursi AS 'Harga Kursi',
                                    jadwal_tayang.waktu_mulai AS 'Waktu Mulai'

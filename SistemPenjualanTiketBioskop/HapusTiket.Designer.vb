@@ -34,7 +34,7 @@ Partial Class HapusTiket
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(40, 100)
+        Me.Label1.Location = New System.Drawing.Point(55, 100)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(517, 25)
         Me.Label1.TabIndex = 58
@@ -47,7 +47,7 @@ Partial Class HapusTiket
         Me.LblIDTiket.ForeColor = System.Drawing.Color.Firebrick
         Me.LblIDTiket.Location = New System.Drawing.Point(282, 155)
         Me.LblIDTiket.Name = "LblIDTiket"
-        Me.LblIDTiket.Size = New System.Drawing.Size(151, 51)
+        Me.LblIDTiket.Size = New System.Drawing.Size(150, 49)
         Me.LblIDTiket.TabIndex = 59
         Me.LblIDTiket.Text = "Label3"
         '
@@ -59,7 +59,7 @@ Partial Class HapusTiket
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnHapus.ForeColor = System.Drawing.Color.White
-        Me.BtnHapus.Location = New System.Drawing.Point(258, 250)
+        Me.BtnHapus.Location = New System.Drawing.Point(255, 250)
         Me.BtnHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(93, 37)
@@ -74,7 +74,7 @@ Partial Class HapusTiket
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(597, 68)
+        Me.Panel1.Size = New System.Drawing.Size(591, 68)
         Me.Panel1.TabIndex = 61
         '
         'Label2
@@ -83,7 +83,7 @@ Partial Class HapusTiket
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(227, 19)
+        Me.Label2.Location = New System.Drawing.Point(224, 19)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(159, 31)
         Me.Label2.TabIndex = 29
@@ -94,7 +94,7 @@ Partial Class HapusTiket
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(597, 311)
+        Me.ClientSize = New System.Drawing.Size(591, 311)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.LblIDTiket)
