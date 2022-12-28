@@ -9,6 +9,9 @@
     End Sub
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
         Tiket.data_tiket.DeleteDataTiketByIDDatabase(Tiket.selectedTableTiket)
+
+        Dim ticket = New Tiket()
+        ticket.Show()
         Me.Close()
     End Sub
 End Class

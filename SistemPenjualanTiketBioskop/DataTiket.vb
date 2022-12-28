@@ -22,10 +22,13 @@ Public Class DataTiket
                                   + "password = " + password + ";" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id AS 'ID',
-                                  id_jadwal_tayang AS 'ID Jadwal Tayang',
-                                  total_harga AS 'Total Harga'
-                                  FROM tiket"
+        sqlCommand.CommandText = "SELECT tiket.id AS 'ID',
+                                  jadwal_tayang.id_jadwal_tayang AS 'ID Jadwal Tayang',
+                                  jadwal_tayang.id_film AS 'ID Film',
+                                  jadwal_tayang.id_studio AS 'ID Studio',
+                                  tiket.total_harga AS 'Total Harga'
+                                  FROM (tiket
+                                   INNER JOIN jadwal_tayang ON tiket.id_jadwal_tayang = jadwal_tayang.id_jadwal_tayang)"
 
         sqlRead = sqlCommand.ExecuteReader
 

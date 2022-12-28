@@ -148,6 +148,9 @@ Public Class TambahTiket
         Finally
             dbConn.Dispose()
         End Try
+
+        Dim tiket = New Tiket()
+        tiket.Show()
         Me.Close()
     End Sub
 End Class

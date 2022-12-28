@@ -31,36 +31,42 @@
     Private Sub BtnJadwalTayang_Click(sender As Object, e As EventArgs) Handles BtnJadwalTayang.Click
         Dim jadwalTayang = New JadwalTayang()
         jadwalTayang.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub BtnFilm_Click(sender As Object, e As EventArgs) Handles BtnFilm.Click
         Dim film = New Film()
         film.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub BtnTiket_Click(sender As Object, e As EventArgs) Handles BtnTiket.Click
         Dim tiket = New Tiket()
         tiket.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
         Dim tambah_tiket = New TambahTiket()
         tambah_tiket.Show()
-        'Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub BtnDel_Click(sender As Object, e As EventArgs) Handles BtnDel.Click
         Dim formHapus = New HapusTiket()
         formHapus.Show()
-        'Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub BtnStudio_Click(sender As Object, e As EventArgs) Handles BtnStudio.Click
         Dim studio = New Studio()
         studio.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        Dim logout = New SignIn()
+        logout.Show()
         Me.Close()
     End Sub
 End Class

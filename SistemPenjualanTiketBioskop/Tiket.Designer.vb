@@ -24,7 +24,7 @@ Partial Class Tiket
     Private Sub InitializeComponent()
         Me.DataGridTiket = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnLogout = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnTiket = New System.Windows.Forms.Button()
         Me.BtnSignOut = New System.Windows.Forms.Button()
@@ -40,17 +40,17 @@ Partial Class Tiket
         'DataGridTiket
         '
         Me.DataGridTiket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridTiket.Location = New System.Drawing.Point(356, 142)
+        Me.DataGridTiket.Location = New System.Drawing.Point(253, 136)
         Me.DataGridTiket.Name = "DataGridTiket"
         Me.DataGridTiket.RowHeadersWidth = 51
         Me.DataGridTiket.RowTemplate.Height = 29
-        Me.DataGridTiket.Size = New System.Drawing.Size(401, 239)
+        Me.DataGridTiket.Size = New System.Drawing.Size(618, 239)
         Me.DataGridTiket.TabIndex = 1
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.BtnLogout)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.BtnTiket)
         Me.Panel1.Controls.Add(Me.BtnSignOut)
@@ -64,21 +64,21 @@ Partial Class Tiket
         Me.Panel1.Size = New System.Drawing.Size(1110, 74)
         Me.Panel1.TabIndex = 16
         '
-        'Button1
+        'BtnLogout
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(955, 14)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 37)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Sign Out"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.BtnLogout.FlatAppearance.BorderSize = 0
+        Me.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLogout.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnLogout.ForeColor = System.Drawing.Color.White
+        Me.BtnLogout.Location = New System.Drawing.Point(955, 14)
+        Me.BtnLogout.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnLogout.Name = "BtnLogout"
+        Me.BtnLogout.Size = New System.Drawing.Size(120, 37)
+        Me.BtnLogout.TabIndex = 18
+        Me.BtnLogout.Text = "Sign Out"
+        Me.BtnLogout.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -223,7 +223,7 @@ Partial Class Tiket
     Friend WithEvents BtnJadwalTayang As Button
     Friend WithEvents BtnStudio As Button
     Friend WithEvents BtnFilm As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnLogout As Button
     Friend WithEvents BtnAdd As Button
     Friend WithEvents BtnDel As Button
 End Class
