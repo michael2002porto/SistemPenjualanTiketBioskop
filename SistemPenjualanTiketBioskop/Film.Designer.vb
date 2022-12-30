@@ -37,6 +37,7 @@ Partial Class Film
         Me.LblUsername = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Lblid = New System.Windows.Forms.Label()
+        Me.BtnSelect = New System.Windows.Forms.Button()
         CType(Me.DGFilm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -208,6 +209,7 @@ Partial Class Film
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.BtnSelect)
         Me.Panel2.Controls.Add(Me.BtnRemoveFilm)
         Me.Panel2.Controls.Add(Me.BtnUpdateFilm)
         Me.Panel2.Controls.Add(Me.BtnTambahFilm)
@@ -251,6 +253,21 @@ Partial Class Film
         Me.Lblid.TabIndex = 19
         Me.Lblid.Text = "1"
         '
+        'BtnSelect
+        '
+        Me.BtnSelect.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSelect.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.BtnSelect.FlatAppearance.BorderSize = 0
+        Me.BtnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSelect.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnSelect.ForeColor = System.Drawing.Color.White
+        Me.BtnSelect.Location = New System.Drawing.Point(45, 7)
+        Me.BtnSelect.Name = "BtnSelect"
+        Me.BtnSelect.Size = New System.Drawing.Size(177, 50)
+        Me.BtnSelect.TabIndex = 14
+        Me.BtnSelect.Text = "Select Film"
+        Me.BtnSelect.UseVisualStyleBackColor = False
+        '
         'Film
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -291,4 +308,5 @@ Partial Class Film
     Friend WithEvents LblUsername As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Lblid As Label
+    Friend WithEvents BtnSelect As Button
 End Class
