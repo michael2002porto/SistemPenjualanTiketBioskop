@@ -25,6 +25,9 @@
     <Compile Update="HapusTiket.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="InfoFilm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="JadwalTayang.vb">
       <SubType>Form</SubType>
     </Compile>

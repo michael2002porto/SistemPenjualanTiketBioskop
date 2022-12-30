@@ -33,6 +33,28 @@ Public Class Film
         tambahFilm.Show()
     End Sub
 
+    Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles BtnSelect.Click
+        Try
+            Dim selectedFilm As List(Of String) = dataFilm.GetDataFilmByIDDatabase(selectedTableFilm)
+
+            dataFilm.GSFoto = selectedFilm(10)
+
+            dataFilm.GSNamaFilm = selectedFilm(1)
+            dataFilm.GSRatingUsia = selectedFilm(2)
+            dataFilm.GSDeskripsi = selectedFilm(4)
+            dataFilm.GSDirector = selectedFilm(5)
+            dataFilm.GSDateRelease = selectedFilm(7)
+            dataFilm.GSDuration = selectedFilm(6)
+            dataFilm.GSHargaFilm = selectedFilm(9)
+            dataFilm.GSBahasa = selectedFilm(8)
+            dataFilm.GSGenre = dataFilm.ConvertStringToGenre(selectedFilm(3))
+            Dim selectFilm = New InfoFilm()
+            selectFilm.Show()
+        Catch ex As Exception
+            MessageBox.Show("Please select data")
+        End Try
+    End Sub
+
     Private Sub BtnUpdateFilm_Click(sender As Object, e As EventArgs) Handles BtnUpdateFilm.Click
         Try
             Dim selectedFilm As List(Of String) = dataFilm.GetDataFilmByIDDatabase(selectedTableFilm)
