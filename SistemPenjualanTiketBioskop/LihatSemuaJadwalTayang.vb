@@ -4,7 +4,9 @@ Imports Mysqlx.XDevAPI.Common
 
 Public Class LihatSemuaJadwalTayang
     Public Shared data_jadwal_tayang As DataJadwalTayang
-    Public Shared selectedTableKoleksi, selectedTableKoleksiNama As String
+    Public Shared data_film As DataFilm
+    'Public Shared data_studio As DataStudio
+    Public Shared selectedIdJadwalTayang, selectedIdFilm, selectedIdStudio As String
 
     Public Sub New()
 
@@ -23,10 +25,10 @@ Public Class LihatSemuaJadwalTayang
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         Try
-            If selectedTableKoleksi Is Nothing Or selectedTableKoleksiNama Is Nothing Then
+            If selectedIdJadwalTayang Is Nothing Then
                 Throw New System.Exception("Please select data grid")
             End If
-            Dim selectedKoleksi As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedTableKoleksi)
+            Dim selectedKoleksi As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedIdJadwalTayang)
 
             data_jadwal_tayang.GSIdFilm = selectedKoleksi(1)
             data_jadwal_tayang.GSIdStudio = selectedKoleksi(2)
@@ -41,7 +43,7 @@ Public Class LihatSemuaJadwalTayang
         End Try
     End Sub
 
-    Private Sub ButtonDetailFilm_Click(sender As Object, e As EventArgs) Handles ButtonDetailFilm.Click
+    Private Sub ButtonDetailFilm_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -51,6 +53,16 @@ Public Class LihatSemuaJadwalTayang
         Me.Close()
     End Sub
 
+    Private Sub DataGridViewJadwalTayangAll_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewJadwalTayangAll.CellClick
+        Dim index As Integer = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridViewJadwalTayangAll.Rows(index)
+
+        selectedIdJadwalTayang = selectedRow.Cells(0).Value
+        selectedIdFilm = selectedRow.Cells(1).Value
+        selectedIdStudio = selectedRow.Cells(2).Value
+    End Sub
+
     Private Sub ReloadDataTableDatabase()
         'DataGridViewJadwalTayang.DataSource = data_jadwal_tayang.GetDataJadwalTayangDatabase()
         DataGridViewJadwalTayangAll.Rows.Clear()
@@ -58,6 +70,9 @@ Public Class LihatSemuaJadwalTayang
         Dim source = data_jadwal_tayang.GetDataJadwalTayangDatabase()
         For Each rowJadwalTayang In source
             Dim dataTable = {
+                rowJadwalTayang(0), 'Id Jadwal Tayang
+                rowJadwalTayang(1), 'Id Film
+                rowJadwalTayang(4), 'Id Studio
                 Image.FromFile(rowJadwalTayang(3)), 'Foto Film
                 rowJadwalTayang(2), 'Nama Film
                 rowJadwalTayang(5) + " (" + "Kapasitas = " + rowJadwalTayang(6) + ", " + "Harga = Rp " + rowJadwalTayang(7) + ")", 'Studio
@@ -67,6 +82,9 @@ Public Class LihatSemuaJadwalTayang
             }
             DataGridViewJadwalTayangAll.Rows.Add(dataTable)
         Next
-        selectedTableKoleksi = Nothing
+
+        selectedIdJadwalTayang = Nothing
+        selectedIdFilm = Nothing
+        selectedIdStudio = Nothing
     End Sub
 End Class

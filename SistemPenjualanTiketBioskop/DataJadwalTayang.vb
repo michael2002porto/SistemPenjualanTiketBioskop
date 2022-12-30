@@ -114,17 +114,11 @@ Public Class DataJadwalTayang
     End Function
 
     Public Function AddDataJadwalTayangDatabase(
-        dir_gambar As String,
-        nama_koleksi As String,
-        jenis_koleksi As String,
-        penerbit_koleksi As String,
-        deskripsi_koleksi As String,
-        tahun_terbit As Integer,
-        lokasi_rak As String,
-        tanggal_masuk As Date,
-        stock_koleksi As Integer,
-        bahasa_koleksi As String,
-        kategori_koleksi As String
+        id_film As Integer,
+        id_studio As Integer,
+        tanggal As Date,
+        waktu_mulai As Date,
+        waktu_selesai As Date
     )
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
@@ -132,19 +126,8 @@ Public Class DataJadwalTayang
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery =
-                "INSERT INTO KOLEKSI(nama_koleksi, dir_gambar, deskripsi, penerbit, jenis_koleksi,
-                tahun_terbit, lokasi, tanggal_masuk_koleksi, stock, bahasa, kategori) VALUE('" _
-                & nama_koleksi & "', '" _
-                & dir_gambar & "', '" _
-                & deskripsi_koleksi & "', '" _
-                & penerbit_koleksi & "', '" _
-                & jenis_koleksi & "', '" _
-                & tahun_terbit & "', '" _
-                & lokasi_rak & "', '" _
-                & tanggal_masuk.ToString("yyyy/MM/dd") & "', '" _
-                & stock_koleksi & "', '" _
-                & bahasa_koleksi & "', '" _
-                & kategori_koleksi & "')"
+                "INSERT INTO jadwal_tayang(id_film, id_studio, tanggal, waktu_mulai, waktu_selesai)
+                VALUE('" & id_film & "', '" & id_studio & "', '" & tanggal & "', '" & waktu_mulai & "', '" & waktu_selesai & "')"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -276,6 +259,42 @@ Public Class DataJadwalTayang
             dbConn.Close()
         Catch ex As Exception
             Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
+    Public Function GetDataFilmDatabase() As List(Of String)
+        Dim result As New List(Of String)
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+                + "password =" + password + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id AS 'ID',
+                                      film AS 'Film',
+                                      genre AS 'Genre',
+                                      director AS 'Director',
+                                      duration AS 'Duration',
+                                      date_release AS 'Date Release',
+                                      bahasa AS 'Bahasa',
+                                      harga_film AS 'Harga'
+                                      From film"
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString() & "; " & sqlRead.GetString(1).ToString())
+            End While
+            'Return result
+
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.Message.ToString())
         Finally
             dbConn.Dispose()
         End Try
