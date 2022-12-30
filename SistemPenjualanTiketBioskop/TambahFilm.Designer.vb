@@ -75,7 +75,7 @@ Partial Class TambahFilm
         Me.LblValueDeskripsi.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.LblValueDeskripsi.Location = New System.Drawing.Point(909, 350)
         Me.LblValueDeskripsi.Name = "LblValueDeskripsi"
-        Me.LblValueDeskripsi.Size = New System.Drawing.Size(45, 25)
+        Me.LblValueDeskripsi.Size = New System.Drawing.Size(60, 34)
         Me.LblValueDeskripsi.TabIndex = 53
         Me.LblValueDeskripsi.Text = "268"
         '
@@ -116,7 +116,7 @@ Partial Class TambahFilm
         Me.ChckAdventure.Location = New System.Drawing.Point(7, 119)
         Me.ChckAdventure.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckAdventure.Name = "ChckAdventure"
-        Me.ChckAdventure.Size = New System.Drawing.Size(130, 29)
+        Me.ChckAdventure.Size = New System.Drawing.Size(171, 38)
         Me.ChckAdventure.TabIndex = 3
         Me.ChckAdventure.Text = "Adventure"
         Me.ChckAdventure.UseVisualStyleBackColor = True
@@ -127,7 +127,7 @@ Partial Class TambahFilm
         Me.ChckHoror.Location = New System.Drawing.Point(7, 88)
         Me.ChckHoror.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckHoror.Name = "ChckHoror"
-        Me.ChckHoror.Size = New System.Drawing.Size(89, 29)
+        Me.ChckHoror.Size = New System.Drawing.Size(119, 38)
         Me.ChckHoror.TabIndex = 2
         Me.ChckHoror.Text = "Horor"
         Me.ChckHoror.UseVisualStyleBackColor = True
@@ -138,7 +138,7 @@ Partial Class TambahFilm
         Me.ChckKomedi.Location = New System.Drawing.Point(7, 57)
         Me.ChckKomedi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckKomedi.Name = "ChckKomedi"
-        Me.ChckKomedi.Size = New System.Drawing.Size(107, 29)
+        Me.ChckKomedi.Size = New System.Drawing.Size(142, 38)
         Me.ChckKomedi.TabIndex = 1
         Me.ChckKomedi.Text = "Komedi"
         Me.ChckKomedi.UseVisualStyleBackColor = True
@@ -149,7 +149,7 @@ Partial Class TambahFilm
         Me.ChckDrama.Location = New System.Drawing.Point(7, 26)
         Me.ChckDrama.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckDrama.Name = "ChckDrama"
-        Me.ChckDrama.Size = New System.Drawing.Size(97, 29)
+        Me.ChckDrama.Size = New System.Drawing.Size(128, 38)
         Me.ChckDrama.TabIndex = 0
         Me.ChckDrama.Text = "Drama"
         Me.ChckDrama.UseVisualStyleBackColor = True
@@ -186,7 +186,7 @@ Partial Class TambahFilm
         Me.ChckMistery.Location = New System.Drawing.Point(232, 119)
         Me.ChckMistery.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckMistery.Name = "ChckMistery"
-        Me.ChckMistery.Size = New System.Drawing.Size(106, 29)
+        Me.ChckMistery.Size = New System.Drawing.Size(137, 38)
         Me.ChckMistery.TabIndex = 12
         Me.ChckMistery.Text = "Mistery"
         Me.ChckMistery.UseVisualStyleBackColor = True
@@ -197,7 +197,7 @@ Partial Class TambahFilm
         Me.ChckBiografi.Location = New System.Drawing.Point(232, 150)
         Me.ChckBiografi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckBiografi.Name = "ChckBiografi"
-        Me.ChckBiografi.Size = New System.Drawing.Size(109, 29)
+        Me.ChckBiografi.Size = New System.Drawing.Size(143, 38)
         Me.ChckBiografi.TabIndex = 11
         Me.ChckBiografi.Text = "Biografi"
         Me.ChckBiografi.UseVisualStyleBackColor = True
@@ -208,7 +208,7 @@ Partial Class TambahFilm
         Me.ChckMusical.Location = New System.Drawing.Point(232, 180)
         Me.ChckMusical.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckMusical.Name = "ChckMusical"
-        Me.ChckMusical.Size = New System.Drawing.Size(109, 29)
+        Me.ChckMusical.Size = New System.Drawing.Size(140, 38)
         Me.ChckMusical.TabIndex = 10
         Me.ChckMusical.Text = "Musical"
         Me.ChckMusical.UseVisualStyleBackColor = True
@@ -219,7 +219,7 @@ Partial Class TambahFilm
         Me.ChckThriller.Location = New System.Drawing.Point(232, 88)
         Me.ChckThriller.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckThriller.Name = "ChckThriller"
-        Me.ChckThriller.Size = New System.Drawing.Size(104, 29)
+        Me.ChckThriller.Size = New System.Drawing.Size(135, 38)
         Me.ChckThriller.TabIndex = 9
         Me.ChckThriller.Text = "Thriller"
         Me.ChckThriller.UseVisualStyleBackColor = True
@@ -230,7 +230,7 @@ Partial Class TambahFilm
         Me.ChckScifi.Location = New System.Drawing.Point(232, 57)
         Me.ChckScifi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckScifi.Name = "ChckScifi"
-        Me.ChckScifi.Size = New System.Drawing.Size(86, 29)
+        Me.ChckScifi.Size = New System.Drawing.Size(111, 38)
         Me.ChckScifi.TabIndex = 8
         Me.ChckScifi.Text = "Sci-fi"
         Me.ChckScifi.UseVisualStyleBackColor = True
@@ -241,7 +241,7 @@ Partial Class TambahFilm
         Me.ChckRomance.Location = New System.Drawing.Point(232, 26)
         Me.ChckRomance.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckRomance.Name = "ChckRomance"
-        Me.ChckRomance.Size = New System.Drawing.Size(119, 29)
+        Me.ChckRomance.Size = New System.Drawing.Size(159, 38)
         Me.ChckRomance.TabIndex = 7
         Me.ChckRomance.Text = "Romance"
         Me.ChckRomance.UseVisualStyleBackColor = True
@@ -252,7 +252,7 @@ Partial Class TambahFilm
         Me.ChckDokumenter.Location = New System.Drawing.Point(7, 211)
         Me.ChckDokumenter.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckDokumenter.Name = "ChckDokumenter"
-        Me.ChckDokumenter.Size = New System.Drawing.Size(146, 29)
+        Me.ChckDokumenter.Size = New System.Drawing.Size(195, 38)
         Me.ChckDokumenter.TabIndex = 6
         Me.ChckDokumenter.Text = "Dokumenter"
         Me.ChckDokumenter.UseVisualStyleBackColor = True
@@ -263,7 +263,7 @@ Partial Class TambahFilm
         Me.ChckAnimasi.Location = New System.Drawing.Point(7, 180)
         Me.ChckAnimasi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckAnimasi.Name = "ChckAnimasi"
-        Me.ChckAnimasi.Size = New System.Drawing.Size(111, 29)
+        Me.ChckAnimasi.Size = New System.Drawing.Size(144, 38)
         Me.ChckAnimasi.TabIndex = 5
         Me.ChckAnimasi.Text = "Animasi"
         Me.ChckAnimasi.UseVisualStyleBackColor = True
@@ -274,7 +274,7 @@ Partial Class TambahFilm
         Me.ChckAction.Location = New System.Drawing.Point(7, 150)
         Me.ChckAction.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ChckAction.Name = "ChckAction"
-        Me.ChckAction.Size = New System.Drawing.Size(97, 29)
+        Me.ChckAction.Size = New System.Drawing.Size(126, 38)
         Me.ChckAction.TabIndex = 4
         Me.ChckAction.Text = "Action"
         Me.ChckAction.UseVisualStyleBackColor = True
@@ -285,7 +285,7 @@ Partial Class TambahFilm
         Me.RdBInggris.Location = New System.Drawing.Point(7, 57)
         Me.RdBInggris.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBInggris.Name = "RdBInggris"
-        Me.RdBInggris.Size = New System.Drawing.Size(95, 29)
+        Me.RdBInggris.Size = New System.Drawing.Size(126, 38)
         Me.RdBInggris.TabIndex = 1
         Me.RdBInggris.TabStop = True
         Me.RdBInggris.Text = "Inggris"
@@ -297,7 +297,7 @@ Partial Class TambahFilm
         Me.RdBIndonesia.Location = New System.Drawing.Point(7, 26)
         Me.RdBIndonesia.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBIndonesia.Name = "RdBIndonesia"
-        Me.RdBIndonesia.Size = New System.Drawing.Size(120, 29)
+        Me.RdBIndonesia.Size = New System.Drawing.Size(159, 38)
         Me.RdBIndonesia.TabIndex = 0
         Me.RdBIndonesia.TabStop = True
         Me.RdBIndonesia.Text = "Indonesia"
@@ -326,7 +326,7 @@ Partial Class TambahFilm
         Me.RdBKorea.Location = New System.Drawing.Point(232, 57)
         Me.RdBKorea.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBKorea.Name = "RdBKorea"
-        Me.RdBKorea.Size = New System.Drawing.Size(90, 29)
+        Me.RdBKorea.Size = New System.Drawing.Size(119, 38)
         Me.RdBKorea.TabIndex = 3
         Me.RdBKorea.TabStop = True
         Me.RdBKorea.Text = "Korea"
@@ -338,7 +338,7 @@ Partial Class TambahFilm
         Me.RdBJepang.Location = New System.Drawing.Point(232, 26)
         Me.RdBJepang.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdBJepang.Name = "RdBJepang"
-        Me.RdBJepang.Size = New System.Drawing.Size(97, 29)
+        Me.RdBJepang.Size = New System.Drawing.Size(128, 38)
         Me.RdBJepang.TabIndex = 2
         Me.RdBJepang.TabStop = True
         Me.RdBJepang.Text = "Jepang"
@@ -351,7 +351,7 @@ Partial Class TambahFilm
         Me.TxtHargaFilm.Location = New System.Drawing.Point(521, 497)
         Me.TxtHargaFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtHargaFilm.Name = "TxtHargaFilm"
-        Me.TxtHargaFilm.Size = New System.Drawing.Size(382, 35)
+        Me.TxtHargaFilm.Size = New System.Drawing.Size(382, 44)
         Me.TxtHargaFilm.TabIndex = 46
         '
         'TxtDuration
@@ -361,7 +361,7 @@ Partial Class TambahFilm
         Me.TxtDuration.Location = New System.Drawing.Point(521, 393)
         Me.TxtDuration.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtDuration.Name = "TxtDuration"
-        Me.TxtDuration.Size = New System.Drawing.Size(382, 35)
+        Me.TxtDuration.Size = New System.Drawing.Size(382, 44)
         Me.TxtDuration.TabIndex = 44
         '
         'RichDeskripsiFilm
@@ -382,7 +382,7 @@ Partial Class TambahFilm
         Me.DateTimePickerRelease.Location = New System.Drawing.Point(521, 445)
         Me.DateTimePickerRelease.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePickerRelease.Name = "DateTimePickerRelease"
-        Me.DateTimePickerRelease.Size = New System.Drawing.Size(382, 35)
+        Me.DateTimePickerRelease.Size = New System.Drawing.Size(382, 44)
         Me.DateTimePickerRelease.TabIndex = 42
         '
         'TxtFilm
@@ -392,7 +392,7 @@ Partial Class TambahFilm
         Me.TxtFilm.Location = New System.Drawing.Point(521, 106)
         Me.TxtFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtFilm.Name = "TxtFilm"
-        Me.TxtFilm.Size = New System.Drawing.Size(382, 35)
+        Me.TxtFilm.Size = New System.Drawing.Size(382, 44)
         Me.TxtFilm.TabIndex = 41
         '
         'Label11
@@ -402,7 +402,7 @@ Partial Class TambahFilm
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label11.Location = New System.Drawing.Point(301, 671)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(65, 25)
+        Me.Label11.Size = New System.Drawing.Size(88, 34)
         Me.Label11.TabIndex = 40
         Me.Label11.Text = "Genre"
         '
@@ -413,7 +413,7 @@ Partial Class TambahFilm
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label10.Location = New System.Drawing.Point(301, 560)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(75, 25)
+        Me.Label10.Size = New System.Drawing.Size(100, 34)
         Me.Label10.TabIndex = 39
         Me.Label10.Text = "Bahasa"
         '
@@ -424,7 +424,7 @@ Partial Class TambahFilm
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label7.Location = New System.Drawing.Point(301, 501)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(110, 25)
+        Me.Label7.Size = New System.Drawing.Size(148, 34)
         Me.Label7.TabIndex = 36
         Me.Label7.Text = "Harga Film"
         '
@@ -435,7 +435,7 @@ Partial Class TambahFilm
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label6.Location = New System.Drawing.Point(301, 452)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(129, 25)
+        Me.Label6.Size = New System.Drawing.Size(169, 34)
         Me.Label6.TabIndex = 35
         Me.Label6.Text = "Date Release"
         '
@@ -446,7 +446,7 @@ Partial Class TambahFilm
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.Location = New System.Drawing.Point(301, 397)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 25)
+        Me.Label5.Size = New System.Drawing.Size(120, 34)
         Me.Label5.TabIndex = 34
         Me.Label5.Text = "Duration"
         '
@@ -473,7 +473,7 @@ Partial Class TambahFilm
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(301, 208)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(97, 25)
+        Me.Label4.Size = New System.Drawing.Size(125, 34)
         Me.Label4.TabIndex = 32
         Me.Label4.Text = "Deskripsi"
         '
@@ -484,7 +484,7 @@ Partial Class TambahFilm
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(301, 160)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 25)
+        Me.Label3.Size = New System.Drawing.Size(113, 34)
         Me.Label3.TabIndex = 31
         Me.Label3.Text = "Director"
         '
@@ -496,7 +496,7 @@ Partial Class TambahFilm
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(378, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(201, 36)
+        Me.Label1.Size = New System.Drawing.Size(272, 49)
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "Tambah Film"
         '
@@ -507,7 +507,7 @@ Partial Class TambahFilm
         Me.TxtDirector.Location = New System.Drawing.Point(521, 156)
         Me.TxtDirector.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtDirector.Name = "TxtDirector"
-        Me.TxtDirector.Size = New System.Drawing.Size(382, 35)
+        Me.TxtDirector.Size = New System.Drawing.Size(382, 44)
         Me.TxtDirector.TabIndex = 54
         '
         'Label2
@@ -517,7 +517,7 @@ Partial Class TambahFilm
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(301, 110)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 25)
+        Me.Label2.Size = New System.Drawing.Size(69, 34)
         Me.Label2.TabIndex = 30
         Me.Label2.Text = "Film"
         '
@@ -533,7 +533,7 @@ Partial Class TambahFilm
         '
         'TambahFilm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(15.0!, 31.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
