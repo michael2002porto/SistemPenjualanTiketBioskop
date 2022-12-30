@@ -105,9 +105,9 @@ Public Class Film
     End Sub
 
     Private Sub BtnStudio_Click(sender As Object, e As EventArgs) Handles BtnStudio.Click
-        Dim studio = New Studio()
-        studio.Show()
-        Me.Close()
+        'Dim studio = New Studio()
+        'studio.Show()
+        'Me.Close()
     End Sub
 
     Private Sub BtnJadwalTayang_Click(sender As Object, e As EventArgs) Handles BtnJadwalTayang.Click
