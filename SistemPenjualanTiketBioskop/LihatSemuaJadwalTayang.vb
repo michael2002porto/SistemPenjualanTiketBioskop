@@ -87,4 +87,8 @@ Public Class LihatSemuaJadwalTayang
         selectedIdFilm = Nothing
         selectedIdStudio = Nothing
     End Sub
+
+    Private Sub LihatSemuaJadwalTayang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        ReloadDataTableDatabase()
+    End Sub
 End Class

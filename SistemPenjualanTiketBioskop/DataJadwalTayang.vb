@@ -6,9 +6,9 @@ Public Class DataJadwalTayang
     Private id_jadwal_tayang As Integer
     Private id_film As Integer
     Private id_studio As Integer
-    Private tanggal As DateOnly
-    Private waktu_mulai As TimeOnly
-    Private waktu_selesai As TimeOnly
+    Private tanggal
+    Private waktu_mulai
+    Private waktu_selesai
 
     'Database Global Variable
     Private jadwalTayangDataTable As New ArrayList()
@@ -81,7 +81,7 @@ Public Class DataJadwalTayang
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText =
             "SELECT jt.id_jadwal_tayang,
-            jt.id_film, f.film, f.foto,
+            jt.id_film, f.nama_film, f.foto,
             jt.id_studio, s.nama_studio, s.kapasitas, s.harga_kursi,
             jt.tanggal, jt.waktu_mulai, jt.waktu_selesai
             FROM jadwal_tayang jt
@@ -116,9 +116,9 @@ Public Class DataJadwalTayang
     Public Function AddDataJadwalTayangDatabase(
         id_film As Integer,
         id_studio As Integer,
-        tanggal As Date,
-        waktu_mulai As Date,
-        waktu_selesai As Date
+        tanggal As String,
+        waktu_mulai As String,
+        waktu_selesai As String
     )
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
@@ -264,39 +264,4 @@ Public Class DataJadwalTayang
         End Try
     End Function
 
-    Public Function GetDataFilmDatabase() As List(Of String)
-        Dim result As New List(Of String)
-
-        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
-                + "password =" + password + ";" + "database =" + database
-
-        Try
-            dbConn.Open()
-            sqlCommand.Connection = dbConn
-            sqlCommand.CommandText = "SELECT id AS 'ID',
-                                      film AS 'Film',
-                                      genre AS 'Genre',
-                                      director AS 'Director',
-                                      duration AS 'Duration',
-                                      date_release AS 'Date Release',
-                                      bahasa AS 'Bahasa',
-                                      harga_film AS 'Harga'
-                                      From film"
-
-            sqlRead = sqlCommand.ExecuteReader
-
-            While sqlRead.Read
-                result.Add(sqlRead.GetString(0).ToString() & "; " & sqlRead.GetString(1).ToString())
-            End While
-            'Return result
-
-            sqlRead.Close()
-            dbConn.Close()
-            Return result
-        Catch ex As Exception
-            MessageBox.Show(ex.Message.ToString())
-        Finally
-            dbConn.Dispose()
-        End Try
-    End Function
 End Class
