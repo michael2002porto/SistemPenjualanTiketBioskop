@@ -4,7 +4,7 @@
     Public Shared SelectedTableNamaStudio As String
 
 
-    Private Sub New()
+    Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()

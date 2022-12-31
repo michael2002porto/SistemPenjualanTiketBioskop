@@ -39,31 +39,29 @@ Partial Class EditFilm
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TxtFilm = New System.Windows.Forms.TextBox()
         Me.TxtHargaFilm = New System.Windows.Forms.TextBox()
-        Me.GroupBahasa = New System.Windows.Forms.GroupBox()
-        Me.RdBInggris = New System.Windows.Forms.RadioButton()
-        Me.RdBIndonesia = New System.Windows.Forms.RadioButton()
         Me.BtnEditFilm = New System.Windows.Forms.Button()
         Me.PicFoto = New System.Windows.Forms.PictureBox()
         Me.LblValueDeskripsi = New System.Windows.Forms.Label()
         Me.TxtDirector = New System.Windows.Forms.TextBox()
         Me.GroupGenre = New System.Windows.Forms.GroupBox()
+        Me.ChckCrime = New System.Windows.Forms.CheckBox()
         Me.ChckMistery = New System.Windows.Forms.CheckBox()
         Me.ChckBiografi = New System.Windows.Forms.CheckBox()
         Me.ChckMusical = New System.Windows.Forms.CheckBox()
         Me.ChckThriller = New System.Windows.Forms.CheckBox()
         Me.ChckScifi = New System.Windows.Forms.CheckBox()
         Me.ChckRomance = New System.Windows.Forms.CheckBox()
-        Me.ChckDokumenter = New System.Windows.Forms.CheckBox()
-        Me.ChckAnimasi = New System.Windows.Forms.CheckBox()
+        Me.ChckDocumenter = New System.Windows.Forms.CheckBox()
+        Me.ChckAnimation = New System.Windows.Forms.CheckBox()
         Me.ChckAction = New System.Windows.Forms.CheckBox()
         Me.ChckAdventure = New System.Windows.Forms.CheckBox()
         Me.ChckHoror = New System.Windows.Forms.CheckBox()
-        Me.ChckKomedi = New System.Windows.Forms.CheckBox()
+        Me.ChckComedy = New System.Windows.Forms.CheckBox()
         Me.ChckDrama = New System.Windows.Forms.CheckBox()
-        Me.RdBJepang = New System.Windows.Forms.RadioButton()
-        Me.RdBKorea = New System.Windows.Forms.RadioButton()
+        Me.ComboBoxBahasa = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ComboBoxRatingUsia = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
-        Me.GroupBahasa.SuspendLayout()
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupGenre.SuspendLayout()
         Me.SuspendLayout()
@@ -107,7 +105,7 @@ Partial Class EditFilm
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(301, 160)
+        Me.Label3.Location = New System.Drawing.Point(301, 210)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(85, 25)
         Me.Label3.TabIndex = 57
@@ -118,7 +116,7 @@ Partial Class EditFilm
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(301, 208)
+        Me.Label4.Location = New System.Drawing.Point(301, 269)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(97, 25)
         Me.Label4.TabIndex = 58
@@ -132,7 +130,7 @@ Partial Class EditFilm
         Me.BtnEditGambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEditGambar.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnEditGambar.ForeColor = System.Drawing.Color.White
-        Me.BtnEditGambar.Location = New System.Drawing.Point(37, 377)
+        Me.BtnEditGambar.Location = New System.Drawing.Point(37, 399)
         Me.BtnEditGambar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditGambar.Name = "BtnEditGambar"
         Me.BtnEditGambar.Size = New System.Drawing.Size(231, 37)
@@ -145,7 +143,7 @@ Partial Class EditFilm
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(301, 397)
+        Me.Label5.Location = New System.Drawing.Point(301, 458)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(89, 25)
         Me.Label5.TabIndex = 60
@@ -156,7 +154,7 @@ Partial Class EditFilm
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(301, 452)
+        Me.Label6.Location = New System.Drawing.Point(301, 513)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(129, 25)
         Me.Label6.TabIndex = 61
@@ -167,7 +165,7 @@ Partial Class EditFilm
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(301, 501)
+        Me.Label7.Location = New System.Drawing.Point(301, 562)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 25)
         Me.Label7.TabIndex = 62
@@ -178,7 +176,7 @@ Partial Class EditFilm
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.Location = New System.Drawing.Point(301, 560)
+        Me.Label10.Location = New System.Drawing.Point(301, 614)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(75, 25)
         Me.Label10.TabIndex = 63
@@ -199,7 +197,7 @@ Partial Class EditFilm
         '
         Me.DateTimePickerRelease.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.DateTimePickerRelease.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePickerRelease.Location = New System.Drawing.Point(521, 445)
+        Me.DateTimePickerRelease.Location = New System.Drawing.Point(521, 506)
         Me.DateTimePickerRelease.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePickerRelease.Name = "DateTimePickerRelease"
         Me.DateTimePickerRelease.Size = New System.Drawing.Size(382, 33)
@@ -209,7 +207,7 @@ Partial Class EditFilm
         '
         Me.RichDeskripsiFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.RichDeskripsiFilm.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.RichDeskripsiFilm.Location = New System.Drawing.Point(521, 208)
+        Me.RichDeskripsiFilm.Location = New System.Drawing.Point(521, 269)
         Me.RichDeskripsiFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RichDeskripsiFilm.Name = "RichDeskripsiFilm"
         Me.RichDeskripsiFilm.Size = New System.Drawing.Size(382, 167)
@@ -220,7 +218,7 @@ Partial Class EditFilm
         '
         Me.TxtDuration.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtDuration.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtDuration.Location = New System.Drawing.Point(521, 393)
+        Me.TxtDuration.Location = New System.Drawing.Point(521, 454)
         Me.TxtDuration.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtDuration.Name = "TxtDuration"
         Me.TxtDuration.Size = New System.Drawing.Size(382, 33)
@@ -244,52 +242,11 @@ Partial Class EditFilm
         '
         Me.TxtHargaFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtHargaFilm.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtHargaFilm.Location = New System.Drawing.Point(521, 497)
+        Me.TxtHargaFilm.Location = New System.Drawing.Point(521, 558)
         Me.TxtHargaFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtHargaFilm.Name = "TxtHargaFilm"
         Me.TxtHargaFilm.Size = New System.Drawing.Size(382, 33)
         Me.TxtHargaFilm.TabIndex = 69
-        '
-        'GroupBahasa
-        '
-        Me.GroupBahasa.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.GroupBahasa.Controls.Add(Me.RdBKorea)
-        Me.GroupBahasa.Controls.Add(Me.RdBJepang)
-        Me.GroupBahasa.Controls.Add(Me.RdBInggris)
-        Me.GroupBahasa.Controls.Add(Me.RdBIndonesia)
-        Me.GroupBahasa.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBahasa.Location = New System.Drawing.Point(521, 547)
-        Me.GroupBahasa.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBahasa.Name = "GroupBahasa"
-        Me.GroupBahasa.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBahasa.Size = New System.Drawing.Size(382, 98)
-        Me.GroupBahasa.TabIndex = 70
-        Me.GroupBahasa.TabStop = False
-        Me.GroupBahasa.Text = "Bahasa"
-        '
-        'RdBInggris
-        '
-        Me.RdBInggris.AutoSize = True
-        Me.RdBInggris.Location = New System.Drawing.Point(7, 57)
-        Me.RdBInggris.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.RdBInggris.Name = "RdBInggris"
-        Me.RdBInggris.Size = New System.Drawing.Size(95, 29)
-        Me.RdBInggris.TabIndex = 1
-        Me.RdBInggris.TabStop = True
-        Me.RdBInggris.Text = "Inggris"
-        Me.RdBInggris.UseVisualStyleBackColor = True
-        '
-        'RdBIndonesia
-        '
-        Me.RdBIndonesia.AutoSize = True
-        Me.RdBIndonesia.Location = New System.Drawing.Point(7, 26)
-        Me.RdBIndonesia.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.RdBIndonesia.Name = "RdBIndonesia"
-        Me.RdBIndonesia.Size = New System.Drawing.Size(120, 29)
-        Me.RdBIndonesia.TabIndex = 0
-        Me.RdBIndonesia.TabStop = True
-        Me.RdBIndonesia.Text = "Indonesia"
-        Me.RdBIndonesia.UseVisualStyleBackColor = True
         '
         'BtnEditFilm
         '
@@ -314,7 +271,7 @@ Partial Class EditFilm
         Me.PicFoto.Location = New System.Drawing.Point(37, 106)
         Me.PicFoto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PicFoto.Name = "PicFoto"
-        Me.PicFoto.Size = New System.Drawing.Size(231, 255)
+        Me.PicFoto.Size = New System.Drawing.Size(231, 289)
         Me.PicFoto.TabIndex = 73
         Me.PicFoto.TabStop = False
         '
@@ -333,7 +290,7 @@ Partial Class EditFilm
         '
         Me.TxtDirector.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtDirector.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtDirector.Location = New System.Drawing.Point(521, 156)
+        Me.TxtDirector.Location = New System.Drawing.Point(521, 207)
         Me.TxtDirector.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtDirector.Name = "TxtDirector"
         Me.TxtDirector.Size = New System.Drawing.Size(382, 33)
@@ -342,18 +299,19 @@ Partial Class EditFilm
         'GroupGenre
         '
         Me.GroupGenre.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupGenre.Controls.Add(Me.ChckCrime)
         Me.GroupGenre.Controls.Add(Me.ChckMistery)
         Me.GroupGenre.Controls.Add(Me.ChckBiografi)
         Me.GroupGenre.Controls.Add(Me.ChckMusical)
         Me.GroupGenre.Controls.Add(Me.ChckThriller)
         Me.GroupGenre.Controls.Add(Me.ChckScifi)
         Me.GroupGenre.Controls.Add(Me.ChckRomance)
-        Me.GroupGenre.Controls.Add(Me.ChckDokumenter)
-        Me.GroupGenre.Controls.Add(Me.ChckAnimasi)
+        Me.GroupGenre.Controls.Add(Me.ChckDocumenter)
+        Me.GroupGenre.Controls.Add(Me.ChckAnimation)
         Me.GroupGenre.Controls.Add(Me.ChckAction)
         Me.GroupGenre.Controls.Add(Me.ChckAdventure)
         Me.GroupGenre.Controls.Add(Me.ChckHoror)
-        Me.GroupGenre.Controls.Add(Me.ChckKomedi)
+        Me.GroupGenre.Controls.Add(Me.ChckComedy)
         Me.GroupGenre.Controls.Add(Me.ChckDrama)
         Me.GroupGenre.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupGenre.Location = New System.Drawing.Point(521, 661)
@@ -364,6 +322,17 @@ Partial Class EditFilm
         Me.GroupGenre.TabIndex = 77
         Me.GroupGenre.TabStop = False
         Me.GroupGenre.Text = "Genre"
+        '
+        'ChckCrime
+        '
+        Me.ChckCrime.AutoSize = True
+        Me.ChckCrime.Location = New System.Drawing.Point(232, 211)
+        Me.ChckCrime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckCrime.Name = "ChckCrime"
+        Me.ChckCrime.Size = New System.Drawing.Size(92, 29)
+        Me.ChckCrime.TabIndex = 13
+        Me.ChckCrime.Text = "Crime"
+        Me.ChckCrime.UseVisualStyleBackColor = True
         '
         'ChckMistery
         '
@@ -431,27 +400,27 @@ Partial Class EditFilm
         Me.ChckRomance.Text = "Romance"
         Me.ChckRomance.UseVisualStyleBackColor = True
         '
-        'ChckDokumenter
+        'ChckDocumenter
         '
-        Me.ChckDokumenter.AutoSize = True
-        Me.ChckDokumenter.Location = New System.Drawing.Point(7, 211)
-        Me.ChckDokumenter.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ChckDokumenter.Name = "ChckDokumenter"
-        Me.ChckDokumenter.Size = New System.Drawing.Size(146, 29)
-        Me.ChckDokumenter.TabIndex = 6
-        Me.ChckDokumenter.Text = "Dokumenter"
-        Me.ChckDokumenter.UseVisualStyleBackColor = True
+        Me.ChckDocumenter.AutoSize = True
+        Me.ChckDocumenter.Location = New System.Drawing.Point(7, 211)
+        Me.ChckDocumenter.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckDocumenter.Name = "ChckDocumenter"
+        Me.ChckDocumenter.Size = New System.Drawing.Size(145, 29)
+        Me.ChckDocumenter.TabIndex = 6
+        Me.ChckDocumenter.Text = "Documenter"
+        Me.ChckDocumenter.UseVisualStyleBackColor = True
         '
-        'ChckAnimasi
+        'ChckAnimation
         '
-        Me.ChckAnimasi.AutoSize = True
-        Me.ChckAnimasi.Location = New System.Drawing.Point(7, 180)
-        Me.ChckAnimasi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ChckAnimasi.Name = "ChckAnimasi"
-        Me.ChckAnimasi.Size = New System.Drawing.Size(111, 29)
-        Me.ChckAnimasi.TabIndex = 5
-        Me.ChckAnimasi.Text = "Animasi"
-        Me.ChckAnimasi.UseVisualStyleBackColor = True
+        Me.ChckAnimation.AutoSize = True
+        Me.ChckAnimation.Location = New System.Drawing.Point(7, 180)
+        Me.ChckAnimation.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckAnimation.Name = "ChckAnimation"
+        Me.ChckAnimation.Size = New System.Drawing.Size(129, 29)
+        Me.ChckAnimation.TabIndex = 5
+        Me.ChckAnimation.Text = "Animation"
+        Me.ChckAnimation.UseVisualStyleBackColor = True
         '
         'ChckAction
         '
@@ -486,16 +455,16 @@ Partial Class EditFilm
         Me.ChckHoror.Text = "Horor"
         Me.ChckHoror.UseVisualStyleBackColor = True
         '
-        'ChckKomedi
+        'ChckComedy
         '
-        Me.ChckKomedi.AutoSize = True
-        Me.ChckKomedi.Location = New System.Drawing.Point(7, 57)
-        Me.ChckKomedi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ChckKomedi.Name = "ChckKomedi"
-        Me.ChckKomedi.Size = New System.Drawing.Size(107, 29)
-        Me.ChckKomedi.TabIndex = 1
-        Me.ChckKomedi.Text = "Komedi"
-        Me.ChckKomedi.UseVisualStyleBackColor = True
+        Me.ChckComedy.AutoSize = True
+        Me.ChckComedy.Location = New System.Drawing.Point(7, 57)
+        Me.ChckComedy.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ChckComedy.Name = "ChckComedy"
+        Me.ChckComedy.Size = New System.Drawing.Size(112, 29)
+        Me.ChckComedy.TabIndex = 1
+        Me.ChckComedy.Text = "Comedy"
+        Me.ChckComedy.UseVisualStyleBackColor = True
         '
         'ChckDrama
         '
@@ -508,29 +477,40 @@ Partial Class EditFilm
         Me.ChckDrama.Text = "Drama"
         Me.ChckDrama.UseVisualStyleBackColor = True
         '
-        'RdBJepang
+        'ComboBoxBahasa
         '
-        Me.RdBJepang.AutoSize = True
-        Me.RdBJepang.Location = New System.Drawing.Point(232, 26)
-        Me.RdBJepang.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.RdBJepang.Name = "RdBJepang"
-        Me.RdBJepang.Size = New System.Drawing.Size(97, 29)
-        Me.RdBJepang.TabIndex = 2
-        Me.RdBJepang.TabStop = True
-        Me.RdBJepang.Text = "Jepang"
-        Me.RdBJepang.UseVisualStyleBackColor = True
+        Me.ComboBoxBahasa.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ComboBoxBahasa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxBahasa.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ComboBoxBahasa.FormattingEnabled = True
+        Me.ComboBoxBahasa.Items.AddRange(New Object() {"Bahasa Indonesia", "Bahasa Inggris", "Bahasa Jepang", "Bahasa Korea", "Bahasa Mandarin"})
+        Me.ComboBoxBahasa.Location = New System.Drawing.Point(521, 611)
+        Me.ComboBoxBahasa.Name = "ComboBoxBahasa"
+        Me.ComboBoxBahasa.Size = New System.Drawing.Size(382, 33)
+        Me.ComboBoxBahasa.TabIndex = 78
         '
-        'RdBKorea
+        'Label8
         '
-        Me.RdBKorea.AutoSize = True
-        Me.RdBKorea.Location = New System.Drawing.Point(232, 57)
-        Me.RdBKorea.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.RdBKorea.Name = "RdBKorea"
-        Me.RdBKorea.Size = New System.Drawing.Size(90, 29)
-        Me.RdBKorea.TabIndex = 3
-        Me.RdBKorea.TabStop = True
-        Me.RdBKorea.Text = "Korea"
-        Me.RdBKorea.UseVisualStyleBackColor = True
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(301, 160)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(114, 25)
+        Me.Label8.TabIndex = 80
+        Me.Label8.Text = "Rating Usia"
+        '
+        'ComboBoxRatingUsia
+        '
+        Me.ComboBoxRatingUsia.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ComboBoxRatingUsia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxRatingUsia.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ComboBoxRatingUsia.FormattingEnabled = True
+        Me.ComboBoxRatingUsia.Items.AddRange(New Object() {"SU", "R13+", "D17+"})
+        Me.ComboBoxRatingUsia.Location = New System.Drawing.Point(521, 157)
+        Me.ComboBoxRatingUsia.Name = "ComboBoxRatingUsia"
+        Me.ComboBoxRatingUsia.Size = New System.Drawing.Size(382, 33)
+        Me.ComboBoxRatingUsia.TabIndex = 79
         '
         'EditFilm
         '
@@ -539,13 +519,15 @@ Partial Class EditFilm
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1000, 967)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.ComboBoxRatingUsia)
+        Me.Controls.Add(Me.ComboBoxBahasa)
         Me.Controls.Add(Me.GroupGenre)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TxtDirector)
         Me.Controls.Add(Me.LblValueDeskripsi)
         Me.Controls.Add(Me.PicFoto)
         Me.Controls.Add(Me.BtnEditFilm)
-        Me.Controls.Add(Me.GroupBahasa)
         Me.Controls.Add(Me.TxtHargaFilm)
         Me.Controls.Add(Me.TxtFilm)
         Me.Controls.Add(Me.TxtDuration)
@@ -567,8 +549,6 @@ Partial Class EditFilm
         Me.Text = "Edit Film"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.GroupBahasa.ResumeLayout(False)
-        Me.GroupBahasa.PerformLayout()
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupGenre.ResumeLayout(False)
         Me.GroupGenre.PerformLayout()
@@ -594,9 +574,6 @@ Partial Class EditFilm
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents TxtFilm As TextBox
     Friend WithEvents TxtHargaFilm As TextBox
-    Friend WithEvents GroupBahasa As GroupBox
-    Friend WithEvents RdBInggris As RadioButton
-    Friend WithEvents RdBIndonesia As RadioButton
     Friend WithEvents BtnEditFilm As Button
     Friend WithEvents PicFoto As PictureBox
     Friend WithEvents LblValueDeskripsi As Label
@@ -608,13 +585,15 @@ Partial Class EditFilm
     Friend WithEvents ChckThriller As CheckBox
     Friend WithEvents ChckScifi As CheckBox
     Friend WithEvents ChckRomance As CheckBox
-    Friend WithEvents ChckDokumenter As CheckBox
-    Friend WithEvents ChckAnimasi As CheckBox
+    Friend WithEvents ChckDocumenter As CheckBox
+    Friend WithEvents ChckAnimation As CheckBox
     Friend WithEvents ChckAction As CheckBox
     Friend WithEvents ChckAdventure As CheckBox
     Friend WithEvents ChckHoror As CheckBox
-    Friend WithEvents ChckKomedi As CheckBox
+    Friend WithEvents ChckComedy As CheckBox
     Friend WithEvents ChckDrama As CheckBox
-    Friend WithEvents RdBJepang As RadioButton
-    Friend WithEvents RdBKorea As RadioButton
+    Friend WithEvents ComboBoxBahasa As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents ComboBoxRatingUsia As ComboBox
+    Friend WithEvents ChckCrime As CheckBox
 End Class

@@ -21,33 +21,21 @@
         DateTimePickerRelease.Format = DateTimePickerFormat.Custom
         DateTimePickerRelease.CustomFormat = "yyyy/MM/dd"
         TxtFilm.Text = Film.dataFilm.GSNamaFilm
+        ComboBoxRatingUsia.SelectedItem() = Film.dataFilm.GSRatingUsia
         RichDeskripsiFilm.Text = Film.dataFilm.GSDeskripsi
         TxtDirector.Text = Film.dataFilm.GSDirector
         TxtDuration.Text = Film.dataFilm.GSDuration
         DateTimePickerRelease.Value = Film.dataFilm.GSDateRelease
+        ComboBoxBahasa.SelectedItem() = Film.dataFilm.GSBahasa
         TxtHargaFilm.Text = Film.dataFilm.GSHargaFilm
-
-        If String.Compare(Film.dataFilm.GSBahasa, "Indonesia") = 0 Then
-            RdBIndonesia.Checked = True
-
-        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Inggris") = 0 Then
-            RdBInggris.Checked = True
-
-        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Jepang") = 0 Then
-            RdBJepang.Checked = True
-
-        ElseIf String.Compare(Film.dataFilm.GSBahasa, "Korea") = 0 Then
-            RdBKorea.Checked = True
-
-        End If
 
         For Each genreItem In Film.dataFilm.GSGenre
 
             If String.Compare(genreItem, "Drama") = 0 Then
                 ChckDrama.Checked = True
 
-            ElseIf String.Compare(genreItem, "Komedi") = 0 Then
-                ChckKomedi.Checked = True
+            ElseIf String.Compare(genreItem, "Comedy") = 0 Then
+                ChckComedy.Checked = True
 
             ElseIf String.Compare(genreItem, "Horor") = 0 Then
                 ChckHoror.Checked = True
@@ -58,11 +46,11 @@
             ElseIf String.Compare(genreItem, "Action") = 0 Then
                 ChckAction.Checked = True
 
-            ElseIf String.Compare(genreItem, "Animasi") = 0 Then
-                ChckAnimasi.Checked = True
+            ElseIf String.Compare(genreItem, "Animation") = 0 Then
+                ChckAnimation.Checked = True
 
-            ElseIf String.Compare(genreItem, "Dokumenter") = 0 Then
-                ChckDokumenter.Checked = True
+            ElseIf String.Compare(genreItem, "Documenter") = 0 Then
+                ChckDocumenter.Checked = True
 
             ElseIf String.Compare(genreItem, "Romance") = 0 Then
                 ChckRomance.Checked = True
@@ -81,6 +69,10 @@
 
             ElseIf String.Compare(genreItem, "Musical") = 0 Then
                 ChckMusical.Checked = True
+
+            ElseIf String.Compare(genreItem, "Crime") = 0 Then
+                ChckCrime.Checked = True
+
             End If
 
         Next
@@ -119,32 +111,20 @@
 
     Private Sub BtnEditFilm_Click(sender As Object, e As EventArgs) Handles BtnEditFilm.Click
         Film.dataFilm.GSNamaFilm = TxtFilm.Text.ToString()
+        Film.dataFilm.GSRatingUsia = ComboBoxRatingUsia.SelectedItem().ToString()
         Film.dataFilm.GSDeskripsi = RichDeskripsiFilm.Text.ToString()
         Film.dataFilm.GSDirector = TxtDirector.Text.ToString()
         Film.dataFilm.GSDuration = TxtDuration.Text.ToString()
         Film.dataFilm.GSDateRelease = DateTimePickerRelease.Value.ToString("yyyy/MM/dd")
+        Film.dataFilm.GSBahasa = ComboBoxBahasa.SelectedItem().ToString()
         Film.dataFilm.GSHargaFilm = Integer.Parse(TxtHargaFilm.Text)
-
-        If RdBIndonesia.Checked = True Then
-            Film.dataFilm.GSBahasa = "Indonesia"
-
-        ElseIf RdBInggris.Checked = True Then
-            Film.dataFilm.GSBahasa = "Inggris"
-
-        ElseIf RdBJepang.Checked = True Then
-            Film.dataFilm.GSBahasa = "Jepang"
-
-        ElseIf RdBKorea.Checked = True Then
-            Film.dataFilm.GSBahasa = "Korea"
-
-        End If
 
         If ChckDrama.Checked() Then
             Film.dataFilm.AddGenre("Drama")
         End If
 
-        If ChckKomedi.Checked() Then
-            Film.dataFilm.AddGenre("Komedi")
+        If ChckComedy.Checked() Then
+            Film.dataFilm.AddGenre("Comedy")
         End If
 
         If ChckHoror.Checked() Then
@@ -159,12 +139,12 @@
             Film.dataFilm.AddGenre("Action")
         End If
 
-        If ChckAnimasi.Checked() Then
-            Film.dataFilm.AddGenre("Animasi")
+        If ChckAnimation.Checked() Then
+            Film.dataFilm.AddGenre("Animation")
         End If
 
-        If ChckDokumenter.Checked() Then
-            Film.dataFilm.AddGenre("Dokumenter")
+        If ChckDocumenter.Checked() Then
+            Film.dataFilm.AddGenre("Documenter")
         End If
 
         If ChckRomance.Checked() Then
@@ -191,10 +171,15 @@
             Film.dataFilm.AddGenre("Musical")
         End If
 
+        If ChckCrime.Checked() Then
+            Film.dataFilm.AddGenre("Crime")
+        End If
+
         Dim convertedGenre = Film.dataFilm.ConvertGenreToString(Film.dataFilm.getGenreItem)
 
         Film.dataFilm.UpdateDataFilmByIDDatabase(Film.selectedTableFilm,
                                                  Film.dataFilm.GSNamaFilm,
+                                                 Film.dataFilm.GSRatingUsia,
                                                  convertedGenre,
                                                  Film.dataFilm.GSDeskripsi,
                                                  Film.dataFilm.GSDirector,
