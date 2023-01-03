@@ -48,10 +48,6 @@ Public Class LihatSemuaJadwalTayang
         End Try
     End Sub
 
-    Private Sub ButtonDetailFilm_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click
         Dim jadwal_tayang = New JadwalTayang()
         jadwal_tayang.Show()
@@ -66,6 +62,29 @@ Public Class LihatSemuaJadwalTayang
         selectedIdJadwalTayang = selectedRow.Cells(0).Value
         selectedIdFilm = selectedRow.Cells(1).Value
         selectedIdStudio = selectedRow.Cells(2).Value
+    End Sub
+
+    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
+        Try
+            If selectedIdJadwalTayang Is Nothing Then
+                Throw New System.Exception("Please select data grid")
+            End If
+            Dim selectedJadwalTayang As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedIdJadwalTayang)
+
+            data_jadwal_tayang.GSIdJadwalTayang = selectedJadwalTayang(0)
+            data_jadwal_tayang.GSIdFilm = selectedJadwalTayang(1)
+            data_jadwal_tayang.GSIdStudio = selectedJadwalTayang(4)
+            data_jadwal_tayang.GSTanggal = selectedJadwalTayang(8)
+            data_jadwal_tayang.GSWaktuMulai = selectedJadwalTayang(9)
+            data_jadwal_tayang.GSWaktuSelesai = selectedJadwalTayang(10)
+            data_film.GSNamaFilm = selectedJadwalTayang(2)
+            data_studio.GSNama = selectedJadwalTayang(5)
+
+            Dim hapus_jadwal_tayang = New HapusJadwalTayang()
+            hapus_jadwal_tayang.Show()
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
     End Sub
 
     Private Sub ReloadDataTableDatabase()
