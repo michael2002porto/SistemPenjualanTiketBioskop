@@ -5,7 +5,7 @@ Imports Mysqlx.XDevAPI.Common
 Public Class LihatSemuaJadwalTayang
     Public Shared data_jadwal_tayang As DataJadwalTayang
     Public Shared data_film As DataFilm
-    'Public Shared data_studio As DataStudio
+    Public Shared data_studio As DataStudio
     Public Shared selectedIdJadwalTayang, selectedIdFilm, selectedIdStudio As String
 
     Public Sub New()
@@ -15,6 +15,8 @@ Public Class LihatSemuaJadwalTayang
 
         ' Add any initialization after the InitializeComponent() call.
         data_jadwal_tayang = New DataJadwalTayang()
+        data_film = New DataFilm()
+        data_studio = New DataStudio()
         ReloadDataTableDatabase()
     End Sub
 
@@ -28,23 +30,22 @@ Public Class LihatSemuaJadwalTayang
             If selectedIdJadwalTayang Is Nothing Then
                 Throw New System.Exception("Please select data grid")
             End If
-            Dim selectedKoleksi As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedIdJadwalTayang)
+            Dim selectedJadwalTayang As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedIdJadwalTayang)
 
-            data_jadwal_tayang.GSIdFilm = selectedKoleksi(1)
-            data_jadwal_tayang.GSIdStudio = selectedKoleksi(2)
-            data_jadwal_tayang.GSTanggal = selectedKoleksi(3)
-            data_jadwal_tayang.GSWaktuMulai = selectedKoleksi(4)
-            data_jadwal_tayang.GSWaktuSelesai = selectedKoleksi(5)
+            data_jadwal_tayang.GSIdJadwalTayang = selectedJadwalTayang(0)
+            data_jadwal_tayang.GSIdFilm = selectedJadwalTayang(1)
+            data_jadwal_tayang.GSIdStudio = selectedJadwalTayang(4)
+            data_jadwal_tayang.GSTanggal = selectedJadwalTayang(8)
+            data_jadwal_tayang.GSWaktuMulai = selectedJadwalTayang(9)
+            data_jadwal_tayang.GSWaktuSelesai = selectedJadwalTayang(10)
+            data_film.GSNamaFilm = selectedJadwalTayang(2)
+            data_studio.GSNama = selectedJadwalTayang(5)
 
             Dim edit_jadwal_tayang = New EditJadwalTayang()
             edit_jadwal_tayang.Show()
         Catch ex As Exception
             MsgBox(ex.Message.ToString())
         End Try
-    End Sub
-
-    Private Sub ButtonDetailFilm_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click
@@ -61,6 +62,29 @@ Public Class LihatSemuaJadwalTayang
         selectedIdJadwalTayang = selectedRow.Cells(0).Value
         selectedIdFilm = selectedRow.Cells(1).Value
         selectedIdStudio = selectedRow.Cells(2).Value
+    End Sub
+
+    Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
+        Try
+            If selectedIdJadwalTayang Is Nothing Then
+                Throw New System.Exception("Please select data grid")
+            End If
+            Dim selectedJadwalTayang As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedIdJadwalTayang)
+
+            data_jadwal_tayang.GSIdJadwalTayang = selectedJadwalTayang(0)
+            data_jadwal_tayang.GSIdFilm = selectedJadwalTayang(1)
+            data_jadwal_tayang.GSIdStudio = selectedJadwalTayang(4)
+            data_jadwal_tayang.GSTanggal = selectedJadwalTayang(8)
+            data_jadwal_tayang.GSWaktuMulai = selectedJadwalTayang(9)
+            data_jadwal_tayang.GSWaktuSelesai = selectedJadwalTayang(10)
+            data_film.GSNamaFilm = selectedJadwalTayang(2)
+            data_studio.GSNama = selectedJadwalTayang(5)
+
+            Dim hapus_jadwal_tayang = New HapusJadwalTayang()
+            hapus_jadwal_tayang.Show()
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
     End Sub
 
     Private Sub ReloadDataTableDatabase()
@@ -90,5 +114,35 @@ Public Class LihatSemuaJadwalTayang
 
     Private Sub LihatSemuaJadwalTayang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
+    End Sub
+
+    Private Sub BtnSignOut_Click(sender As Object, e As EventArgs) Handles BtnSignOut.Click
+        Dim signIn = New SignIn()
+        signIn.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnFilm_Click(sender As Object, e As EventArgs) Handles BtnFilm.Click
+        Dim film = New Film()
+        film.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnStudio_Click(sender As Object, e As EventArgs) Handles BtnStudio.Click
+        Dim studio = New Studio()
+        studio.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnJadwalTayang_Click(sender As Object, e As EventArgs) Handles BtnJadwalTayang.Click
+        Dim jadwalTayang = New JadwalTayang()
+        jadwalTayang.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnTiket_Click(sender As Object, e As EventArgs) Handles BtnTiket.Click
+        Dim tiket = New Tiket()
+        tiket.Show()
+        Me.Close()
     End Sub
 End Class
