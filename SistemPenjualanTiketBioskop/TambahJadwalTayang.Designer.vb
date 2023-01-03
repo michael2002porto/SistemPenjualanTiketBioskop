@@ -29,14 +29,14 @@ Partial Class TambahJadwalTayang
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.DateTimePickerRelease = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBoxJenisKoleksi = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ButtonBack = New System.Windows.Forms.Button()
-        Me.BtnTambahGambar = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DateTimePickerTanggal = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerWaktuMulai = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerWaktuSelesai = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBoxFilm = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxStudio = New System.Windows.Forms.ComboBox()
+        Me.ButtonTambah = New System.Windows.Forms.Button()
+        Me.BtnLihatDetailFilm = New System.Windows.Forms.Button()
+        Me.BtnLihatDetailStudio = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -117,103 +117,101 @@ Partial Class TambahJadwalTayang
         Me.Label6.TabIndex = 61
         Me.Label6.Text = "Waktu Selesai"
         '
-        'DateTimePickerRelease
+        'DateTimePickerTanggal
         '
-        Me.DateTimePickerRelease.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.DateTimePickerRelease.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePickerRelease.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePickerRelease.Location = New System.Drawing.Point(302, 302)
-        Me.DateTimePickerRelease.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DateTimePickerRelease.Name = "DateTimePickerRelease"
-        Me.DateTimePickerRelease.Size = New System.Drawing.Size(477, 44)
-        Me.DateTimePickerRelease.TabIndex = 62
+        Me.DateTimePickerTanggal.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.DateTimePickerTanggal.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.DateTimePickerTanggal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePickerTanggal.Location = New System.Drawing.Point(302, 302)
+        Me.DateTimePickerTanggal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DateTimePickerTanggal.Name = "DateTimePickerTanggal"
+        Me.DateTimePickerTanggal.Size = New System.Drawing.Size(477, 44)
+        Me.DateTimePickerTanggal.TabIndex = 62
         '
-        'DateTimePicker1
+        'DateTimePickerWaktuMulai
         '
-        Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker1.Location = New System.Drawing.Point(302, 402)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(477, 44)
-        Me.DateTimePicker1.TabIndex = 63
+        Me.DateTimePickerWaktuMulai.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.DateTimePickerWaktuMulai.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.DateTimePickerWaktuMulai.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePickerWaktuMulai.Location = New System.Drawing.Point(302, 402)
+        Me.DateTimePickerWaktuMulai.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DateTimePickerWaktuMulai.Name = "DateTimePickerWaktuMulai"
+        Me.DateTimePickerWaktuMulai.Size = New System.Drawing.Size(477, 44)
+        Me.DateTimePickerWaktuMulai.TabIndex = 63
         '
-        'DateTimePicker2
+        'DateTimePickerWaktuSelesai
         '
-        Me.DateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker2.Location = New System.Drawing.Point(302, 502)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(477, 44)
-        Me.DateTimePicker2.TabIndex = 64
+        Me.DateTimePickerWaktuSelesai.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.DateTimePickerWaktuSelesai.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.DateTimePickerWaktuSelesai.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePickerWaktuSelesai.Location = New System.Drawing.Point(302, 502)
+        Me.DateTimePickerWaktuSelesai.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DateTimePickerWaktuSelesai.Name = "DateTimePickerWaktuSelesai"
+        Me.DateTimePickerWaktuSelesai.Size = New System.Drawing.Size(477, 44)
+        Me.DateTimePickerWaktuSelesai.TabIndex = 64
         '
-        'ComboBoxJenisKoleksi
+        'ComboBoxFilm
         '
-        Me.ComboBoxJenisKoleksi.FormattingEnabled = True
-        Me.ComboBoxJenisKoleksi.Items.AddRange(New Object() {"Buku", "Ensiklopedia", "Koran", "Majalah", "Publikasi Penelitian"})
-        Me.ComboBoxJenisKoleksi.Location = New System.Drawing.Point(302, 107)
-        Me.ComboBoxJenisKoleksi.Name = "ComboBoxJenisKoleksi"
-        Me.ComboBoxJenisKoleksi.Size = New System.Drawing.Size(477, 40)
-        Me.ComboBoxJenisKoleksi.TabIndex = 65
+        Me.ComboBoxFilm.FormattingEnabled = True
+        Me.ComboBoxFilm.Location = New System.Drawing.Point(302, 107)
+        Me.ComboBoxFilm.Name = "ComboBoxFilm"
+        Me.ComboBoxFilm.Size = New System.Drawing.Size(477, 40)
+        Me.ComboBoxFilm.TabIndex = 65
         '
-        'ComboBox1
+        'ComboBoxStudio
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Buku", "Ensiklopedia", "Koran", "Majalah", "Publikasi Penelitian"})
-        Me.ComboBox1.Location = New System.Drawing.Point(302, 207)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(477, 40)
-        Me.ComboBox1.TabIndex = 66
+        Me.ComboBoxStudio.FormattingEnabled = True
+        Me.ComboBoxStudio.Location = New System.Drawing.Point(302, 207)
+        Me.ComboBoxStudio.Name = "ComboBoxStudio"
+        Me.ComboBoxStudio.Size = New System.Drawing.Size(477, 40)
+        Me.ComboBoxStudio.TabIndex = 66
         '
-        'ButtonBack
+        'ButtonTambah
         '
-        Me.ButtonBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.ButtonBack.FlatAppearance.BorderSize = 0
-        Me.ButtonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBack.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ButtonBack.ForeColor = System.Drawing.Color.White
-        Me.ButtonBack.Location = New System.Drawing.Point(302, 634)
-        Me.ButtonBack.Margin = New System.Windows.Forms.Padding(4)
-        Me.ButtonBack.Name = "ButtonBack"
-        Me.ButtonBack.Size = New System.Drawing.Size(389, 64)
-        Me.ButtonBack.TabIndex = 67
-        Me.ButtonBack.Text = "Tambah Jadwal Tayang"
-        Me.ButtonBack.UseVisualStyleBackColor = False
+        Me.ButtonTambah.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.ButtonTambah.FlatAppearance.BorderSize = 0
+        Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonTambah.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ButtonTambah.ForeColor = System.Drawing.Color.White
+        Me.ButtonTambah.Location = New System.Drawing.Point(302, 634)
+        Me.ButtonTambah.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonTambah.Name = "ButtonTambah"
+        Me.ButtonTambah.Size = New System.Drawing.Size(389, 64)
+        Me.ButtonTambah.TabIndex = 67
+        Me.ButtonTambah.Text = "Tambah Jadwal Tayang"
+        Me.ButtonTambah.UseVisualStyleBackColor = False
         '
-        'BtnTambahGambar
+        'BtnLihatDetailFilm
         '
-        Me.BtnTambahGambar.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.BtnTambahGambar.BackColor = System.Drawing.Color.Teal
-        Me.BtnTambahGambar.FlatAppearance.BorderSize = 0
-        Me.BtnTambahGambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnTambahGambar.Font = New System.Drawing.Font("Times New Roman", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.BtnTambahGambar.ForeColor = System.Drawing.Color.White
-        Me.BtnTambahGambar.Location = New System.Drawing.Point(796, 107)
-        Me.BtnTambahGambar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnTambahGambar.Name = "BtnTambahGambar"
-        Me.BtnTambahGambar.Size = New System.Drawing.Size(163, 40)
-        Me.BtnTambahGambar.TabIndex = 68
-        Me.BtnTambahGambar.Text = "Lihat Detail"
-        Me.BtnTambahGambar.UseVisualStyleBackColor = False
+        Me.BtnLihatDetailFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BtnLihatDetailFilm.BackColor = System.Drawing.Color.Teal
+        Me.BtnLihatDetailFilm.FlatAppearance.BorderSize = 0
+        Me.BtnLihatDetailFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLihatDetailFilm.Font = New System.Drawing.Font("Times New Roman", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BtnLihatDetailFilm.ForeColor = System.Drawing.Color.White
+        Me.BtnLihatDetailFilm.Location = New System.Drawing.Point(796, 107)
+        Me.BtnLihatDetailFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnLihatDetailFilm.Name = "BtnLihatDetailFilm"
+        Me.BtnLihatDetailFilm.Size = New System.Drawing.Size(163, 40)
+        Me.BtnLihatDetailFilm.TabIndex = 68
+        Me.BtnLihatDetailFilm.Text = "Lihat Detail"
+        Me.BtnLihatDetailFilm.UseVisualStyleBackColor = False
         '
-        'Button2
+        'BtnLihatDetailStudio
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button2.BackColor = System.Drawing.Color.Teal
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Times New Roman", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(796, 207)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(163, 40)
-        Me.Button2.TabIndex = 70
-        Me.Button2.Text = "Lihat Detail"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.BtnLihatDetailStudio.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BtnLihatDetailStudio.BackColor = System.Drawing.Color.Teal
+        Me.BtnLihatDetailStudio.FlatAppearance.BorderSize = 0
+        Me.BtnLihatDetailStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLihatDetailStudio.Font = New System.Drawing.Font("Times New Roman", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BtnLihatDetailStudio.ForeColor = System.Drawing.Color.White
+        Me.BtnLihatDetailStudio.Location = New System.Drawing.Point(796, 207)
+        Me.BtnLihatDetailStudio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnLihatDetailStudio.Name = "BtnLihatDetailStudio"
+        Me.BtnLihatDetailStudio.Size = New System.Drawing.Size(163, 40)
+        Me.BtnLihatDetailStudio.TabIndex = 70
+        Me.BtnLihatDetailStudio.Text = "Lihat Detail"
+        Me.BtnLihatDetailStudio.UseVisualStyleBackColor = False
         '
         'TambahJadwalTayang
         '
@@ -221,14 +219,14 @@ Partial Class TambahJadwalTayang
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1000, 733)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.BtnTambahGambar)
-        Me.Controls.Add(Me.ButtonBack)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.ComboBoxJenisKoleksi)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.DateTimePickerRelease)
+        Me.Controls.Add(Me.BtnLihatDetailStudio)
+        Me.Controls.Add(Me.BtnLihatDetailFilm)
+        Me.Controls.Add(Me.ButtonTambah)
+        Me.Controls.Add(Me.ComboBoxStudio)
+        Me.Controls.Add(Me.ComboBoxFilm)
+        Me.Controls.Add(Me.DateTimePickerWaktuSelesai)
+        Me.Controls.Add(Me.DateTimePickerWaktuMulai)
+        Me.Controls.Add(Me.DateTimePickerTanggal)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -250,12 +248,12 @@ Partial Class TambahJadwalTayang
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents DateTimePickerRelease As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents ComboBoxJenisKoleksi As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ButtonBack As Button
-    Friend WithEvents BtnTambahGambar As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents DateTimePickerTanggal As DateTimePicker
+    Friend WithEvents DateTimePickerWaktuMulai As DateTimePicker
+    Friend WithEvents DateTimePickerWaktuSelesai As DateTimePicker
+    Friend WithEvents ComboBoxFilm As ComboBox
+    Friend WithEvents ComboBoxStudio As ComboBox
+    Friend WithEvents ButtonTambah As Button
+    Friend WithEvents BtnLihatDetailFilm As Button
+    Friend WithEvents BtnLihatDetailStudio As Button
 End Class
