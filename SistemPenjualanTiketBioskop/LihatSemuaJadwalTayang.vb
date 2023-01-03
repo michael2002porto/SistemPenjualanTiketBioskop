@@ -5,7 +5,7 @@ Imports Mysqlx.XDevAPI.Common
 Public Class LihatSemuaJadwalTayang
     Public Shared data_jadwal_tayang As DataJadwalTayang
     Public Shared data_film As DataFilm
-    'Public Shared data_studio As DataStudio
+    Public Shared data_studio As DataStudio
     Public Shared selectedIdJadwalTayang, selectedIdFilm, selectedIdStudio As String
 
     Public Sub New()
@@ -15,6 +15,8 @@ Public Class LihatSemuaJadwalTayang
 
         ' Add any initialization after the InitializeComponent() call.
         data_jadwal_tayang = New DataJadwalTayang()
+        data_film = New DataFilm()
+        data_studio = New DataStudio()
         ReloadDataTableDatabase()
     End Sub
 
@@ -28,13 +30,16 @@ Public Class LihatSemuaJadwalTayang
             If selectedIdJadwalTayang Is Nothing Then
                 Throw New System.Exception("Please select data grid")
             End If
-            Dim selectedKoleksi As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedIdJadwalTayang)
+            Dim selectedJadwalTayang As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedIdJadwalTayang)
 
-            data_jadwal_tayang.GSIdFilm = selectedKoleksi(1)
-            data_jadwal_tayang.GSIdStudio = selectedKoleksi(2)
-            data_jadwal_tayang.GSTanggal = selectedKoleksi(3)
-            data_jadwal_tayang.GSWaktuMulai = selectedKoleksi(4)
-            data_jadwal_tayang.GSWaktuSelesai = selectedKoleksi(5)
+            data_jadwal_tayang.GSIdJadwalTayang = selectedJadwalTayang(0)
+            data_jadwal_tayang.GSIdFilm = selectedJadwalTayang(1)
+            data_jadwal_tayang.GSIdStudio = selectedJadwalTayang(4)
+            data_jadwal_tayang.GSTanggal = selectedJadwalTayang(8)
+            data_jadwal_tayang.GSWaktuMulai = selectedJadwalTayang(9)
+            data_jadwal_tayang.GSWaktuSelesai = selectedJadwalTayang(10)
+            data_film.GSNamaFilm = selectedJadwalTayang(2)
+            data_studio.GSNama = selectedJadwalTayang(5)
 
             Dim edit_jadwal_tayang = New EditJadwalTayang()
             edit_jadwal_tayang.Show()
