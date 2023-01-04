@@ -36,8 +36,6 @@ Partial Class SignIn
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TxtUsername = New System.Windows.Forms.TextBox()
-        Me.BtnJadwalTayang = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -45,30 +43,35 @@ Partial Class SignIn
         '
         'Panel1
         '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(480, 576)
+        Me.Panel1.Size = New System.Drawing.Size(482, 576)
         Me.Panel1.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Script MT Bold", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Script MT Bold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(141, 25)
+        Me.Label1.Location = New System.Drawing.Point(209, 22)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(200, 58)
+        Me.Label1.Size = New System.Drawing.Size(168, 48)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Bioscoop"
         '
         'Panel2
         '
+        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.BtnSignUp)
         Me.Panel2.Controls.Add(Me.BtnSignIn)
@@ -77,8 +80,7 @@ Partial Class SignIn
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Controls.Add(Me.BtnJadwalTayang)
-        Me.Panel2.Location = New System.Drawing.Point(481, 0)
+        Me.Panel2.Location = New System.Drawing.Point(482, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(561, 576)
         Me.Panel2.TabIndex = 1
@@ -129,9 +131,9 @@ Partial Class SignIn
         Me.CheckPassword.Location = New System.Drawing.Point(28, 323)
         Me.CheckPassword.Name = "CheckPassword"
         Me.CheckPassword.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CheckPassword.Size = New System.Drawing.Size(186, 29)
+        Me.CheckPassword.Size = New System.Drawing.Size(176, 29)
         Me.CheckPassword.TabIndex = 9
-        Me.CheckPassword.Text = "Show Password?"
+        Me.CheckPassword.Text = "Show Password"
         Me.CheckPassword.UseVisualStyleBackColor = True
         '
         'Panel4
@@ -196,20 +198,6 @@ Partial Class SignIn
         Me.TxtUsername.Size = New System.Drawing.Size(461, 26)
         Me.TxtUsername.TabIndex = 6
         '
-        'BtnJadwalTayang
-        '
-        Me.BtnJadwalTayang.FlatAppearance.BorderSize = 0
-        Me.BtnJadwalTayang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnJadwalTayang.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnJadwalTayang.ForeColor = System.Drawing.Color.White
-        Me.BtnJadwalTayang.Location = New System.Drawing.Point(175, 25)
-        Me.BtnJadwalTayang.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnJadwalTayang.Name = "BtnJadwalTayang"
-        Me.BtnJadwalTayang.Size = New System.Drawing.Size(201, 58)
-        Me.BtnJadwalTayang.TabIndex = 3
-        Me.BtnJadwalTayang.Text = "Sign In"
-        Me.BtnJadwalTayang.UseVisualStyleBackColor = True
-        '
         'SignIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
@@ -220,9 +208,8 @@ Partial Class SignIn
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "SignIn"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sign In"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -236,7 +223,6 @@ Partial Class SignIn
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents BtnJadwalTayang As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents TxtUsername As TextBox

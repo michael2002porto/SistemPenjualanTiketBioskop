@@ -17,6 +17,8 @@
     Private Sub SignIn_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         TxtUsername.Text = ""
         TxtPassword.Text = ""
+
+        TxtPassword.UseSystemPasswordChar = True
     End Sub
 
     Private Sub BtnSignUp_Click(sender As Object, e As EventArgs) Handles BtnSignUp.Click
@@ -42,7 +44,8 @@
 
             If data_user.Count > 0 Then
                 users.GSUsername = data_user(1)
-                film.Show()
+                Dim jadwalTayang = New JadwalTayang()
+                jadwalTayang.Show()
                 Me.Hide()
 
             ElseIf plainUsername = "" Or plainPassword = "" Then
