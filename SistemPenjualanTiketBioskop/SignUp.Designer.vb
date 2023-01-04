@@ -22,7 +22,6 @@ Partial Class SignUp
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SignUp))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LblRePassword = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -293,7 +292,7 @@ Partial Class SignUp
         Me.Panel6.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BackgroundImage = CType(resources.GetObject("Panel6.BackgroundImage"), System.Drawing.Image)
+        Me.Panel6.BackgroundImage = Global.SistemPenjualanTiketBioskop.My.Resources.Resources.background_signIn
         Me.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel6.Controls.Add(Me.Label5)
         Me.Panel6.Location = New System.Drawing.Point(562, 0)
