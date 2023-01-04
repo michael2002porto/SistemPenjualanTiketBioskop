@@ -6,8 +6,8 @@
 
         ' Add any initialization after the InitializeComponent() call.
         TxtNamaStudioValue.Text = Studio.data_studio.GSNama
-        CbxKapasitasStudio.SelectedItem() = Studio.data_studio.GSKapasitas
-        CbxHargaKursi.SelectedItem() = Studio.data_studio.GSHarga
+        CbxKapasitasStudio.Text = Studio.data_studio.GSKapasitas
+        CbxHargaKursi.Text = Studio.data_studio.GSHarga
     End Sub
 
     Private Sub BtnSave_Click_1(sender As Object, e As EventArgs) Handles BtnSave.Click
