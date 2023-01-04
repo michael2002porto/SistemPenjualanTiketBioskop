@@ -58,9 +58,8 @@ Public Class EditJadwalTayang
             Dim selectedStudio As List(Of String) = data_studio.GetDataStudioByIDDatabase(selectedComboBoxStudio)
 
             data_studio.GSNama = selectedStudio(1)
-            data_studio.GSJenis = selectedStudio(2)
-            data_studio.GSKapasitas = selectedStudio(3)
-            data_studio.GSHarga = selectedStudio(4)
+            data_studio.GSKapasitas = selectedStudio(2)
+            data_studio.GSHarga = selectedStudio(3)
 
             MsgBox(
                 "Jenis Studio: " + selectedStudio(2) + Environment.NewLine +
