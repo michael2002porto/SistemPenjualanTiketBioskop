@@ -20,8 +20,8 @@ Public Class Film
 
     Private Sub Film_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabaseFilm()
-        'LblUsername.Text = SignIn.data_user(1).toString()
-        'Lblid.Text = SignIn.data_user(0).toString()
+        LblUsername.Text = SignIn.data_user(1).ToString()
+        Lblid.Text = SignIn.data_user(0).ToString()
     End Sub
 
     Private Sub ReloadDataTableDatabaseFilm()
