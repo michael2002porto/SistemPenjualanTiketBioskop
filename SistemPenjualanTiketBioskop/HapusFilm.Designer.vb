@@ -24,6 +24,44 @@ Partial Class HapusFilm
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
+        'BtnHapusFilm
+        '
+        Me.BtnHapusFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BtnHapusFilm.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.BtnHapusFilm.FlatAppearance.BorderSize = 0
+        Me.BtnHapusFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnHapusFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnHapusFilm.ForeColor = System.Drawing.Color.White
+        Me.BtnHapusFilm.Location = New System.Drawing.Point(311, 287)
+        Me.BtnHapusFilm.Name = "BtnHapusFilm"
+        Me.BtnHapusFilm.Size = New System.Drawing.Size(177, 43)
+        Me.BtnHapusFilm.TabIndex = 5
+        Me.BtnHapusFilm.Text = "Hapus"
+        Me.BtnHapusFilm.UseVisualStyleBackColor = False
+        '
+        'LblFilm
+        '
+        Me.LblFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LblFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.LblFilm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.LblFilm.Location = New System.Drawing.Point(52, 131)
+        Me.LblFilm.Name = "LblFilm"
+        Me.LblFilm.Size = New System.Drawing.Size(696, 26)
+        Me.LblFilm.TabIndex = 4
+        Me.LblFilm.Text = "-"
+        Me.LblFilm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(219, 35)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(347, 33)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Apakah ingin menghapus film"
+        '
         'HapusFilm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)

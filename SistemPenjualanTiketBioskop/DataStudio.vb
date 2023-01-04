@@ -1,4 +1,5 @@
 ﻿Imports System.Text
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports MySql.Data.MySqlClient
 Public Class DataStudio
     Private nama_studio As String
@@ -235,4 +236,36 @@ Public Class DataStudio
         End Try
     End Function
 
+    Public Function GetDataStudioDatabaseList() As List(Of String)
+        Dim result As New List(Of String)
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username_db + ";" + "password=" + password_db + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id AS 'ID', 
+                                     nama_studio AS 'Nama Koleksi',
+                                     kapasitas AS 'Kapasitas Studio', 
+                                     harga_kursi AS 'Harga Studio'
+                                     FROM studio"
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString() & " | " & sqlRead.GetString(1).ToString())
+            End While
+            'Return result
+
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.Message.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
 End Class
+
