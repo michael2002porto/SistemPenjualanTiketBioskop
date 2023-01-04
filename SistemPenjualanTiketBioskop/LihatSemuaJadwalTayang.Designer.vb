@@ -45,7 +45,7 @@ Partial Class LihatSemuaJadwalTayang
         Me.ButtonEdit = New System.Windows.Forms.Button()
         Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.BtnSignOut = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnTiket = New System.Windows.Forms.Button()
         Me.BtnJadwalTayang = New System.Windows.Forms.Button()
@@ -286,7 +286,7 @@ Partial Class LihatSemuaJadwalTayang
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.BtnSignOut)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.BtnTiket)
         Me.Panel1.Controls.Add(Me.BtnJadwalTayang)
@@ -299,21 +299,21 @@ Partial Class LihatSemuaJadwalTayang
         Me.Panel1.Size = New System.Drawing.Size(2228, 118)
         Me.Panel1.TabIndex = 42
         '
-        'Button5
+        'BtnSignOut
         '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(1985, 33)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(195, 59)
-        Me.Button5.TabIndex = 27
-        Me.Button5.Text = "Sign Out"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.BtnSignOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSignOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.BtnSignOut.FlatAppearance.BorderSize = 0
+        Me.BtnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSignOut.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnSignOut.ForeColor = System.Drawing.Color.White
+        Me.BtnSignOut.Location = New System.Drawing.Point(1985, 33)
+        Me.BtnSignOut.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSignOut.Name = "BtnSignOut"
+        Me.BtnSignOut.Size = New System.Drawing.Size(195, 59)
+        Me.BtnSignOut.TabIndex = 27
+        Me.BtnSignOut.Text = "Sign Out"
+        Me.BtnSignOut.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -427,7 +427,7 @@ Partial Class LihatSemuaJadwalTayang
     Friend WithEvents BtnJadwalTayang As Button
     Friend WithEvents BtnStudio As Button
     Friend WithEvents BtnFilm As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents BtnSignOut As Button
     Friend WithEvents IdJadwalTayang As DataGridViewTextBoxColumn
     Friend WithEvents IdFilm As DataGridViewTextBoxColumn
     Friend WithEvents IdStudio As DataGridViewTextBoxColumn
