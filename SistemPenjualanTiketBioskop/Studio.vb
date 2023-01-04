@@ -62,4 +62,35 @@
         Dim formtambah = New TambahStudio()
         formtambah.Show()
     End Sub
+
+
+    Private Sub BtnSignOut_Click(sender As Object, e As EventArgs) Handles BtnSignOut.Click
+        Dim signIn = New SignIn()
+        signIn.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnFilm_Click(sender As Object, e As EventArgs) Handles BtnFilm.Click
+        Dim film = New Film()
+        film.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnStudio_Click(sender As Object, e As EventArgs) Handles BtnStudio.Click
+        Dim studio = New Studio()
+        studio.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnJadwalTayang_Click(sender As Object, e As EventArgs) Handles BtnJadwalTayang.Click
+        Dim jadwalTayang = New JadwalTayang()
+        jadwalTayang.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnTiket_Click(sender As Object, e As EventArgs) Handles BtnTiket.Click
+        Dim tiket = New Tiket()
+        tiket.Show()
+        Me.Close()
+    End Sub
 End Class
