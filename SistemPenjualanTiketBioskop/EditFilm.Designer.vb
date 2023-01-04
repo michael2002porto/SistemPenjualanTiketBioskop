@@ -22,6 +22,20 @@ Partial Class EditFilm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.BtnEditGambar = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.DateTimePickerRelease = New System.Windows.Forms.DateTimePicker()
+        Me.RichDeskripsiFilm = New System.Windows.Forms.RichTextBox()
+        Me.TxtDuration = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TxtFilm = New System.Windows.Forms.TextBox()
         Me.TxtHargaFilm = New System.Windows.Forms.TextBox()
@@ -503,7 +517,7 @@ Partial Class EditFilm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1000, 967)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ComboBoxRatingUsia)
@@ -539,8 +553,24 @@ Partial Class EditFilm
         Me.GroupGenre.ResumeLayout(False)
         Me.GroupGenre.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents BtnEditGambar As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents DateTimePickerRelease As DateTimePicker
+    Friend WithEvents RichDeskripsiFilm As RichTextBox
+    Friend WithEvents TxtDuration As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents TxtFilm As TextBox
     Friend WithEvents TxtHargaFilm As TextBox
