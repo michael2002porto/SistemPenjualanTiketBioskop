@@ -1,4 +1,5 @@
 ﻿Public Class EditStudio
+    Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()

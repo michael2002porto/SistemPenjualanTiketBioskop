@@ -63,7 +63,7 @@ Partial Class HapusStudio
         '
         'HapusStudio
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(615, 241)
         Me.Controls.Add(Me.Label1)
@@ -73,6 +73,7 @@ Partial Class HapusStudio
         Me.Name = "HapusStudio"
         Me.Text = "Hapus Studio"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents BtnHapusDataStudio As Button

@@ -10,6 +10,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
+        data_studio = New DataStudio()
         ReloadDataStudioDatabase()
     End Sub
 
@@ -17,7 +18,7 @@
         DataGridStudio.DataSource = data_studio.GetDataStudioDatabase()
     End Sub
 
-    Private Sub datagrid_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+    Private Sub studio_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataStudioDatabase()
     End Sub
 
@@ -34,7 +35,6 @@
     '    Dim SelectedStudio As List(Of String) = data_studio.GetDataStudioByIDDatabase(SelectedTableStudio)
 
     '    data_studio.GSNama = SelectedStudio(1)
-    '    data_studio.GSJenis = SelectedStudio(2)
     '    data_studio.GSKapasitas = SelectedStudio(3)
     '    data_studio.GSHarga = SelectedStudio(4)
 
@@ -46,9 +46,8 @@
         Dim SelectedStudio As List(Of String) = data_studio.GetDataStudioByIDDatabase(SelectedTableStudio)
 
         data_studio.GSNama = SelectedStudio(1)
-        data_studio.GSJenis = SelectedStudio(2)
-        data_studio.GSKapasitas = SelectedStudio(3)
-        data_studio.GSHarga = SelectedStudio(4)
+        data_studio.GSKapasitas = SelectedStudio(2)
+        data_studio.GSHarga = SelectedStudio(3)
 
         Dim formUpdate = New EditStudio()
         formUpdate.Show()
@@ -57,5 +56,41 @@
     Private Sub BtnRemove_Click(sender As Object, e As EventArgs) Handles BtnRemove.Click
         Dim formhapus = New HapusStudio()
         formhapus.Show()
+    End Sub
+
+    Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
+        Dim formtambah = New TambahStudio()
+        formtambah.Show()
+    End Sub
+
+
+    Private Sub BtnSignOut_Click(sender As Object, e As EventArgs) Handles BtnSignOut.Click
+        Dim signIn = New SignIn()
+        signIn.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnFilm_Click(sender As Object, e As EventArgs) Handles BtnFilm.Click
+        Dim film = New Film()
+        film.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnStudio_Click(sender As Object, e As EventArgs) Handles BtnStudio.Click
+        Dim studio = New Studio()
+        studio.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnJadwalTayang_Click(sender As Object, e As EventArgs) Handles BtnJadwalTayang.Click
+        Dim jadwalTayang = New JadwalTayang()
+        jadwalTayang.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnTiket_Click(sender As Object, e As EventArgs) Handles BtnTiket.Click
+        Dim tiket = New Tiket()
+        tiket.Show()
+        Me.Close()
     End Sub
 End Class
