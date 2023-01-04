@@ -9,7 +9,6 @@
 
         ' Add any initialization after the InitializeComponent() call.
         data_tiket = New DataTiket
-        ReloadDataTableDatabase()
     End Sub
 
     Private Sub DataGridTiket_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridTiket.CellClick

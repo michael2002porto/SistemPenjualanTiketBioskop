@@ -85,8 +85,9 @@ Public Class JadwalTayang
     End Sub
 
     Private Sub BtnTiket_Click(sender As Object, e As EventArgs) Handles BtnTiket.Click
-        Dim tiket = New Tiket()
-        tiket.Show()
+
+        Dim tiket_form = New Tiket()
+        tiket_form.Show()
         Me.Close()
     End Sub
 End Class
