@@ -6,9 +6,9 @@ Public Class DataJadwalTayang
     Private id_jadwal_tayang As Integer
     Private id_film As Integer
     Private id_studio As Integer
-    Private tanggal As DateOnly
-    Private waktu_mulai As TimeOnly
-    Private waktu_selesai As TimeOnly
+    Private tanggal
+    Private waktu_mulai
+    Private waktu_selesai
 
     'Database Global Variable
     Private jadwalTayangDataTable As New ArrayList()
@@ -81,8 +81,8 @@ Public Class DataJadwalTayang
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText =
             "SELECT jt.id_jadwal_tayang,
-            jt.id_film, f.film, f.foto,
-            jt.id_studio, s.kapasitas, s.harga_kursi,
+            jt.id_film, f.nama_film, f.foto,
+            jt.id_studio, s.nama_studio, s.kapasitas, s.harga_kursi,
             jt.tanggal, jt.waktu_mulai, jt.waktu_selesai
             FROM jadwal_tayang jt
             LEFT JOIN film f ON f.id = jt.id_film
@@ -98,11 +98,12 @@ Public Class DataJadwalTayang
                     sqlRead.GetString(2).ToString(), 'film
                     sqlRead.GetString(3).ToString(), 'foto
                     sqlRead.GetString(4).ToString(), 'id_studio
-                    sqlRead.GetString(5).ToString(), 'kapasitas
-                    sqlRead.GetString(6).ToString(), 'harga_kursi
-                    sqlRead.GetString(7).ToString(), 'tanggal
-                    sqlRead.GetString(8).ToString(), 'waktu_mulai
-                    sqlRead.GetString(9).ToString() 'waktu_selesai
+                    sqlRead.GetString(5).ToString(), 'nama_studio
+                    sqlRead.GetString(6).ToString(), 'kapasitas
+                    sqlRead.GetString(7).ToString(), 'harga_kursi
+                    sqlRead.GetString(8).ToString(), 'tanggal
+                    sqlRead.GetString(9).ToString(), 'waktu_mulai
+                    sqlRead.GetString(10).ToString() 'waktu_selesai
                 }
             )
         End While
@@ -113,17 +114,11 @@ Public Class DataJadwalTayang
     End Function
 
     Public Function AddDataJadwalTayangDatabase(
-        dir_gambar As String,
-        nama_koleksi As String,
-        jenis_koleksi As String,
-        penerbit_koleksi As String,
-        deskripsi_koleksi As String,
-        tahun_terbit As Integer,
-        lokasi_rak As String,
-        tanggal_masuk As Date,
-        stock_koleksi As Integer,
-        bahasa_koleksi As String,
-        kategori_koleksi As String
+        id_film As Integer,
+        id_studio As Integer,
+        tanggal As String,
+        waktu_mulai As String,
+        waktu_selesai As String
     )
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
@@ -131,19 +126,8 @@ Public Class DataJadwalTayang
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery =
-                "INSERT INTO KOLEKSI(nama_koleksi, dir_gambar, deskripsi, penerbit, jenis_koleksi,
-                tahun_terbit, lokasi, tanggal_masuk_koleksi, stock, bahasa, kategori) VALUE('" _
-                & nama_koleksi & "', '" _
-                & dir_gambar & "', '" _
-                & deskripsi_koleksi & "', '" _
-                & penerbit_koleksi & "', '" _
-                & jenis_koleksi & "', '" _
-                & tahun_terbit & "', '" _
-                & lokasi_rak & "', '" _
-                & tanggal_masuk.ToString("yyyy/MM/dd") & "', '" _
-                & stock_koleksi & "', '" _
-                & bahasa_koleksi & "', '" _
-                & kategori_koleksi & "')"
+                "INSERT INTO jadwal_tayang(id_film, id_studio, tanggal, waktu_mulai, waktu_selesai)
+                VALUE('" & id_film & "', '" & id_studio & "', '" & tanggal & "', '" & waktu_mulai & "', '" & waktu_selesai & "')"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -152,6 +136,8 @@ Public Class DataJadwalTayang
             'Perpustakaan.sqlDt.Load(sqlRead)
             sqlRead.Close()
             dbConn.Close()
+
+            MsgBox("Berhasil insert data!")
         Catch ex As Exception
             Return ex.Message
         Finally
@@ -163,24 +149,18 @@ Public Class DataJadwalTayang
         Dim result As New List(Of String)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
-            + "password =" + password + ";" + "database =" + database
+            + "password=" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText =
-            "SELECT id_koleksi,
-            nama_koleksi,
-            dir_gambar,
-            deskripsi,
-            penerbit,
-            jenis_koleksi,
-            tahun_terbit,
-            lokasi,
-            tanggal_masuk_koleksi,
-            stock,
-            bahasa,
-            kategori
-            FROM koleksi
-            WHERE id_koleksi='" & ID & "'"
+            "SELECT jt.id_jadwal_tayang,
+            jt.id_film, f.nama_film, f.foto,
+            jt.id_studio, s.nama_studio, s.kapasitas, s.harga_kursi,
+            jt.tanggal, jt.waktu_mulai, jt.waktu_selesai
+            FROM jadwal_tayang jt
+            LEFT JOIN film f ON f.id = jt.id_film
+            LEFT JOIN studio s ON s.id = jt.id_studio
+            WHERE id_jadwal_tayang = " & ID
 
         sqlRead = sqlCommand.ExecuteReader
 
@@ -196,7 +176,6 @@ Public Class DataJadwalTayang
             result.Add(sqlRead.GetString(8).ToString())
             result.Add(sqlRead.GetString(9).ToString())
             result.Add(sqlRead.GetString(10).ToString())
-            result.Add(sqlRead.GetString(11).ToString())
         End While
 
         sqlRead.Close()
@@ -206,38 +185,25 @@ Public Class DataJadwalTayang
 
     Public Function UpdateDataJadwalTayangByIDDatabase(
         ID As Integer,
-        dir_gambar As String,
-        nama_koleksi As String,
-        jenis_koleksi As String,
-        penerbit_koleksi As String,
-        deskripsi_koleksi As String,
-        tahun_terbit As String,
-        lokasi_rak As String,
-        tanggal_masuk As String,
-        stock_koleksi As Integer,
-        bahasa_koleksi As String,
-        kategori_koleksi As String
+        id_film As Integer,
+        id_studio As Integer,
+        tanggal As String,
+        waktu_mulai As String,
+        waktu_selesai As String
     )
-        tahun_terbit = tahun_terbit.ToString()
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password =" + password + ";" + "database =" + database
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery =
-                "UPDATE koleksi SET " &
-                "nama_koleksi='" & nama_koleksi & "', " &
-                "dir_gambar='" & dir_gambar & "', " &
-                "deskripsi='" & deskripsi_koleksi & "', " &
-                "penerbit='" & penerbit_koleksi & "', " &
-                "jenis_koleksi='" & jenis_koleksi & "', " &
-                "tahun_terbit='" & tahun_terbit & "', " &
-                "lokasi='" & lokasi_rak & "', " &
-                "tanggal_masuk_koleksi='" & tanggal_masuk & "', " &
-                "stock='" & stock_koleksi & "', " &
-                "bahasa='" & bahasa_koleksi & "', " &
-                "kategori='" & kategori_koleksi & "' " &
-                "WHERE id_koleksi='" & ID & "'"
+                "UPDATE jadwal_tayang SET " &
+                "id_film = '" & id_film & "', " &
+                "id_studio = '" & id_studio & "', " &
+                "tanggal = '" & tanggal & "', " &
+                "waktu_mulai = '" & waktu_mulai & "', " &
+                "waktu_selesai = '" & waktu_selesai & "' " &
+                "WHERE id_jadwal_tayang = '" & ID & "'"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -246,6 +212,8 @@ Public Class DataJadwalTayang
             'Perpustakaan.sqlDt.Load(sqlRead)
             sqlRead.Close()
             dbConn.Close()
+
+            MsgBox("Berhasil update data!")
         Catch ex As Exception
             Return ex.Message
         Finally
@@ -261,8 +229,8 @@ Public Class DataJadwalTayang
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery =
-                "DELETE FROM koleksi " &
-                "WHERE id_koleksi='" & ID & "'"
+                "DELETE FROM jadwal_tayang " &
+                "WHERE id_jadwal_tayang = '" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
 
@@ -273,10 +241,13 @@ Public Class DataJadwalTayang
             'Perpustakaan.sqlDt.Load(sqlRead)
             sqlRead.Close()
             dbConn.Close()
+
+            MsgBox("Berhasil delete data!")
         Catch ex As Exception
             Return ex.Message
         Finally
             dbConn.Dispose()
         End Try
     End Function
+
 End Class

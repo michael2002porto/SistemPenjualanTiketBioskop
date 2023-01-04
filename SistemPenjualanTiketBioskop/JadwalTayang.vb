@@ -30,11 +30,11 @@ Public Class JadwalTayang
         Dim source = data_jadwal_tayang.GetDataJadwalTayangDatabase("WHERE DATE(tanggal) = CURDATE()")
         For Each rowJadwalTayang In source
             Dim dataTable = {
-                Image.FromFile(rowJadwalTayang(3)), 'Foto FIlm
+                Image.FromFile(rowJadwalTayang(3)), 'Foto Film
                 rowJadwalTayang(2), 'Nama Film
                 rowJadwalTayang(5), 'Studio
-                Convert.ToDateTime(rowJadwalTayang(8)).ToString("HH:mm"), 'Mulai Tayang
-                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm") 'Selesai Tayang
+                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm"), 'Mulai Tayang
+                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm") 'Selesai Tayang
             }
             DataGridViewJadwalTayangNowPlaying.Rows.Add(dataTable)
         Next
@@ -48,15 +48,45 @@ Public Class JadwalTayang
         Dim source = data_jadwal_tayang.GetDataJadwalTayangDatabase("WHERE DATE(tanggal) > CURDATE()")
         For Each rowJadwalTayang In source
             Dim dataTable = {
-                Image.FromFile(rowJadwalTayang(3)), 'Foto FIlm
+                Image.FromFile(rowJadwalTayang(3)), 'Foto Film
                 rowJadwalTayang(2), 'Nama Film
                 rowJadwalTayang(5), 'Studio
-                Convert.ToDateTime(rowJadwalTayang(7)).ToString("dd/MM/yyyy"), 'Tanggal Tayang
-                Convert.ToDateTime(rowJadwalTayang(8)).ToString("HH:mm"), 'Mulai Tayang
-                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm") 'Selesai Tayang
+                Convert.ToDateTime(rowJadwalTayang(8)).ToString("dd/MM/yyyy"), 'Tanggal Tayang
+                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm"), 'Mulai Tayang
+                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm") 'Selesai Tayang
             }
             DataGridViewJadwalTayangUpcoming.Rows.Add(dataTable)
         Next
         selectedTableKoleksi = Nothing
+    End Sub
+
+    Private Sub BtnSignOut_Click(sender As Object, e As EventArgs) Handles BtnSignOut.Click
+        Dim signIn = New SignIn()
+        signIn.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnFilm_Click(sender As Object, e As EventArgs) Handles BtnFilm.Click
+        Dim film = New Film()
+        film.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnStudio_Click(sender As Object, e As EventArgs) Handles BtnStudio.Click
+        Dim studio = New Studio()
+        studio.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnJadwalTayang_Click(sender As Object, e As EventArgs) Handles BtnJadwalTayang.Click
+        Dim jadwalTayang = New JadwalTayang()
+        jadwalTayang.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub BtnTiket_Click(sender As Object, e As EventArgs) Handles BtnTiket.Click
+        Dim tiket = New Tiket()
+        tiket.Show()
+        Me.Close()
     End Sub
 End Class

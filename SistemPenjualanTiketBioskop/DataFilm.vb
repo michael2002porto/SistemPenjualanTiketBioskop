@@ -384,4 +384,40 @@ Public Class DataFilm
 
     End Function
 
+    Public Function GetDataFilmDatabaseList() As List(Of String)
+        Dim result As New List(Of String)
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+                + "password =" + password + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id AS 'ID',
+                                      nama_film AS 'Film',
+                                      genre AS 'Genre',
+                                      director AS 'Director',
+                                      duration AS 'Duration',
+                                      date_release AS 'Date Release',
+                                      bahasa AS 'Bahasa',
+                                      harga_film AS 'Harga'
+                                      From film"
+
+            sqlRead = sqlCommand.ExecuteReader
+
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString() & " | " & sqlRead.GetString(1).ToString())
+            End While
+            'Return result
+
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.Message.ToString())
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
 End Class
