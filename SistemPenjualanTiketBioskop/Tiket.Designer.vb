@@ -72,7 +72,7 @@ Partial Class Tiket
         Me.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnLogout.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnLogout.ForeColor = System.Drawing.Color.White
-        Me.BtnLogout.Location = New System.Drawing.Point(955, 14)
+        Me.BtnLogout.Location = New System.Drawing.Point(952, 19)
         Me.BtnLogout.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnLogout.Name = "BtnLogout"
         Me.BtnLogout.Size = New System.Drawing.Size(120, 37)
