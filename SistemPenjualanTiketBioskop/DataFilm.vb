@@ -1,4 +1,6 @@
-﻿Public Class DataFilm
+﻿Imports System.IO
+Imports System.Text
+Imports MySql.Data.MySqlClient
 
 Public Class DataFilm
     Private foto As String
