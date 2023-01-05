@@ -156,8 +156,27 @@ Public Class LihatSemuaJadwalTayang
         ReloadDataTableDatabase(TextBoxSearch.Text)
     End Sub
 
-    Private Sub ButtonLihat_Click(sender As Object, e As EventArgs) Handles ButtonLihat.Click
+    Private Sub ButtonDetail_Click(sender As Object, e As EventArgs) Handles ButtonDetail.Click
+        Try
+            If selectedIdJadwalTayang Is Nothing Then
+                Throw New System.Exception("Please select data grid")
+            End If
+            Dim selectedJadwalTayang As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedIdJadwalTayang)
 
+            data_jadwal_tayang.GSIdJadwalTayang = selectedJadwalTayang(0)
+            data_jadwal_tayang.GSIdFilm = selectedJadwalTayang(1)
+            data_jadwal_tayang.GSIdStudio = selectedJadwalTayang(4)
+            data_jadwal_tayang.GSTanggal = selectedJadwalTayang(8)
+            data_jadwal_tayang.GSWaktuMulai = selectedJadwalTayang(9)
+            data_jadwal_tayang.GSWaktuSelesai = selectedJadwalTayang(10)
+            data_film.GSNamaFilm = selectedJadwalTayang(2)
+            data_studio.GSNama = selectedJadwalTayang(5)
+
+            Dim detail_jadwal_tayang = New DetailJadwalTayang()
+            detail_jadwal_tayang.Show()
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
     End Sub
 
     Private Sub BtnJadwalTayang_Click(sender As Object, e As EventArgs) Handles BtnJadwalTayang.Click

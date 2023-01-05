@@ -62,9 +62,8 @@ Public Class EditJadwalTayang
             data_studio.GSHarga = selectedStudio(3)
 
             MsgBox(
-                "Jenis Studio: " + selectedStudio(2) + Environment.NewLine +
-                "Kapasitas: " + selectedStudio(3) + Environment.NewLine +
-                "Harga Kursi: " + selectedStudio(4) + Environment.NewLine,
+                "Kapasitas: " + selectedStudio(2) + Environment.NewLine +
+                "Harga Kursi: " + selectedStudio(3) + Environment.NewLine,
                 MsgBoxStyle.Information,
                 selectedStudio(1)
             )
