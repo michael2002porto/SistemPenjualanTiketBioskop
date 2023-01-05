@@ -37,24 +37,26 @@ Partial Class JadwalTayang
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ButtonViewAll = New System.Windows.Forms.Button()
         Me.DataGridViewJadwalTayangNowPlaying = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewJadwalTayangUpcoming = New System.Windows.Forms.DataGridView()
         Me.FotoFilm = New System.Windows.Forms.DataGridViewImageColumn()
         Me.JudulFilm = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Studio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WaktuMulai = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WaktuSelesai = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewJadwalTayangUpcoming = New System.Windows.Forms.DataGridView()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.JudulFilm1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TanggalTayang = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridViewJadwalTayangNowPlaying, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewJadwalTayangUpcoming, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -139,10 +141,10 @@ Partial Class JadwalTayang
         Me.BtnJadwalTayang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnJadwalTayang.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnJadwalTayang.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.BtnJadwalTayang.Location = New System.Drawing.Point(703, 0)
+        Me.BtnJadwalTayang.Location = New System.Drawing.Point(658, 0)
         Me.BtnJadwalTayang.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnJadwalTayang.Name = "BtnJadwalTayang"
-        Me.BtnJadwalTayang.Size = New System.Drawing.Size(261, 115)
+        Me.BtnJadwalTayang.Size = New System.Drawing.Size(306, 115)
         Me.BtnJadwalTayang.TabIndex = 2
         Me.BtnJadwalTayang.Text = "Jadwal Tayang"
         Me.BtnJadwalTayang.UseVisualStyleBackColor = True
@@ -236,7 +238,7 @@ Partial Class JadwalTayang
         Me.ButtonViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonViewAll.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonViewAll.ForeColor = System.Drawing.Color.White
-        Me.ButtonViewAll.Location = New System.Drawing.Point(999, 1171)
+        Me.ButtonViewAll.Location = New System.Drawing.Point(1000, 19)
         Me.ButtonViewAll.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonViewAll.Name = "ButtonViewAll"
         Me.ButtonViewAll.Size = New System.Drawing.Size(230, 64)
@@ -255,39 +257,6 @@ Partial Class JadwalTayang
         Me.DataGridViewJadwalTayangNowPlaying.RowTemplate.Height = 41
         Me.DataGridViewJadwalTayangNowPlaying.Size = New System.Drawing.Size(1661, 335)
         Me.DataGridViewJadwalTayangNowPlaying.TabIndex = 30
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.HeaderText = "Foto Film"
-        Me.DataGridViewImageColumn1.MinimumWidth = 10
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.Width = 250
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Nama Film"
-        Me.DataGridViewTextBoxColumn1.MinimumWidth = 10
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Width = 685
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Studio"
-        Me.DataGridViewTextBoxColumn2.MinimumWidth = 10
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 200
-        '
-        'DataGridViewJadwalTayangUpcoming
-        '
-        Me.DataGridViewJadwalTayangUpcoming.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.DataGridViewJadwalTayangUpcoming.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewJadwalTayangUpcoming.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn2, Me.JudulFilm1, Me.DataGridViewTextBoxColumn4, Me.TanggalTayang, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.DataGridViewJadwalTayangUpcoming.Location = New System.Drawing.Point(281, 732)
-        Me.DataGridViewJadwalTayangUpcoming.Name = "DataGridViewJadwalTayangUpcoming"
-        Me.DataGridViewJadwalTayangUpcoming.RowHeadersWidth = 82
-        Me.DataGridViewJadwalTayangUpcoming.RowTemplate.Height = 41
-        Me.DataGridViewJadwalTayangUpcoming.Size = New System.Drawing.Size(1661, 335)
-        Me.DataGridViewJadwalTayangUpcoming.TabIndex = 31
         '
         'FotoFilm
         '
@@ -323,6 +292,39 @@ Partial Class JadwalTayang
         Me.WaktuSelesai.MinimumWidth = 10
         Me.WaktuSelesai.Name = "WaktuSelesai"
         Me.WaktuSelesai.Width = 220
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.HeaderText = "Foto Film"
+        Me.DataGridViewImageColumn1.MinimumWidth = 10
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.Width = 250
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Nama Film"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 10
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 685
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Studio"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 10
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 200
+        '
+        'DataGridViewJadwalTayangUpcoming
+        '
+        Me.DataGridViewJadwalTayangUpcoming.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.DataGridViewJadwalTayangUpcoming.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewJadwalTayangUpcoming.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn2, Me.JudulFilm1, Me.DataGridViewTextBoxColumn4, Me.TanggalTayang, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.DataGridViewJadwalTayangUpcoming.Location = New System.Drawing.Point(281, 732)
+        Me.DataGridViewJadwalTayangUpcoming.Name = "DataGridViewJadwalTayangUpcoming"
+        Me.DataGridViewJadwalTayangUpcoming.RowHeadersWidth = 82
+        Me.DataGridViewJadwalTayangUpcoming.RowTemplate.Height = 41
+        Me.DataGridViewJadwalTayangUpcoming.Size = New System.Drawing.Size(1661, 335)
+        Me.DataGridViewJadwalTayangUpcoming.TabIndex = 31
         '
         'DataGridViewImageColumn2
         '
@@ -366,15 +368,23 @@ Partial Class JadwalTayang
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.Width = 110
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.ButtonViewAll)
+        Me.Panel2.Location = New System.Drawing.Point(0, 1177)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(2228, 100)
+        Me.Panel2.TabIndex = 32
+        '
         'JadwalTayang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(2228, 1273)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridViewJadwalTayangUpcoming)
         Me.Controls.Add(Me.DataGridViewJadwalTayangNowPlaying)
-        Me.Controls.Add(Me.ButtonViewAll)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel1)
@@ -387,6 +397,7 @@ Partial Class JadwalTayang
         Me.Panel1.PerformLayout()
         CType(Me.DataGridViewJadwalTayangNowPlaying, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridViewJadwalTayangUpcoming, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -422,4 +433,5 @@ Partial Class JadwalTayang
     Friend WithEvents TanggalTayang As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents Panel2 As Panel
 End Class
