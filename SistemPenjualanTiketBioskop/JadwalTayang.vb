@@ -33,8 +33,8 @@ Public Class JadwalTayang
                 Image.FromFile(rowJadwalTayang(3)), 'Foto Film
                 rowJadwalTayang(2), 'Nama Film
                 rowJadwalTayang(5), 'Studio
-                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm"), 'Mulai Tayang
-                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm") 'Selesai Tayang
+                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm:ss"), 'Mulai Tayang
+                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm:ss") 'Selesai Tayang
             }
             DataGridViewJadwalTayangNowPlaying.Rows.Add(dataTable)
         Next
@@ -51,9 +51,9 @@ Public Class JadwalTayang
                 Image.FromFile(rowJadwalTayang(3)), 'Foto Film
                 rowJadwalTayang(2), 'Nama Film
                 rowJadwalTayang(5), 'Studio
-                Convert.ToDateTime(rowJadwalTayang(8)).ToString("dd/MM/yyyy"), 'Tanggal Tayang
-                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm"), 'Mulai Tayang
-                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm") 'Selesai Tayang
+                Convert.ToDateTime(rowJadwalTayang(8)).ToString("yyyy-MM-dd"), 'Tanggal Tayang
+                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm:ss"), 'Mulai Tayang
+                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm:ss") 'Selesai Tayang
             }
             DataGridViewJadwalTayangUpcoming.Rows.Add(dataTable)
         Next
