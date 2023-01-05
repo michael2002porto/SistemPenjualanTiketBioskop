@@ -114,6 +114,8 @@ Public Class LihatSemuaJadwalTayang
 
     Private Sub LihatSemuaJadwalTayang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
+        LblUsername.Text = SignIn.data_user(1).ToString()
+        Lblid.Text = SignIn.data_user(0).ToString()
     End Sub
 
     Private Sub BtnSignOut_Click(sender As Object, e As EventArgs) Handles BtnSignOut.Click

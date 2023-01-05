@@ -371,7 +371,8 @@ Partial Class JadwalTayang
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.ButtonViewAll)
-        Me.Panel2.Location = New System.Drawing.Point(0, 1177)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 1173)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(2228, 100)
         Me.Panel2.TabIndex = 32
