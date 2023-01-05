@@ -215,7 +215,7 @@ Partial Class LihatSemuaJadwalTayang
         Me.ButtonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonBack.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonBack.ForeColor = System.Drawing.Color.White
-        Me.ButtonBack.Location = New System.Drawing.Point(997, 734)
+        Me.ButtonBack.Location = New System.Drawing.Point(13, 22)
         Me.ButtonBack.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonBack.Name = "ButtonBack"
         Me.ButtonBack.Size = New System.Drawing.Size(230, 64)
@@ -226,6 +226,7 @@ Partial Class LihatSemuaJadwalTayang
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.ButtonHapus)
+        Me.Panel2.Controls.Add(Me.ButtonBack)
         Me.Panel2.Controls.Add(Me.ButtonEdit)
         Me.Panel2.Controls.Add(Me.ButtonTambah)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -348,10 +349,10 @@ Partial Class LihatSemuaJadwalTayang
         Me.BtnJadwalTayang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnJadwalTayang.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnJadwalTayang.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.BtnJadwalTayang.Location = New System.Drawing.Point(703, 0)
+        Me.BtnJadwalTayang.Location = New System.Drawing.Point(670, 0)
         Me.BtnJadwalTayang.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnJadwalTayang.Name = "BtnJadwalTayang"
-        Me.BtnJadwalTayang.Size = New System.Drawing.Size(261, 115)
+        Me.BtnJadwalTayang.Size = New System.Drawing.Size(294, 115)
         Me.BtnJadwalTayang.TabIndex = 2
         Me.BtnJadwalTayang.Text = "Jadwal Tayang"
         Me.BtnJadwalTayang.UseVisualStyleBackColor = True
@@ -391,7 +392,6 @@ Partial Class LihatSemuaJadwalTayang
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(2228, 929)
         Me.Controls.Add(Me.DataGridViewJadwalTayangAll)
-        Me.Controls.Add(Me.ButtonBack)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Lblid)
         Me.Controls.Add(Me.LblUsername)
