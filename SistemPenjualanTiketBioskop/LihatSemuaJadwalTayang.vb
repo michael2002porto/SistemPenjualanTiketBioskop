@@ -156,6 +156,10 @@ Public Class LihatSemuaJadwalTayang
         ReloadDataTableDatabase(TextBoxSearch.Text)
     End Sub
 
+    Private Sub ButtonLihat_Click(sender As Object, e As EventArgs) Handles ButtonLihat.Click
+
+    End Sub
+
     Private Sub BtnJadwalTayang_Click(sender As Object, e As EventArgs) Handles BtnJadwalTayang.Click
         Dim jadwalTayang = New JadwalTayang()
         jadwalTayang.Show()

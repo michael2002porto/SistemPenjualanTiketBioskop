@@ -46,13 +46,13 @@ Partial Class JadwalTayang
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewJadwalTayangUpcoming = New System.Windows.Forms.DataGridView()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.JudulFilm1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TanggalTayang = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridViewJadwalTayangNowPlaying, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewJadwalTayangUpcoming, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -326,6 +326,15 @@ Partial Class JadwalTayang
         Me.DataGridViewJadwalTayangUpcoming.Size = New System.Drawing.Size(1661, 335)
         Me.DataGridViewJadwalTayangUpcoming.TabIndex = 31
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.ButtonViewAll)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 1173)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(2228, 100)
+        Me.Panel2.TabIndex = 32
+        '
         'DataGridViewImageColumn2
         '
         Me.DataGridViewImageColumn2.HeaderText = "Foto Film"
@@ -352,7 +361,7 @@ Partial Class JadwalTayang
         Me.TanggalTayang.HeaderText = "Tanggal Tayang"
         Me.TanggalTayang.MinimumWidth = 10
         Me.TanggalTayang.Name = "TanggalTayang"
-        Me.TanggalTayang.Width = 220
+        Me.TanggalTayang.Width = 180
         '
         'DataGridViewTextBoxColumn5
         '
@@ -367,15 +376,6 @@ Partial Class JadwalTayang
         Me.DataGridViewTextBoxColumn6.MinimumWidth = 10
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.Width = 110
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.ButtonViewAll)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 1173)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2228, 100)
-        Me.Panel2.TabIndex = 32
         '
         'JadwalTayang
         '
@@ -428,11 +428,11 @@ Partial Class JadwalTayang
     Friend WithEvents Studio As DataGridViewTextBoxColumn
     Friend WithEvents WaktuMulai As DataGridViewTextBoxColumn
     Friend WithEvents WaktuSelesai As DataGridViewTextBoxColumn
+    Friend WithEvents Panel2 As Panel
     Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
     Friend WithEvents JudulFilm1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents TanggalTayang As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents Panel2 As Panel
 End Class

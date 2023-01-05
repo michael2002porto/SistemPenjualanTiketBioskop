@@ -55,6 +55,7 @@ Partial Class LihatSemuaJadwalTayang
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.ButtonLihat = New System.Windows.Forms.Button()
         CType(Me.DataGridViewJadwalTayangAll, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -132,7 +133,7 @@ Partial Class LihatSemuaJadwalTayang
         Me.TanggalTayang.HeaderText = "Tanggal Tayang"
         Me.TanggalTayang.MinimumWidth = 10
         Me.TanggalTayang.Name = "TanggalTayang"
-        Me.TanggalTayang.Width = 220
+        Me.TanggalTayang.Width = 180
         '
         'WaktuMulai
         '
@@ -231,6 +232,7 @@ Partial Class LihatSemuaJadwalTayang
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.ButtonLihat)
         Me.Panel2.Controls.Add(Me.ButtonHapus)
         Me.Panel2.Controls.Add(Me.ButtonBack)
         Me.Panel2.Controls.Add(Me.ButtonEdit)
@@ -425,6 +427,22 @@ Partial Class LihatSemuaJadwalTayang
         Me.Panel3.Size = New System.Drawing.Size(2056, 39)
         Me.Panel3.TabIndex = 45
         '
+        'ButtonLihat
+        '
+        Me.ButtonLihat.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonLihat.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.ButtonLihat.FlatAppearance.BorderSize = 0
+        Me.ButtonLihat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonLihat.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ButtonLihat.ForeColor = System.Drawing.Color.White
+        Me.ButtonLihat.Location = New System.Drawing.Point(1213, 22)
+        Me.ButtonLihat.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonLihat.Name = "ButtonLihat"
+        Me.ButtonLihat.Size = New System.Drawing.Size(230, 64)
+        Me.ButtonLihat.TabIndex = 40
+        Me.ButtonLihat.Text = "Lihat"
+        Me.ButtonLihat.UseVisualStyleBackColor = False
+        '
         'LihatSemuaJadwalTayang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
@@ -472,6 +490,9 @@ Partial Class LihatSemuaJadwalTayang
     Friend WithEvents BtnStudio As Button
     Friend WithEvents BtnFilm As Button
     Friend WithEvents BtnSignOut As Button
+    Friend WithEvents TextBoxSearch As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel3 As Panel
     Friend WithEvents IdJadwalTayang As DataGridViewTextBoxColumn
     Friend WithEvents IdFilm As DataGridViewTextBoxColumn
     Friend WithEvents IdStudio As DataGridViewTextBoxColumn
@@ -481,7 +502,5 @@ Partial Class LihatSemuaJadwalTayang
     Friend WithEvents TanggalTayang As DataGridViewTextBoxColumn
     Friend WithEvents WaktuMulai As DataGridViewTextBoxColumn
     Friend WithEvents WaktuSelesai As DataGridViewTextBoxColumn
-    Friend WithEvents TextBoxSearch As TextBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents ButtonLihat As Button
 End Class
