@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-Public Class HapusJadwalTayang
+﻿Public Class DetailJadwalTayang
     Public Shared data_jadwal_tayang As DataJadwalTayang
     Public Shared c_film As Film
     Public Shared data_film As DataFilm
@@ -79,15 +77,7 @@ Public Class HapusJadwalTayang
         End Try
     End Sub
 
-    Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
-        LihatSemuaJadwalTayang.data_jadwal_tayang.DeleteDataJadwalTayangByIDDatabase(
-            LihatSemuaJadwalTayang.selectedIdJadwalTayang
-        )
-
-        Me.Close()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub ButtonTutup_Click(sender As Object, e As EventArgs) Handles ButtonTutup.Click
         Me.Close()
     End Sub
 End Class

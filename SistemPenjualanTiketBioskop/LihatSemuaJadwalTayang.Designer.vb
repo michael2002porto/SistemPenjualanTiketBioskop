@@ -22,6 +22,7 @@ Partial Class LihatSemuaJadwalTayang
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LihatSemuaJadwalTayang))
         Me.DataGridViewJadwalTayangAll = New System.Windows.Forms.DataGridView()
         Me.IdJadwalTayang = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdFilm = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,6 +42,7 @@ Partial Class LihatSemuaJadwalTayang
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ButtonBack = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.ButtonDetail = New System.Windows.Forms.Button()
         Me.ButtonHapus = New System.Windows.Forms.Button()
         Me.ButtonEdit = New System.Windows.Forms.Button()
         Me.ButtonTambah = New System.Windows.Forms.Button()
@@ -51,9 +53,14 @@ Partial Class LihatSemuaJadwalTayang
         Me.BtnJadwalTayang = New System.Windows.Forms.Button()
         Me.BtnStudio = New System.Windows.Forms.Button()
         Me.BtnFilm = New System.Windows.Forms.Button()
+        Me.TextBoxSearch = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         CType(Me.DataGridViewJadwalTayangAll, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridViewJadwalTayangAll
@@ -61,7 +68,7 @@ Partial Class LihatSemuaJadwalTayang
         Me.DataGridViewJadwalTayangAll.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.DataGridViewJadwalTayangAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewJadwalTayangAll.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdJadwalTayang, Me.IdFilm, Me.IdStudio, Me.FotoFilm, Me.JudulFilm, Me.Studio, Me.TanggalTayang, Me.WaktuMulai, Me.WaktuSelesai})
-        Me.DataGridViewJadwalTayangAll.Location = New System.Drawing.Point(85, 286)
+        Me.DataGridViewJadwalTayangAll.Location = New System.Drawing.Point(85, 370)
         Me.DataGridViewJadwalTayangAll.Name = "DataGridViewJadwalTayangAll"
         Me.DataGridViewJadwalTayangAll.RowHeadersWidth = 82
         Me.DataGridViewJadwalTayangAll.RowTemplate.Height = 41
@@ -126,7 +133,7 @@ Partial Class LihatSemuaJadwalTayang
         Me.TanggalTayang.HeaderText = "Tanggal Tayang"
         Me.TanggalTayang.MinimumWidth = 10
         Me.TanggalTayang.Name = "TanggalTayang"
-        Me.TanggalTayang.Width = 220
+        Me.TanggalTayang.Width = 180
         '
         'WaktuMulai
         '
@@ -225,6 +232,7 @@ Partial Class LihatSemuaJadwalTayang
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.ButtonDetail)
         Me.Panel2.Controls.Add(Me.ButtonHapus)
         Me.Panel2.Controls.Add(Me.ButtonBack)
         Me.Panel2.Controls.Add(Me.ButtonEdit)
@@ -235,6 +243,22 @@ Partial Class LihatSemuaJadwalTayang
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(2228, 99)
         Me.Panel2.TabIndex = 41
+        '
+        'ButtonDetail
+        '
+        Me.ButtonDetail.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonDetail.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.ButtonDetail.FlatAppearance.BorderSize = 0
+        Me.ButtonDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonDetail.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ButtonDetail.ForeColor = System.Drawing.Color.White
+        Me.ButtonDetail.Location = New System.Drawing.Point(1213, 22)
+        Me.ButtonDetail.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonDetail.Name = "ButtonDetail"
+        Me.ButtonDetail.Size = New System.Drawing.Size(230, 64)
+        Me.ButtonDetail.TabIndex = 40
+        Me.ButtonDetail.Text = "Detail"
+        Me.ButtonDetail.UseVisualStyleBackColor = False
         '
         'ButtonHapus
         '
@@ -385,6 +409,40 @@ Partial Class LihatSemuaJadwalTayang
         Me.BtnFilm.Text = "Film"
         Me.BtnFilm.UseVisualStyleBackColor = True
         '
+        'TextBoxSearch
+        '
+        Me.TextBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxSearch.Location = New System.Drawing.Point(44, 2)
+        Me.TextBoxSearch.Name = "TextBoxSearch"
+        Me.TextBoxSearch.PlaceholderText = "Search..."
+        Me.TextBoxSearch.Size = New System.Drawing.Size(1989, 32)
+        Me.TextBoxSearch.TabIndex = 43
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.ErrorImage = Nothing
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.InitialImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(-1, -1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(39, 39)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 44
+        Me.PictureBox1.TabStop = False
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.TextBoxSearch)
+        Me.Panel3.Controls.Add(Me.PictureBox1)
+        Me.Panel3.Location = New System.Drawing.Point(85, 308)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(2056, 39)
+        Me.Panel3.TabIndex = 45
+        '
         'LihatSemuaJadwalTayang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
@@ -398,12 +456,16 @@ Partial Class LihatSemuaJadwalTayang
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel3)
         Me.Name = "LihatSemuaJadwalTayang"
         Me.Text = "LihatSemuaJadwalTayang"
         CType(Me.DataGridViewJadwalTayangAll, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -428,6 +490,9 @@ Partial Class LihatSemuaJadwalTayang
     Friend WithEvents BtnStudio As Button
     Friend WithEvents BtnFilm As Button
     Friend WithEvents BtnSignOut As Button
+    Friend WithEvents TextBoxSearch As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel3 As Panel
     Friend WithEvents IdJadwalTayang As DataGridViewTextBoxColumn
     Friend WithEvents IdFilm As DataGridViewTextBoxColumn
     Friend WithEvents IdStudio As DataGridViewTextBoxColumn
@@ -437,4 +502,5 @@ Partial Class LihatSemuaJadwalTayang
     Friend WithEvents TanggalTayang As DataGridViewTextBoxColumn
     Friend WithEvents WaktuMulai As DataGridViewTextBoxColumn
     Friend WithEvents WaktuSelesai As DataGridViewTextBoxColumn
+    Friend WithEvents ButtonDetail As Button
 End Class

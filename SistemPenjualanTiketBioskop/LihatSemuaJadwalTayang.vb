@@ -87,11 +87,26 @@ Public Class LihatSemuaJadwalTayang
         End Try
     End Sub
 
-    Private Sub ReloadDataTableDatabase()
+    Private Sub ReloadDataTableDatabase(Optional search As String = "")
         'DataGridViewJadwalTayang.DataSource = data_jadwal_tayang.GetDataJadwalTayangDatabase()
         DataGridViewJadwalTayangAll.Rows.Clear()
         DataGridViewJadwalTayangAll.RowTemplate.Height = 100
-        Dim source = data_jadwal_tayang.GetDataJadwalTayangDatabase()
+
+        Dim source
+        If search.Length > 0 Then
+            source = data_jadwal_tayang.GetDataJadwalTayangDatabase(
+                "WHERE f.nama_film LIKE '%" + search + "%'
+                OR s.nama_studio LIKE '%" + search + "%'
+                OR s.kapasitas LIKE '%" + search + "%'
+                OR s.harga_kursi LIKE '%" + search + "%'
+                OR jt.tanggal LIKE '%" + search + "%'
+                OR jt.waktu_mulai LIKE '%" + search + "%'
+                OR jt.waktu_selesai LIKE '%" + search + "%'"
+            )
+        Else
+            source = data_jadwal_tayang.GetDataJadwalTayangDatabase()
+        End If
+
         For Each rowJadwalTayang In source
             Dim dataTable = {
                 rowJadwalTayang(0), 'Id Jadwal Tayang
@@ -100,9 +115,9 @@ Public Class LihatSemuaJadwalTayang
                 Image.FromFile(rowJadwalTayang(3)), 'Foto Film
                 rowJadwalTayang(2), 'Nama Film
                 rowJadwalTayang(5) + " (" + "Kapasitas = " + rowJadwalTayang(6) + ", " + "Harga = Rp " + rowJadwalTayang(7) + ")", 'Studio
-                Convert.ToDateTime(rowJadwalTayang(8)).ToString("dd/MM/yyyy"), 'Tanggal Tayang
-                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm"), 'Mulai Tayang
-                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm") 'Selesai Tayang
+                Convert.ToDateTime(rowJadwalTayang(8)).ToString("yyyy-MM-dd"), 'Tanggal Tayang
+                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm:ss"), 'Mulai Tayang
+                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm:ss") 'Selesai Tayang
             }
             DataGridViewJadwalTayangAll.Rows.Add(dataTable)
         Next
@@ -114,6 +129,9 @@ Public Class LihatSemuaJadwalTayang
 
     Private Sub LihatSemuaJadwalTayang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
+
+        LblUsername.Text = SignIn.data_user(1).ToString()
+        Lblid.Text = SignIn.data_user(0).ToString()
     End Sub
 
     Private Sub BtnSignOut_Click(sender As Object, e As EventArgs) Handles BtnSignOut.Click
@@ -132,6 +150,33 @@ Public Class LihatSemuaJadwalTayang
         Dim studio = New Studio()
         studio.Show()
         Me.Close()
+    End Sub
+
+    Private Sub TextBoxSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
+        ReloadDataTableDatabase(TextBoxSearch.Text)
+    End Sub
+
+    Private Sub ButtonDetail_Click(sender As Object, e As EventArgs) Handles ButtonDetail.Click
+        Try
+            If selectedIdJadwalTayang Is Nothing Then
+                Throw New System.Exception("Please select data grid")
+            End If
+            Dim selectedJadwalTayang As List(Of String) = data_jadwal_tayang.GetDataJadwalTayangByIDDatabase(selectedIdJadwalTayang)
+
+            data_jadwal_tayang.GSIdJadwalTayang = selectedJadwalTayang(0)
+            data_jadwal_tayang.GSIdFilm = selectedJadwalTayang(1)
+            data_jadwal_tayang.GSIdStudio = selectedJadwalTayang(4)
+            data_jadwal_tayang.GSTanggal = selectedJadwalTayang(8)
+            data_jadwal_tayang.GSWaktuMulai = selectedJadwalTayang(9)
+            data_jadwal_tayang.GSWaktuSelesai = selectedJadwalTayang(10)
+            data_film.GSNamaFilm = selectedJadwalTayang(2)
+            data_studio.GSNama = selectedJadwalTayang(5)
+
+            Dim detail_jadwal_tayang = New DetailJadwalTayang()
+            detail_jadwal_tayang.Show()
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString())
+        End Try
     End Sub
 
     Private Sub BtnJadwalTayang_Click(sender As Object, e As EventArgs) Handles BtnJadwalTayang.Click
