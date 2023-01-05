@@ -55,13 +55,17 @@ Public Class LihatSemuaJadwalTayang
     End Sub
 
     Private Sub DataGridViewJadwalTayangAll_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewJadwalTayangAll.CellClick
-        Dim index As Integer = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridViewJadwalTayangAll.Rows(index)
+        Try
+            Dim index As Integer = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridViewJadwalTayangAll.Rows(index)
 
-        selectedIdJadwalTayang = selectedRow.Cells(0).Value
-        selectedIdFilm = selectedRow.Cells(1).Value
-        selectedIdStudio = selectedRow.Cells(2).Value
+            selectedIdJadwalTayang = selectedRow.Cells(0).Value
+            selectedIdFilm = selectedRow.Cells(1).Value
+            selectedIdStudio = selectedRow.Cells(2).Value
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click

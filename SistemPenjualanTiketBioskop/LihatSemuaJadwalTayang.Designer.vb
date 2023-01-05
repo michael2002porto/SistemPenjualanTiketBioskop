@@ -458,7 +458,7 @@ Partial Class LihatSemuaJadwalTayang
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
         Me.Name = "LihatSemuaJadwalTayang"
-        Me.Text = "LihatSemuaJadwalTayang"
+        Me.Text = "Semua Jadwal Tayang"
         CType(Me.DataGridViewJadwalTayangAll, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
