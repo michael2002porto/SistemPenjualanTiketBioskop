@@ -20,10 +20,6 @@ Public Class SignUp
     Private Sub SignUp_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         LblEmail.Visible = False
         LblRePassword.Visible = False
-        TxtEmail.Text = ""
-        TxtUsername.Text = ""
-        TxtPassword.Text = ""
-        TxtRePassword.Text = ""
         TxtPassword.UseSystemPasswordChar = True
         TxtRePassword.UseSystemPasswordChar = True
     End Sub
