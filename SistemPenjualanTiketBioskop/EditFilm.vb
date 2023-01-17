@@ -1,4 +1,5 @@
 ﻿Public Class EditFilm
+    Public Shared data_film As List(Of String)
 
     Dim max_char_deskripsi = 268
     Dim panjang_karakter = max_char_deskripsi
@@ -81,6 +82,10 @@
         LblValueDeskripsi.Text = max_char_deskripsi - RichDeskripsiFilm.Text.Length
     End Sub
 
+    Private Sub EditFilm_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        LblValidateNamaFilm.Visible = False
+    End Sub
+
     Private Sub BtnEditGambar_Click(sender As Object, e As EventArgs) Handles BtnEditGambar.Click
         Try
             OpenFileDialog1.Title = "Open Gambar Koleksi"
@@ -99,9 +104,20 @@
     End Sub
 
     Private Sub TxtFilm_Leave(sender As Object, e As EventArgs) Handles TxtFilm.Leave
+        LblValidateNamaFilm.Visible = False
+
         If TxtFilm.Text.Length < 1 Then
             TxtFilm.Select()
             MessageBox.Show("Please add At least 1 String")
+        End If
+
+        Dim judulFilm As String = TxtFilm.Text
+        data_film = Film.dataFilm.CheckJudulFilm(judulFilm)
+
+        ' Validasi nama film, jika nama film sudah ada sebelumnya
+        If data_film.Count > 0 Then
+            Film.dataFilm.GSNamaFilm = data_film(0)
+            LblValidateNamaFilm.Visible = True
         End If
     End Sub
 
@@ -199,7 +215,14 @@
 
             Dim convertedGenre = Film.dataFilm.ConvertGenreToString(Film.dataFilm.getGenreItem)
 
-            If Film.dataFilm.GSDeskripsi = "" Or Film.dataFilm.GSDirector = "" Or Film.dataFilm.GSDuration = "" Or convertedGenre = "" Or Film.dataFilm.GSBahasa = "" Or Film.dataFilm.GSHargaFilm = "" Then
+            Dim judulFilm As String = TxtFilm.Text
+            data_film = Film.dataFilm.CheckJudulFilm(judulFilm)
+
+            If data_film.Count > 0 Then
+                Film.dataFilm.GSNamaFilm = data_film(0)
+                MessageBox.Show("film sudah ada")
+
+            ElseIf Film.dataFilm.GSDeskripsi = "" Or Film.dataFilm.GSDirector = "" Or Film.dataFilm.GSDuration = "" Or convertedGenre = "" Or Film.dataFilm.GSBahasa = "" Or Film.dataFilm.GSHargaFilm = "" Then
                 MessageBox.Show("Harap isi semua data")
 
             Else
