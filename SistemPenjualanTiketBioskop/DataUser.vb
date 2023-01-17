@@ -12,6 +12,7 @@ Public Class DataUser
     Public Shared sqlRead As MySqlDataReader
     Private sqlQuery As String
     Private queryAuth As String
+    Private validateUsername As String
 
     Private server As String = "localhost"
     Private username_db As String = "root"
@@ -136,4 +137,34 @@ Public Class DataUser
         End Try
     End Function
 
+    Public Function CheckUsername(username As String) As List(Of String)
+        Dim result As New List(Of String)
+
+        Try
+            DBConnection()
+
+            dbConn.Open()
+
+            sqlCommand.Connection = dbConn
+            validateUsername = "SELECT username FROM user WHERE username='" & username & "'"
+
+            sqlCommand.CommandText = validateUsername
+            Debug.WriteLine(validateUsername)
+            sqlRead = sqlCommand.ExecuteReader
+
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString())
+            End While
+
+            'Return result
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            dbConn.Dispose()
+        End Try
+
+    End Function
 End Class
