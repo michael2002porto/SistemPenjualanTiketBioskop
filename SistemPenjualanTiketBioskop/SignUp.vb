@@ -20,10 +20,6 @@ Public Class SignUp
     Private Sub SignUp_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         LblEmail.Visible = False
         LblRePassword.Visible = False
-        TxtEmail.Text = ""
-        TxtUsername.Text = ""
-        TxtPassword.Text = ""
-        TxtRePassword.Text = ""
         TxtPassword.UseSystemPasswordChar = True
         TxtRePassword.UseSystemPasswordChar = True
     End Sub
@@ -90,7 +86,8 @@ Public Class SignUp
         If TxtUsername.Text.Length >= min_char_username And TxtUsername.Text.Length <= max_char_username And TxtPassword.Text.Length >= min_char_password And TxtPassword.Text.Length <= max_char_password Then
             If TxtPassword.Text = TxtRePassword.Text Then
                 SignIn.users.AddUsersDatabase(TxtEmail.Text, TxtUsername.Text, TxtPassword.Text)
-                jadwalTayang.Show()
+                Dim form_SignIn = New SignIn()
+                form_SignIn.Show()
                 Me.Close()
             Else
                 MessageBox.Show("Error")
