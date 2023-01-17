@@ -25,10 +25,14 @@
     Private Sub DataGridStudio_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridStudio.CellClick
         Dim index As Integer = e.RowIndex
         Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridStudio.Rows(index)
 
-        SelectedTableStudio = selectedRow.Cells(0).Value
-        SelectedTableNamaStudio = selectedRow.Cells(1).Value
+        Try
+            selectedRow = DataGridStudio.Rows(index)
+            SelectedTableStudio = selectedRow.Cells(0).Value
+            SelectedTableNamaStudio = selectedRow.Cells(1).Value
+        Catch ex As Exception
+            MessageBox.Show("Please select data")
+        End Try
     End Sub
 
     'Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles BtnSelect.Click
@@ -43,14 +47,20 @@
     'End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        Dim SelectedStudio As List(Of String) = data_studio.GetDataStudioByIDDatabase(SelectedTableStudio)
 
-        data_studio.GSNama = SelectedStudio(1)
-        data_studio.GSKapasitas = SelectedStudio(2)
-        data_studio.GSHarga = SelectedStudio(3)
 
-        Dim formUpdate = New EditStudio()
-        formUpdate.Show()
+        Try
+            Dim selectedStudio As List(Of String) = data_studio.GetDataStudioByIDDatabase(SelectedTableStudio)
+            data_studio.GSNama = selectedStudio(1)
+            data_studio.GSKapasitas = selectedStudio(2)
+            data_studio.GSHarga = selectedStudio(3)
+
+            Dim formUpdate = New EditStudio()
+            formUpdate.Show()
+
+        Catch ex As Exception
+            MessageBox.Show("Please select data")
+        End Try
     End Sub
 
     Private Sub BtnRemove_Click(sender As Object, e As EventArgs) Handles BtnRemove.Click
@@ -93,4 +103,5 @@
         tiket.Show()
         Me.Close()
     End Sub
+
 End Class

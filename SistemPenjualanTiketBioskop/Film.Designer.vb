@@ -229,7 +229,7 @@ Partial Class Film
         Me.BtnSelect.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnSelect.ForeColor = System.Drawing.Color.White
         Me.BtnSelect.Location = New System.Drawing.Point(45, 8)
-        Me.BtnSelect.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnSelect.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSelect.Name = "BtnSelect"
         Me.BtnSelect.Size = New System.Drawing.Size(178, 50)
         Me.BtnSelect.TabIndex = 14
