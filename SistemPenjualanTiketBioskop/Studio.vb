@@ -1,4 +1,6 @@
-﻿Public Class Studio
+﻿Imports Org.BouncyCastle.Asn1.Ocsp
+
+Public Class Studio
     Public Shared data_studio As DataStudio
     Public Shared SelectedTableStudio As Integer
     Public Shared SelectedTableNamaStudio As String
@@ -20,6 +22,8 @@
 
     Private Sub studio_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataStudioDatabase()
+        LblUsername.Text = SignIn.data_user(1).ToString()
+
     End Sub
 
     Private Sub DataGridStudio_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridStudio.CellClick
@@ -108,5 +112,37 @@
         Dim signIn = New SignIn()
         signIn.Show()
         Me.Close()
+    End Sub
+    Private Sub ReloadDataTableDatabase(Optional search As String = "")
+        'DataGridViewJadwalTayang.DataSource = data_jadwal_tayang.GetDataJadwalTayangDatabase()
+        'DataGridStudio.Rows.Clear()
+        'DataGridStudio.RowTemplate.Height = 100
+
+        'Dim source
+        'If search.Length > 0 Then
+        '    source = data_studio.GetDataStudioDatabaseList(
+        '        "WHERE s.nama_studio LIKE '%" + search + "%'
+        '        OR s.kapasitas LIKE '%" + search + "%'
+        '        OR s.harga_kursi LIKE '%" + search + "%'"
+        '    )
+        'Else
+        '    source = data_studio.GetDataStudioDatabaseList()
+        'End If
+
+        'For Each rowJadwalTayang In source
+        '    Dim dataTable = {
+        '        rowJadwalTayang(0), 'Id Studio
+        '        rowJadwalTayang(1), 'Nama Studio
+        '        rowJadwalTayang(2), 'Jenis Studio
+        '        rowJadwalTayang(3), 'Kapasitas Studio
+        '        rowJadwalTayang(4) 'Harga Kursi
+        '    }
+        '    DataGridStudio.Rows.Add(dataTable)
+        'Next
+
+        'SelectedTableStudio = Nothing
+    End Sub
+    Private Sub TextBoxSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
+        'ReloadDataTableDatabase(TextBoxSearch.Text)
     End Sub
 End Class
