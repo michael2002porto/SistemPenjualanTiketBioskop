@@ -153,4 +153,11 @@ Public Class TambahTiket
         tiket.Show()
         Me.Close()
     End Sub
+
+    Private Sub CbBoxFilm_Leave(sender As Object, e As EventArgs) Handles CbBoxFilm.Leave
+        If CbBoxFilm.Text.Length < 1 Then
+            CbBoxFilm.Select()
+            MessageBox.Show("Please select the movie title")
+        End If
+    End Sub
 End Class
