@@ -90,6 +90,12 @@ Public Class JadwalTayang
         Me.Close()
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim signIn = New SignIn()
+        signIn.Show()
+        Me.Close()
+    End Sub
+
     Private Sub JadwalTayang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         LblUsername.Text = SignIn.data_user(1).ToString()
         Lblid.Text = SignIn.data_user(0).ToString()
