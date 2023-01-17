@@ -74,7 +74,7 @@
     End Sub
 
 
-    Private Sub BtnSignOut_Click(sender As Object, e As EventArgs) Handles BtnSignOut.Click
+    Private Sub BtnSignOut_Click(sender As Object, e As EventArgs)
         Dim signIn = New SignIn()
         signIn.Show()
         Me.Close()

@@ -27,14 +27,13 @@ Partial Class Studio
         Me.BtnRemove = New System.Windows.Forms.Button()
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnTiket = New System.Windows.Forms.Button()
-        Me.BtnSignOut = New System.Windows.Forms.Button()
         Me.BtnJadwalTayang = New System.Windows.Forms.Button()
         Me.BtnStudio = New System.Windows.Forms.Button()
         Me.BtnFilm = New System.Windows.Forms.Button()
         Me.LblUsername = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridStudio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -91,7 +90,6 @@ Partial Class Studio
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.BtnTiket)
-        Me.Panel1.Controls.Add(Me.BtnSignOut)
         Me.Panel1.Controls.Add(Me.BtnJadwalTayang)
         Me.Panel1.Controls.Add(Me.BtnStudio)
         Me.Panel1.Controls.Add(Me.BtnFilm)
@@ -100,6 +98,22 @@ Partial Class Studio
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1480, 92)
         Me.Panel1.TabIndex = 16
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(1284, 24)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(150, 46)
+        Me.Button1.TabIndex = 19
+        Me.Button1.Text = "Sign Out"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -175,26 +189,11 @@ Partial Class Studio
         Me.LblUsername.TabIndex = 18
         Me.LblUsername.Text = "Username"
         '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(1284, 24)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(150, 46)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "Sign Out"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Studio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1480, 548)
         Me.Controls.Add(Me.LblUsername)
         Me.Controls.Add(Me.Panel1)
