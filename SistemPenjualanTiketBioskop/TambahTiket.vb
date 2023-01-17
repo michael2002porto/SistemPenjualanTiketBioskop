@@ -11,6 +11,7 @@ Public Class TambahTiket
     Private total_harga As Integer
     Private harga_kursi As Integer
     Private harga_film As Integer
+    Private sqlQuery As String
 
 
     Public Sub New()
@@ -28,15 +29,21 @@ Public Class TambahTiket
     End Sub
 
     Private Sub DataGridJadwal_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridJadwal.CellClick
+        Dim index As Integer = e.RowIndex
+        Dim selectedrow As DataGridViewRow
         Try
-            Dim index As Integer = e.RowIndex
-            Dim selectedrow As DataGridViewRow
             selectedrow = DataGridJadwal.Rows(index)
-
             selectedTableJadwal = selectedrow.Cells(0).Value
         Catch ex As Exception
             MessageBox.Show("Please select data")
         End Try
+
+    End Sub
+
+    Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
+        Dim tiket = New Tiket()
+        tiket.Show()
+        Me.Close()
     End Sub
 
     Private Sub TambahTiket_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -66,14 +73,14 @@ Public Class TambahTiket
     End Sub
 
     Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles BtnSelect.Click
-        namaFilm = CbBoxFilm.SelectedItem()
-
-        Dim dbConn As New MySqlConnection
-        Dim sqlRead As MySqlDataReader
-        Dim sqlCommand As New MySqlCommand
-        dbConn.ConnectionString = "server = localhost; user id = root; password = ''; database = bioskop"
 
         Try
+            namaFilm = CbBoxFilm.SelectedItem()
+
+            Dim dbConn As New MySqlConnection
+            Dim sqlRead As MySqlDataReader
+            Dim sqlCommand As New MySqlCommand
+            dbConn.ConnectionString = "server = localhost; user id = root; password = ''; database = bioskop"
             dbConn.Open()
             Dim Query As String = "SELECT id FROM film WHERE nama_film = '" & namaFilm & "'"
             sqlCommand = New MySqlCommand(Query, dbConn)
@@ -88,10 +95,9 @@ Public Class TambahTiket
             dbConn.Close()
             ReloadDataTableDatabase()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            dbConn.Dispose()
+            MessageBox.Show("Please select the movie title")
         End Try
+
     End Sub
 
     Public Function GetDataJadwalDatabase() As DataTable
@@ -125,43 +131,35 @@ Public Class TambahTiket
     End Sub
 
     Private Sub BtnBuy_Click(sender As Object, e As EventArgs) Handles BtnBuy.Click
-        Dim selectedJadwal As List(Of String) = data_tiket.GetDataJadwalByIDDatabase(selectedTableJadwal)
-        id_jadwal_tayang = selectedJadwal(0)
-        harga_film = selectedJadwal(2)
-        harga_kursi = selectedJadwal(3)
-
         Dim dbConn As New MySqlConnection
         Dim sqlRead As MySqlDataReader
         Dim sqlCommand As New MySqlCommand
-        dbConn.ConnectionString = "server = localhost; user id = root; password = ''; database = bioskop"
-
         Try
+            Dim selectedJadwal As List(Of String) = data_tiket.GetDataJadwalByIDDatabase(selectedTableJadwal)
+            id_jadwal_tayang = selectedJadwal(0)
+            harga_film = selectedJadwal(2)
+            harga_kursi = selectedJadwal(3)
+
+            dbConn.ConnectionString = "server = localhost; user id = root; password = ''; database = bioskop"
+
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlCommand.CommandText = "INSERT INTO TIKET(id_jadwal_tayang, total_harga) VALUE('" _
+            sqlQuery = "INSERT INTO TIKET(id_jadwal_tayang, total_harga) VALUE('" _
                                     & id_jadwal_tayang & "', '" _
                                     & (harga_film + harga_kursi) & "')"
 
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
+            MessageBox.Show("Tiket berhasil ditambahkan")
             dbConn.Close()
 
             sqlRead.Close()
-            dbConn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Please select data")
         Finally
             dbConn.Dispose()
         End Try
-
-        Dim tiket = New Tiket()
-        tiket.Show()
-        Me.Close()
     End Sub
 
-    Private Sub CbBoxFilm_Leave(sender As Object, e As EventArgs) Handles CbBoxFilm.Leave
-        If CbBoxFilm.Text.Length < 1 Then
-            CbBoxFilm.Select()
-            MessageBox.Show("Please select the movie title")
-        End If
-    End Sub
+
 End Class

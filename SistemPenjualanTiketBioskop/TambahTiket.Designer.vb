@@ -29,8 +29,11 @@ Partial Class TambahTiket
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnSelect = New System.Windows.Forms.Button()
         Me.BtnBuy = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BtnBack = New System.Windows.Forms.Button()
         CType(Me.DataGridJadwal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -68,7 +71,7 @@ Partial Class TambahTiket
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(832, 68)
+        Me.Panel1.Size = New System.Drawing.Size(827, 68)
         Me.Panel1.TabIndex = 56
         '
         'Label2
@@ -77,7 +80,7 @@ Partial Class TambahTiket
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(332, 18)
+        Me.Label2.Location = New System.Drawing.Point(329, 18)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(179, 31)
         Me.Label2.TabIndex = 29
@@ -107,7 +110,7 @@ Partial Class TambahTiket
         Me.BtnBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnBuy.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnBuy.ForeColor = System.Drawing.Color.White
-        Me.BtnBuy.Location = New System.Drawing.Point(602, 369)
+        Me.BtnBuy.Location = New System.Drawing.Point(641, 17)
         Me.BtnBuy.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnBuy.Name = "BtnBuy"
         Me.BtnBuy.Size = New System.Drawing.Size(125, 37)
@@ -115,13 +118,38 @@ Partial Class TambahTiket
         Me.BtnBuy.Text = "Beli Tiket"
         Me.BtnBuy.UseVisualStyleBackColor = False
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.BtnBack)
+        Me.Panel2.Controls.Add(Me.BtnBuy)
+        Me.Panel2.Location = New System.Drawing.Point(0, 388)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(827, 68)
+        Me.Panel2.TabIndex = 59
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BtnBack.BackColor = System.Drawing.Color.Teal
+        Me.BtnBack.FlatAppearance.BorderSize = 0
+        Me.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnBack.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnBack.ForeColor = System.Drawing.Color.White
+        Me.BtnBack.Location = New System.Drawing.Point(33, 17)
+        Me.BtnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(125, 37)
+        Me.BtnBack.TabIndex = 59
+        Me.BtnBack.Text = "Kembali"
+        Me.BtnBack.UseVisualStyleBackColor = False
+        '
         'TambahTiket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(832, 430)
-        Me.Controls.Add(Me.BtnBuy)
+        Me.ClientSize = New System.Drawing.Size(827, 457)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.BtnSelect)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridJadwal)
@@ -133,6 +161,7 @@ Partial Class TambahTiket
         CType(Me.DataGridJadwal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -145,4 +174,6 @@ Partial Class TambahTiket
     Friend WithEvents Label2 As Label
     Friend WithEvents BtnSelect As Button
     Friend WithEvents BtnBuy As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents BtnBack As Button
 End Class
