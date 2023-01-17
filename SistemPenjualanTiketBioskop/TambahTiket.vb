@@ -28,11 +28,15 @@ Public Class TambahTiket
     End Sub
 
     Private Sub DataGridJadwal_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridJadwal.CellClick
-        Dim index As Integer = e.RowIndex
-        Dim selectedrow As DataGridViewRow
-        selectedrow = DataGridJadwal.Rows(index)
+        Try
+            Dim index As Integer = e.RowIndex
+            Dim selectedrow As DataGridViewRow
+            selectedrow = DataGridJadwal.Rows(index)
 
-        selectedTableJadwal = selectedrow.Cells(0).Value
+            selectedTableJadwal = selectedrow.Cells(0).Value
+        Catch ex As Exception
+            MessageBox.Show("Please select data")
+        End Try
     End Sub
 
     Private Sub TambahTiket_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -152,5 +156,12 @@ Public Class TambahTiket
         Dim tiket = New Tiket()
         tiket.Show()
         Me.Close()
+    End Sub
+
+    Private Sub CbBoxFilm_Leave(sender As Object, e As EventArgs) Handles CbBoxFilm.Leave
+        If CbBoxFilm.Text.Length < 1 Then
+            CbBoxFilm.Select()
+            MessageBox.Show("Please select the movie title")
+        End If
     End Sub
 End Class
