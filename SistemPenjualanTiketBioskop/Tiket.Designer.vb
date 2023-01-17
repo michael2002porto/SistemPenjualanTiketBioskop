@@ -27,7 +27,6 @@ Partial Class Tiket
         Me.BtnLogout = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnTiket = New System.Windows.Forms.Button()
-        Me.BtnSignOut = New System.Windows.Forms.Button()
         Me.BtnJadwalTayang = New System.Windows.Forms.Button()
         Me.BtnStudio = New System.Windows.Forms.Button()
         Me.BtnFilm = New System.Windows.Forms.Button()
@@ -54,7 +53,6 @@ Partial Class Tiket
         Me.Panel1.Controls.Add(Me.BtnLogout)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.BtnTiket)
-        Me.Panel1.Controls.Add(Me.BtnSignOut)
         Me.Panel1.Controls.Add(Me.BtnJadwalTayang)
         Me.Panel1.Controls.Add(Me.BtnStudio)
         Me.Panel1.Controls.Add(Me.BtnFilm)
@@ -103,21 +101,6 @@ Partial Class Tiket
         Me.BtnTiket.TabIndex = 3
         Me.BtnTiket.Text = "Tiket"
         Me.BtnTiket.UseVisualStyleBackColor = True
-        '
-        'BtnSignOut
-        '
-        Me.BtnSignOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSignOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.BtnSignOut.FlatAppearance.BorderSize = 0
-        Me.BtnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSignOut.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnSignOut.ForeColor = System.Drawing.Color.White
-        Me.BtnSignOut.Location = New System.Drawing.Point(3452, 30)
-        Me.BtnSignOut.Name = "BtnSignOut"
-        Me.BtnSignOut.Size = New System.Drawing.Size(195, 59)
-        Me.BtnSignOut.TabIndex = 14
-        Me.BtnSignOut.Text = "Sign Out"
-        Me.BtnSignOut.UseVisualStyleBackColor = False
         '
         'BtnJadwalTayang
         '
@@ -211,7 +194,6 @@ Partial Class Tiket
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnTiket As Button
-    Friend WithEvents BtnSignOut As Button
     Friend WithEvents BtnJadwalTayang As Button
     Friend WithEvents BtnStudio As Button
     Friend WithEvents BtnFilm As Button
