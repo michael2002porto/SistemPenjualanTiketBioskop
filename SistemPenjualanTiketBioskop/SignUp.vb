@@ -22,6 +22,7 @@ Public Class SignUp
 
     Private Sub SignUp_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         LblEmail.Visible = False
+        LblCheckUsername.Visible = False
         LblRePassword.Visible = False
         TxtPassword.UseSystemPasswordChar = True
         TxtRePassword.UseSystemPasswordChar = True
@@ -34,6 +35,19 @@ Public Class SignUp
         Catch ex As Exception
             LblEmail.Visible = True
         End Try
+    End Sub
+
+    Private Sub TxtUsername_Leave(sender As Object, e As EventArgs) Handles TxtUsername.Leave
+        LblCheckUsername.Visible = False
+
+        Dim username As String = TxtUsername.Text
+        data_user = SignIn.users.CheckUsername(username)
+
+        ' Validasi username, jika username sudah ada sebelumnya atau terdaftar
+        If data_user.Count > 0 Then
+            SignIn.users.GSUsername = data_user(0)
+            LblCheckUsername.Visible = True
+        End If
     End Sub
 
     Private Sub TxtUsername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtUsername.KeyPress
@@ -109,4 +123,5 @@ Public Class SignUp
         End If
 
     End Sub
+
 End Class
