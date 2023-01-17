@@ -1,7 +1,10 @@
 ﻿Imports System.Net.Mail
+Imports Microsoft.VisualBasic.ApplicationServices
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class SignUp
     Public Shared jadwalTayang As JadwalTayang
+    Public Shared data_user As List(Of String)
 
     Dim max_char_username = 30
     Dim min_char_username = 6
@@ -83,18 +86,27 @@ Public Class SignUp
     End Sub
 
     Private Sub BtnSignUp_Click(sender As Object, e As EventArgs) Handles BtnSignUp.Click
-        If TxtUsername.Text.Length >= min_char_username And TxtUsername.Text.Length <= max_char_username And TxtPassword.Text.Length >= min_char_password And TxtPassword.Text.Length <= max_char_password Then
-            If TxtPassword.Text = TxtRePassword.Text Then
-                SignIn.users.AddUsersDatabase(TxtEmail.Text, TxtUsername.Text, TxtPassword.Text)
-                Dim form_SignIn = New SignIn()
-                form_SignIn.Show()
-                Me.Close()
-            Else
-                MessageBox.Show("Error")
-            End If
+        Dim username As String = TxtUsername.Text
+        data_user = SignIn.users.CheckUsername(username)
+
+        If data_user.Count > 0 Then
+            SignIn.users.GSUsername = data_user(0)
+            MessageBox.Show("username sudah terdaftar")
 
         Else
-            MessageBox.Show("Please enter a username with a minimum length of 6 characters, a maximum of 30 characters. Password with a minimum length of 8 characters, a maximum of 100 characters.")
+            If TxtUsername.Text.Length >= min_char_username And TxtUsername.Text.Length <= max_char_username And TxtPassword.Text.Length >= min_char_password And TxtPassword.Text.Length <= max_char_password Then
+                If TxtPassword.Text = TxtRePassword.Text Then
+                    SignIn.users.AddUsersDatabase(TxtEmail.Text, TxtUsername.Text, TxtPassword.Text)
+                    SignIn.Show()
+                    Me.Close()
+                Else
+                    MessageBox.Show("Error")
+                End If
+
+            Else
+                MessageBox.Show("Please enter a username with a minimum length of 6 characters, a maximum of 30 characters. Password with a minimum length of 8 characters, a maximum of 100 characters.")
+            End If
         End If
+
     End Sub
 End Class
