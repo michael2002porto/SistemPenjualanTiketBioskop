@@ -34,6 +34,7 @@ Partial Class Studio
         Me.BtnStudio = New System.Windows.Forms.Button()
         Me.BtnFilm = New System.Windows.Forms.Button()
         Me.LblUsername = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridStudio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -41,12 +42,11 @@ Partial Class Studio
         'DataGridStudio
         '
         Me.DataGridStudio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridStudio.Location = New System.Drawing.Point(703, 212)
-        Me.DataGridStudio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridStudio.Location = New System.Drawing.Point(541, 166)
         Me.DataGridStudio.Name = "DataGridStudio"
         Me.DataGridStudio.RowHeadersWidth = 62
         Me.DataGridStudio.RowTemplate.Height = 33
-        Me.DataGridStudio.Size = New System.Drawing.Size(863, 374)
+        Me.DataGridStudio.Size = New System.Drawing.Size(664, 292)
         Me.DataGridStudio.TabIndex = 0
         '
         'BtnUpdate
@@ -54,10 +54,9 @@ Partial Class Studio
         Me.BtnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.BtnUpdate.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnUpdate.ForeColor = System.Drawing.SystemColors.Window
-        Me.BtnUpdate.Location = New System.Drawing.Point(1034, 614)
-        Me.BtnUpdate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnUpdate.Location = New System.Drawing.Point(795, 480)
         Me.BtnUpdate.Name = "BtnUpdate"
-        Me.BtnUpdate.Size = New System.Drawing.Size(168, 64)
+        Me.BtnUpdate.Size = New System.Drawing.Size(129, 50)
         Me.BtnUpdate.TabIndex = 2
         Me.BtnUpdate.Text = "Update"
         Me.BtnUpdate.UseVisualStyleBackColor = False
@@ -67,10 +66,9 @@ Partial Class Studio
         Me.BtnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.BtnRemove.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnRemove.ForeColor = System.Drawing.SystemColors.Window
-        Me.BtnRemove.Location = New System.Drawing.Point(1398, 614)
-        Me.BtnRemove.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnRemove.Location = New System.Drawing.Point(1075, 480)
         Me.BtnRemove.Name = "BtnRemove"
-        Me.BtnRemove.Size = New System.Drawing.Size(168, 64)
+        Me.BtnRemove.Size = New System.Drawing.Size(129, 50)
         Me.BtnRemove.TabIndex = 3
         Me.BtnRemove.Text = "Remove"
         Me.BtnRemove.UseVisualStyleBackColor = False
@@ -80,10 +78,9 @@ Partial Class Studio
         Me.BtnTambah.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.BtnTambah.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambah.ForeColor = System.Drawing.SystemColors.Window
-        Me.BtnTambah.Location = New System.Drawing.Point(1216, 614)
-        Me.BtnTambah.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnTambah.Location = New System.Drawing.Point(935, 480)
         Me.BtnTambah.Name = "BtnTambah"
-        Me.BtnTambah.Size = New System.Drawing.Size(168, 64)
+        Me.BtnTambah.Size = New System.Drawing.Size(129, 50)
         Me.BtnTambah.TabIndex = 5
         Me.BtnTambah.Text = "Add"
         Me.BtnTambah.UseVisualStyleBackColor = False
@@ -91,6 +88,7 @@ Partial Class Studio
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.BtnTiket)
         Me.Panel1.Controls.Add(Me.BtnSignOut)
@@ -99,9 +97,8 @@ Partial Class Studio
         Me.Panel1.Controls.Add(Me.BtnFilm)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(2228, 118)
+        Me.Panel1.Size = New System.Drawing.Size(1480, 92)
         Me.Panel1.TabIndex = 16
         '
         'Label1
@@ -109,10 +106,9 @@ Partial Class Studio
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Script MT Bold", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(58, 23)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(45, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(266, 77)
+        Me.Label1.Size = New System.Drawing.Size(200, 58)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Bioscoop"
         '
@@ -123,29 +119,12 @@ Partial Class Studio
         Me.BtnTiket.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTiket.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTiket.ForeColor = System.Drawing.Color.White
-        Me.BtnTiket.Location = New System.Drawing.Point(1346, 3)
-        Me.BtnTiket.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnTiket.Location = New System.Drawing.Point(1035, 2)
         Me.BtnTiket.Name = "BtnTiket"
-        Me.BtnTiket.Size = New System.Drawing.Size(148, 115)
+        Me.BtnTiket.Size = New System.Drawing.Size(114, 90)
         Me.BtnTiket.TabIndex = 3
         Me.BtnTiket.Text = "Tiket"
         Me.BtnTiket.UseVisualStyleBackColor = True
-        '
-        'BtnSignOut
-        '
-        Me.BtnSignOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSignOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.BtnSignOut.FlatAppearance.BorderSize = 0
-        Me.BtnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSignOut.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.BtnSignOut.ForeColor = System.Drawing.Color.White
-        Me.BtnSignOut.Location = New System.Drawing.Point(3940, 31)
-        Me.BtnSignOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnSignOut.Name = "BtnSignOut"
-        Me.BtnSignOut.Size = New System.Drawing.Size(195, 59)
-        Me.BtnSignOut.TabIndex = 14
-        Me.BtnSignOut.Text = "Sign Out"
-        Me.BtnSignOut.UseVisualStyleBackColor = False
         '
         'BtnJadwalTayang
         '
@@ -153,10 +132,9 @@ Partial Class Studio
         Me.BtnJadwalTayang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnJadwalTayang.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnJadwalTayang.ForeColor = System.Drawing.Color.White
-        Me.BtnJadwalTayang.Location = New System.Drawing.Point(687, 0)
-        Me.BtnJadwalTayang.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnJadwalTayang.Location = New System.Drawing.Point(528, 0)
         Me.BtnJadwalTayang.Name = "BtnJadwalTayang"
-        Me.BtnJadwalTayang.Size = New System.Drawing.Size(277, 115)
+        Me.BtnJadwalTayang.Size = New System.Drawing.Size(213, 90)
         Me.BtnJadwalTayang.TabIndex = 2
         Me.BtnJadwalTayang.Text = "Jadwal Tayang"
         Me.BtnJadwalTayang.UseVisualStyleBackColor = True
@@ -167,10 +145,9 @@ Partial Class Studio
         Me.BtnStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStudio.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnStudio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.BtnStudio.Location = New System.Drawing.Point(1173, 3)
-        Me.BtnStudio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnStudio.Location = New System.Drawing.Point(902, 2)
         Me.BtnStudio.Name = "BtnStudio"
-        Me.BtnStudio.Size = New System.Drawing.Size(146, 111)
+        Me.BtnStudio.Size = New System.Drawing.Size(112, 87)
         Me.BtnStudio.TabIndex = 1
         Me.BtnStudio.Text = "Studio"
         Me.BtnStudio.UseVisualStyleBackColor = True
@@ -181,10 +158,9 @@ Partial Class Studio
         Me.BtnFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnFilm.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnFilm.Location = New System.Drawing.Point(984, 3)
-        Me.BtnFilm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnFilm.Location = New System.Drawing.Point(757, 2)
         Me.BtnFilm.Name = "BtnFilm"
-        Me.BtnFilm.Size = New System.Drawing.Size(146, 111)
+        Me.BtnFilm.Size = New System.Drawing.Size(112, 87)
         Me.BtnFilm.TabIndex = 0
         Me.BtnFilm.Text = "Film"
         Me.BtnFilm.UseVisualStyleBackColor = True
@@ -193,25 +169,39 @@ Partial Class Studio
         '
         Me.LblUsername.AutoSize = True
         Me.LblUsername.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LblUsername.Location = New System.Drawing.Point(58, 143)
-        Me.LblUsername.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblUsername.Location = New System.Drawing.Point(45, 112)
         Me.LblUsername.Name = "LblUsername"
-        Me.LblUsername.Size = New System.Drawing.Size(170, 36)
+        Me.LblUsername.Size = New System.Drawing.Size(130, 28)
         Me.LblUsername.TabIndex = 18
         Me.LblUsername.Text = "Username"
         '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(1284, 24)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(150, 46)
+        Me.Button1.TabIndex = 19
+        Me.Button1.Text = "Sign Out"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Studio
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2228, 701)
+        Me.ClientSize = New System.Drawing.Size(1480, 548)
         Me.Controls.Add(Me.LblUsername)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.BtnRemove)
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.DataGridStudio)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Studio"
         Me.Text = "Studio"
         CType(Me.DataGridStudio, System.ComponentModel.ISupportInitialize).EndInit()
@@ -234,4 +224,5 @@ Partial Class Studio
     Friend WithEvents BtnStudio As Button
     Friend WithEvents BtnFilm As Button
     Friend WithEvents LblUsername As Label
+    Friend WithEvents Button1 As Button
 End Class
