@@ -61,7 +61,6 @@ Partial Class EditFilm
         Me.ComboBoxBahasa = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ComboBoxRatingUsia = New System.Windows.Forms.ComboBox()
-        Me.LblValidateNamaFilm = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PicFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupGenre.SuspendLayout()
@@ -106,7 +105,7 @@ Partial Class EditFilm
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(301, 214)
+        Me.Label3.Location = New System.Drawing.Point(301, 184)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(85, 25)
         Me.Label3.TabIndex = 57
@@ -117,7 +116,7 @@ Partial Class EditFilm
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(301, 273)
+        Me.Label4.Location = New System.Drawing.Point(301, 243)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(97, 25)
         Me.Label4.TabIndex = 58
@@ -144,7 +143,7 @@ Partial Class EditFilm
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(301, 464)
+        Me.Label5.Location = New System.Drawing.Point(301, 434)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(89, 25)
         Me.Label5.TabIndex = 60
@@ -155,7 +154,7 @@ Partial Class EditFilm
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(301, 521)
+        Me.Label6.Location = New System.Drawing.Point(301, 491)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(129, 25)
         Me.Label6.TabIndex = 61
@@ -166,7 +165,7 @@ Partial Class EditFilm
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(301, 570)
+        Me.Label7.Location = New System.Drawing.Point(301, 540)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 25)
         Me.Label7.TabIndex = 62
@@ -177,7 +176,7 @@ Partial Class EditFilm
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.Location = New System.Drawing.Point(301, 623)
+        Me.Label10.Location = New System.Drawing.Point(301, 592)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(75, 25)
         Me.Label10.TabIndex = 63
@@ -188,7 +187,7 @@ Partial Class EditFilm
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label11.Location = New System.Drawing.Point(301, 680)
+        Me.Label11.Location = New System.Drawing.Point(301, 649)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(65, 25)
         Me.Label11.TabIndex = 64
@@ -198,7 +197,7 @@ Partial Class EditFilm
         '
         Me.DateTimePickerRelease.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.DateTimePickerRelease.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePickerRelease.Location = New System.Drawing.Point(521, 514)
+        Me.DateTimePickerRelease.Location = New System.Drawing.Point(521, 484)
         Me.DateTimePickerRelease.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePickerRelease.Name = "DateTimePickerRelease"
         Me.DateTimePickerRelease.Size = New System.Drawing.Size(382, 33)
@@ -208,7 +207,7 @@ Partial Class EditFilm
         '
         Me.RichDeskripsiFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.RichDeskripsiFilm.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.RichDeskripsiFilm.Location = New System.Drawing.Point(521, 273)
+        Me.RichDeskripsiFilm.Location = New System.Drawing.Point(521, 243)
         Me.RichDeskripsiFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RichDeskripsiFilm.Name = "RichDeskripsiFilm"
         Me.RichDeskripsiFilm.Size = New System.Drawing.Size(382, 167)
@@ -219,7 +218,7 @@ Partial Class EditFilm
         '
         Me.TxtDuration.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtDuration.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtDuration.Location = New System.Drawing.Point(521, 460)
+        Me.TxtDuration.Location = New System.Drawing.Point(521, 430)
         Me.TxtDuration.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtDuration.Name = "TxtDuration"
         Me.TxtDuration.Size = New System.Drawing.Size(382, 33)
@@ -243,7 +242,7 @@ Partial Class EditFilm
         '
         Me.TxtHargaFilm.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtHargaFilm.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtHargaFilm.Location = New System.Drawing.Point(521, 566)
+        Me.TxtHargaFilm.Location = New System.Drawing.Point(521, 536)
         Me.TxtHargaFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtHargaFilm.Name = "TxtHargaFilm"
         Me.TxtHargaFilm.Size = New System.Drawing.Size(382, 33)
@@ -257,7 +256,7 @@ Partial Class EditFilm
         Me.BtnEditFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnEditFilm.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnEditFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnEditFilm.Location = New System.Drawing.Point(411, 938)
+        Me.BtnEditFilm.Location = New System.Drawing.Point(411, 907)
         Me.BtnEditFilm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditFilm.Name = "BtnEditFilm"
         Me.BtnEditFilm.Size = New System.Drawing.Size(208, 37)
@@ -281,7 +280,7 @@ Partial Class EditFilm
         Me.LblValueDeskripsi.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LblValueDeskripsi.AutoSize = True
         Me.LblValueDeskripsi.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LblValueDeskripsi.Location = New System.Drawing.Point(909, 354)
+        Me.LblValueDeskripsi.Location = New System.Drawing.Point(909, 324)
         Me.LblValueDeskripsi.Name = "LblValueDeskripsi"
         Me.LblValueDeskripsi.Size = New System.Drawing.Size(45, 25)
         Me.LblValueDeskripsi.TabIndex = 74
@@ -291,7 +290,7 @@ Partial Class EditFilm
         '
         Me.TxtDirector.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtDirector.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TxtDirector.Location = New System.Drawing.Point(521, 211)
+        Me.TxtDirector.Location = New System.Drawing.Point(521, 181)
         Me.TxtDirector.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtDirector.Name = "TxtDirector"
         Me.TxtDirector.Size = New System.Drawing.Size(382, 33)
@@ -315,7 +314,7 @@ Partial Class EditFilm
         Me.GroupGenre.Controls.Add(Me.ChckComedy)
         Me.GroupGenre.Controls.Add(Me.ChckDrama)
         Me.GroupGenre.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.GroupGenre.Location = New System.Drawing.Point(521, 670)
+        Me.GroupGenre.Location = New System.Drawing.Point(521, 639)
         Me.GroupGenre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupGenre.Name = "GroupGenre"
         Me.GroupGenre.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -485,7 +484,7 @@ Partial Class EditFilm
         Me.ComboBoxBahasa.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ComboBoxBahasa.FormattingEnabled = True
         Me.ComboBoxBahasa.Items.AddRange(New Object() {"Bahasa Indonesia", "Bahasa Inggris", "Bahasa Jepang", "Bahasa Korea", "Bahasa Mandarin"})
-        Me.ComboBoxBahasa.Location = New System.Drawing.Point(521, 620)
+        Me.ComboBoxBahasa.Location = New System.Drawing.Point(521, 589)
         Me.ComboBoxBahasa.Name = "ComboBoxBahasa"
         Me.ComboBoxBahasa.Size = New System.Drawing.Size(382, 33)
         Me.ComboBoxBahasa.TabIndex = 78
@@ -495,7 +494,7 @@ Partial Class EditFilm
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(301, 164)
+        Me.Label8.Location = New System.Drawing.Point(301, 134)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(114, 25)
         Me.Label8.TabIndex = 80
@@ -508,21 +507,10 @@ Partial Class EditFilm
         Me.ComboBoxRatingUsia.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ComboBoxRatingUsia.FormattingEnabled = True
         Me.ComboBoxRatingUsia.Items.AddRange(New Object() {"SU", "R13+", "D17+"})
-        Me.ComboBoxRatingUsia.Location = New System.Drawing.Point(521, 161)
+        Me.ComboBoxRatingUsia.Location = New System.Drawing.Point(521, 131)
         Me.ComboBoxRatingUsia.Name = "ComboBoxRatingUsia"
         Me.ComboBoxRatingUsia.Size = New System.Drawing.Size(382, 33)
         Me.ComboBoxRatingUsia.TabIndex = 79
-        '
-        'LblValidateNamaFilm
-        '
-        Me.LblValidateNamaFilm.AutoSize = True
-        Me.LblValidateNamaFilm.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LblValidateNamaFilm.ForeColor = System.Drawing.Color.DarkRed
-        Me.LblValidateNamaFilm.Location = New System.Drawing.Point(776, 118)
-        Me.LblValidateNamaFilm.Name = "LblValidateNamaFilm"
-        Me.LblValidateNamaFilm.Size = New System.Drawing.Size(127, 20)
-        Me.LblValidateNamaFilm.TabIndex = 81
-        Me.LblValidateNamaFilm.Text = "*Film sudah ada"
         '
         'EditFilm
         '
@@ -530,8 +518,7 @@ Partial Class EditFilm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1000, 989)
-        Me.Controls.Add(Me.LblValidateNamaFilm)
+        Me.ClientSize = New System.Drawing.Size(1000, 960)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ComboBoxRatingUsia)
         Me.Controls.Add(Me.ComboBoxBahasa)
@@ -609,5 +596,4 @@ Partial Class EditFilm
     Friend WithEvents Label8 As Label
     Friend WithEvents ComboBoxRatingUsia As ComboBox
     Friend WithEvents ChckCrime As CheckBox
-    Friend WithEvents LblValidateNamaFilm As Label
 End Class
