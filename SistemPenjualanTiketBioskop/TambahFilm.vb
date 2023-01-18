@@ -1,5 +1,7 @@
 ﻿Public Class TambahFilm
 
+    Public Shared data_film As List(Of String)
+
     Dim max_char_deskripsi_film = 268
     Dim panjang_karakter = max_char_deskripsi_film
 
@@ -14,14 +16,26 @@
     End Sub
 
     Private Sub TambahFilm_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-
+        LblValidateNamaFilm.Visible = False
     End Sub
 
     Private Sub TxtFilm_Leave(sender As Object, e As EventArgs) Handles TxtFilm.Leave
+        LblValidateNamaFilm.Visible = False
+
         If TxtFilm.Text.Length < 1 Then
             TxtFilm.Select()
             MessageBox.Show("Please add At least 1 String")
         End If
+
+        Dim judulFilm As String = TxtFilm.Text
+        data_film = Film.dataFilm.CheckJudulFilm(judulFilm)
+
+        ' Validasi nama film, jika nama film sudah ada sebelumnya
+        If data_film.Count > 0 Then
+            Film.dataFilm.GSNamaFilm = data_film(0)
+            LblValidateNamaFilm.Visible = True
+        End If
+
     End Sub
 
     Private Sub TxtDuration_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtDuration.KeyPress
@@ -67,88 +81,106 @@
         End If
     End Sub
 
+
+
     Private Sub BtnTambahFilm_Click(sender As Object, e As EventArgs) Handles BtnTambahFilm.Click
-        Film.dataFilm.GSNamaFilm = TxtFilm.Text
-        Film.dataFilm.GSRatingUsia = ComboBoxRatingUsia.SelectedItem()
-        Film.dataFilm.GSDeskripsi = RichDeskripsiFilm.Text
-        Film.dataFilm.GSDirector = TxtDirector.Text
-        Film.dataFilm.GSDuration = TxtDuration.Text
-        Film.dataFilm.GSDateRelease = DateTimePickerRelease.Value.ToLongDateString
-        Film.dataFilm.GSBahasa = ComboBoxBahasa.SelectedItem()
-        Film.dataFilm.GSHargaFilm = TxtHargaFilm.Text
+        Try
+            Film.dataFilm.GSNamaFilm = TxtFilm.Text
+            Film.dataFilm.GSRatingUsia = ComboBoxRatingUsia.SelectedItem()
+            Film.dataFilm.GSDeskripsi = RichDeskripsiFilm.Text
+            Film.dataFilm.GSDirector = TxtDirector.Text
+            Film.dataFilm.GSDuration = TxtDuration.Text
+            Film.dataFilm.GSDateRelease = DateTimePickerRelease.Value.ToLongDateString
+            Film.dataFilm.GSBahasa = ComboBoxBahasa.SelectedItem()
+            Film.dataFilm.GSHargaFilm = TxtHargaFilm.Text
 
-        Film.dataFilm.resetGenre()
+            Film.dataFilm.resetGenre()
 
-        If ChckDrama.Checked() Then
-            Film.dataFilm.AddGenre("Drama")
-        End If
+            If ChckDrama.Checked() Then
+                Film.dataFilm.AddGenre("Drama")
+            End If
 
-        If ChckComedy.Checked() Then
-            Film.dataFilm.AddGenre("Comedy")
-        End If
+            If ChckComedy.Checked() Then
+                Film.dataFilm.AddGenre("Comedy")
+            End If
 
-        If ChckHoror.Checked() Then
-            Film.dataFilm.AddGenre("Horor")
-        End If
+            If ChckHoror.Checked() Then
+                Film.dataFilm.AddGenre("Horor")
+            End If
 
-        If ChckAdventure.Checked() Then
-            Film.dataFilm.AddGenre("Adventure")
-        End If
+            If ChckAdventure.Checked() Then
+                Film.dataFilm.AddGenre("Adventure")
+            End If
 
-        If ChckAction.Checked() Then
-            Film.dataFilm.AddGenre("Action")
-        End If
+            If ChckAction.Checked() Then
+                Film.dataFilm.AddGenre("Action")
+            End If
 
-        If ChckAnimation.Checked() Then
-            Film.dataFilm.AddGenre("Animation")
-        End If
+            If ChckAnimation.Checked() Then
+                Film.dataFilm.AddGenre("Animation")
+            End If
 
-        If ChckDocumenter.Checked() Then
-            Film.dataFilm.AddGenre("Documenter")
-        End If
+            If ChckDocumenter.Checked() Then
+                Film.dataFilm.AddGenre("Documenter")
+            End If
 
-        If ChckRomance.Checked() Then
-            Film.dataFilm.AddGenre("Romance")
-        End If
+            If ChckRomance.Checked() Then
+                Film.dataFilm.AddGenre("Romance")
+            End If
 
-        If ChckScifi.Checked() Then
-            Film.dataFilm.AddGenre("Sci-fi")
-        End If
+            If ChckScifi.Checked() Then
+                Film.dataFilm.AddGenre("Sci-fi")
+            End If
 
-        If ChckThriller.Checked() Then
-            Film.dataFilm.AddGenre("Thriller")
-        End If
+            If ChckThriller.Checked() Then
+                Film.dataFilm.AddGenre("Thriller")
+            End If
 
-        If ChckMistery.Checked() Then
-            Film.dataFilm.AddGenre("Mistery")
-        End If
+            If ChckMistery.Checked() Then
+                Film.dataFilm.AddGenre("Mistery")
+            End If
 
-        If ChckBiografi.Checked() Then
-            Film.dataFilm.AddGenre("Biografi")
-        End If
+            If ChckBiografi.Checked() Then
+                Film.dataFilm.AddGenre("Biografi")
+            End If
 
-        If ChckMusical.Checked() Then
-            Film.dataFilm.AddGenre("Musical")
-        End If
+            If ChckMusical.Checked() Then
+                Film.dataFilm.AddGenre("Musical")
+            End If
 
-        If ChckCrime.Checked() Then
-            Film.dataFilm.AddGenre("Crime")
-        End If
+            If ChckCrime.Checked() Then
+                Film.dataFilm.AddGenre("Crime")
+            End If
 
-        Dim convertedGenre = Film.dataFilm.ConvertGenreToString(Film.dataFilm.getGenreItem)
+            Dim convertedGenre = Film.dataFilm.ConvertGenreToString(Film.dataFilm.getGenreItem)
 
-        Film.dataFilm.AddDataFilmDatabase(Film.dataFilm.GSNamaFilm,
-                                          Film.dataFilm.GSRatingUsia,
-                                          convertedGenre,
-                                          Film.dataFilm.GSDeskripsi,
-                                          Film.dataFilm.GSDirector,
-                                          Film.dataFilm.GSDuration,
-                                          Film.dataFilm.GSDateRelease,
-                                          Film.dataFilm.GSBahasa,
-                                          Film.dataFilm.GSHargaFilm,
-                                          Film.dataFilm.GSFoto)
+            Dim judulFilm As String = TxtFilm.Text
+            data_film = Film.dataFilm.CheckJudulFilm(judulFilm)
 
-        Me.Close()
+            If data_film.Count > 0 Then
+                Film.dataFilm.GSNamaFilm = data_film(0)
+                MessageBox.Show("film sudah ada")
+
+            ElseIf Film.dataFilm.GSFoto = "" Or Film.dataFilm.GSRatingUsia = "" Or Film.dataFilm.GSBahasa = "" Or convertedGenre = "" Then
+                MessageBox.Show("Harap isi semua data")
+            Else
+                Film.dataFilm.AddDataFilmDatabase(Film.dataFilm.GSNamaFilm,
+                                              Film.dataFilm.GSRatingUsia,
+                                              convertedGenre,
+                                              Film.dataFilm.GSDeskripsi,
+                                              Film.dataFilm.GSDirector,
+                                              Film.dataFilm.GSDuration,
+                                              Film.dataFilm.GSDateRelease,
+                                              Film.dataFilm.GSBahasa,
+                                              Film.dataFilm.GSHargaFilm,
+                                              Film.dataFilm.GSFoto)
+
+                Me.Close()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Harap isi semua data")
+        End Try
     End Sub
 
 End Class

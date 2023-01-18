@@ -33,8 +33,8 @@ Public Class JadwalTayang
                 Image.FromFile(rowJadwalTayang(3)), 'Foto Film
                 rowJadwalTayang(2), 'Nama Film
                 rowJadwalTayang(5), 'Studio
-                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm"), 'Mulai Tayang
-                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm") 'Selesai Tayang
+                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm:ss"), 'Mulai Tayang
+                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm:ss") 'Selesai Tayang
             }
             DataGridViewJadwalTayangNowPlaying.Rows.Add(dataTable)
         Next
@@ -51,9 +51,9 @@ Public Class JadwalTayang
                 Image.FromFile(rowJadwalTayang(3)), 'Foto Film
                 rowJadwalTayang(2), 'Nama Film
                 rowJadwalTayang(5), 'Studio
-                Convert.ToDateTime(rowJadwalTayang(8)).ToString("dd/MM/yyyy"), 'Tanggal Tayang
-                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm"), 'Mulai Tayang
-                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm") 'Selesai Tayang
+                Convert.ToDateTime(rowJadwalTayang(8)).ToString("yyyy-MM-dd"), 'Tanggal Tayang
+                Convert.ToDateTime(rowJadwalTayang(9)).ToString("HH:mm:ss"), 'Mulai Tayang
+                Convert.ToDateTime(rowJadwalTayang(10)).ToString("HH:mm:ss") 'Selesai Tayang
             }
             DataGridViewJadwalTayangUpcoming.Rows.Add(dataTable)
         Next
@@ -88,5 +88,16 @@ Public Class JadwalTayang
         Dim tiket = New Tiket()
         tiket.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim signIn = New SignIn()
+        signIn.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub JadwalTayang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        LblUsername.Text = SignIn.data_user(1).ToString()
+        Lblid.Text = SignIn.data_user(0).ToString()
     End Sub
 End Class

@@ -14,4 +14,10 @@
         ticket.Show()
         Me.Close()
     End Sub
+
+    Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles BtnBack.Click
+        Dim tiket = New Tiket()
+        tiket.Show()
+        Me.Close()
+    End Sub
 End Class
