@@ -22,7 +22,6 @@ Partial Class SignUp
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SignUp))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LblRePassword = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -45,6 +44,7 @@ Partial Class SignUp
         Me.BtnJadwalTayang = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.LblCheckUsername = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -59,6 +59,7 @@ Partial Class SignUp
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.LblCheckUsername)
         Me.Panel2.Controls.Add(Me.LblRePassword)
         Me.Panel2.Controls.Add(Me.Panel5)
         Me.Panel2.Controls.Add(Me.Label6)
@@ -293,7 +294,7 @@ Partial Class SignUp
         Me.Panel6.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BackgroundImage = CType(resources.GetObject("Panel6.BackgroundImage"), System.Drawing.Image)
+        Me.Panel6.BackgroundImage = Global.SistemPenjualanTiketBioskop.My.Resources.Resources.background_signIn
         Me.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel6.Controls.Add(Me.Label5)
         Me.Panel6.Location = New System.Drawing.Point(562, 0)
@@ -314,6 +315,16 @@ Partial Class SignUp
         Me.Label5.Size = New System.Drawing.Size(200, 58)
         Me.Label5.TabIndex = 18
         Me.Label5.Text = "Bioscoop"
+        '
+        'LblCheckUsername
+        '
+        Me.LblCheckUsername.AutoSize = True
+        Me.LblCheckUsername.ForeColor = System.Drawing.Color.Gold
+        Me.LblCheckUsername.Location = New System.Drawing.Point(342, 296)
+        Me.LblCheckUsername.Name = "LblCheckUsername"
+        Me.LblCheckUsername.Size = New System.Drawing.Size(189, 25)
+        Me.LblCheckUsername.TabIndex = 19
+        Me.LblCheckUsername.Text = "* username sudah ada"
         '
         'SignUp
         '
@@ -363,4 +374,5 @@ Partial Class SignUp
     Friend WithEvents LblRePassword As Label
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label5 As Label
+    Friend WithEvents LblCheckUsername As Label
 End Class

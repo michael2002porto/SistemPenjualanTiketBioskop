@@ -27,6 +27,7 @@ Partial Class HapusTiket
         Me.BtnHapus = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.BtnBack = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,7 +60,7 @@ Partial Class HapusTiket
         Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnHapus.ForeColor = System.Drawing.Color.White
-        Me.BtnHapus.Location = New System.Drawing.Point(255, 250)
+        Me.BtnHapus.Location = New System.Drawing.Point(193, 249)
         Me.BtnHapus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(93, 37)
@@ -89,12 +90,29 @@ Partial Class HapusTiket
         Me.Label2.TabIndex = 29
         Me.Label2.Text = "Hapus Tiket"
         '
+        'BtnBack
+        '
+        Me.BtnBack.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BtnBack.BackColor = System.Drawing.Color.Teal
+        Me.BtnBack.FlatAppearance.BorderSize = 0
+        Me.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnBack.Font = New System.Drawing.Font("Times New Roman", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.BtnBack.ForeColor = System.Drawing.Color.White
+        Me.BtnBack.Location = New System.Drawing.Point(319, 249)
+        Me.BtnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(93, 37)
+        Me.BtnBack.TabIndex = 62
+        Me.BtnBack.Text = "Batal"
+        Me.BtnBack.UseVisualStyleBackColor = False
+        '
         'HapusTiket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(591, 311)
+        Me.Controls.Add(Me.BtnBack)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.LblIDTiket)
@@ -113,4 +131,6 @@ Partial Class HapusTiket
     Friend WithEvents BtnHapus As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label2 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnBack As Button
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Film
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Film
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.BtnUpdateFilm = New System.Windows.Forms.Button()
         Me.BtnRemoveFilm = New System.Windows.Forms.Button()
@@ -53,10 +53,9 @@ Partial Class Film
         Me.BtnUpdateFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnUpdateFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnUpdateFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnUpdateFilm.Location = New System.Drawing.Point(1290, 8)
-        Me.BtnUpdateFilm.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnUpdateFilm.Location = New System.Drawing.Point(1677, 10)
         Me.BtnUpdateFilm.Name = "BtnUpdateFilm"
-        Me.BtnUpdateFilm.Size = New System.Drawing.Size(178, 50)
+        Me.BtnUpdateFilm.Size = New System.Drawing.Size(231, 64)
         Me.BtnUpdateFilm.TabIndex = 12
         Me.BtnUpdateFilm.Text = "Edit Film"
         Me.BtnUpdateFilm.UseVisualStyleBackColor = False
@@ -69,10 +68,9 @@ Partial Class Film
         Me.BtnRemoveFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRemoveFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnRemoveFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnRemoveFilm.Location = New System.Drawing.Point(1490, 8)
-        Me.BtnRemoveFilm.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnRemoveFilm.Location = New System.Drawing.Point(1937, 10)
         Me.BtnRemoveFilm.Name = "BtnRemoveFilm"
-        Me.BtnRemoveFilm.Size = New System.Drawing.Size(178, 50)
+        Me.BtnRemoveFilm.Size = New System.Drawing.Size(231, 64)
         Me.BtnRemoveFilm.TabIndex = 10
         Me.BtnRemoveFilm.Text = "Hapus Film"
         Me.BtnRemoveFilm.UseVisualStyleBackColor = False
@@ -100,10 +98,9 @@ Partial Class Film
         Me.BtnTambahFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambahFilm.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTambahFilm.ForeColor = System.Drawing.Color.White
-        Me.BtnTambahFilm.Location = New System.Drawing.Point(1095, 8)
-        Me.BtnTambahFilm.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnTambahFilm.Location = New System.Drawing.Point(1424, 10)
         Me.BtnTambahFilm.Name = "BtnTambahFilm"
-        Me.BtnTambahFilm.Size = New System.Drawing.Size(178, 50)
+        Me.BtnTambahFilm.Size = New System.Drawing.Size(231, 64)
         Me.BtnTambahFilm.TabIndex = 13
         Me.BtnTambahFilm.Text = "Tambah Film"
         Me.BtnTambahFilm.UseVisualStyleBackColor = False
@@ -116,10 +113,9 @@ Partial Class Film
         Me.BtnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSignOut.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnSignOut.ForeColor = System.Drawing.Color.White
-        Me.BtnSignOut.Location = New System.Drawing.Point(1518, 24)
-        Me.BtnSignOut.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnSignOut.Location = New System.Drawing.Point(1973, 31)
         Me.BtnSignOut.Name = "BtnSignOut"
-        Me.BtnSignOut.Size = New System.Drawing.Size(150, 46)
+        Me.BtnSignOut.Size = New System.Drawing.Size(195, 59)
         Me.BtnSignOut.TabIndex = 14
         Me.BtnSignOut.Text = "Sign Out"
         Me.BtnSignOut.UseVisualStyleBackColor = False
@@ -135,9 +131,8 @@ Partial Class Film
         Me.Panel1.Controls.Add(Me.BtnFilm)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1714, 92)
+        Me.Panel1.Size = New System.Drawing.Size(2228, 118)
         Me.Panel1.TabIndex = 15
         '
         'Label1
@@ -145,10 +140,9 @@ Partial Class Film
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Script MT Bold", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(45, 18)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(58, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(200, 58)
+        Me.Label1.Size = New System.Drawing.Size(266, 77)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Bioscoop"
         '
@@ -159,10 +153,9 @@ Partial Class Film
         Me.BtnTiket.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTiket.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnTiket.ForeColor = System.Drawing.Color.White
-        Me.BtnTiket.Location = New System.Drawing.Point(1035, 2)
-        Me.BtnTiket.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnTiket.Location = New System.Drawing.Point(1346, 3)
         Me.BtnTiket.Name = "BtnTiket"
-        Me.BtnTiket.Size = New System.Drawing.Size(112, 90)
+        Me.BtnTiket.Size = New System.Drawing.Size(148, 115)
         Me.BtnTiket.TabIndex = 3
         Me.BtnTiket.Text = "Tiket"
         Me.BtnTiket.UseVisualStyleBackColor = True
@@ -173,10 +166,9 @@ Partial Class Film
         Me.BtnJadwalTayang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnJadwalTayang.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnJadwalTayang.ForeColor = System.Drawing.Color.White
-        Me.BtnJadwalTayang.Location = New System.Drawing.Point(541, 1)
-        Me.BtnJadwalTayang.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnJadwalTayang.Location = New System.Drawing.Point(666, 1)
         Me.BtnJadwalTayang.Name = "BtnJadwalTayang"
-        Me.BtnJadwalTayang.Size = New System.Drawing.Size(201, 90)
+        Me.BtnJadwalTayang.Size = New System.Drawing.Size(298, 115)
         Me.BtnJadwalTayang.TabIndex = 2
         Me.BtnJadwalTayang.Text = "Jadwal Tayang"
         Me.BtnJadwalTayang.UseVisualStyleBackColor = True
@@ -187,10 +179,9 @@ Partial Class Film
         Me.BtnStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStudio.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnStudio.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.BtnStudio.Location = New System.Drawing.Point(902, 2)
-        Me.BtnStudio.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnStudio.Location = New System.Drawing.Point(1173, 3)
         Me.BtnStudio.Name = "BtnStudio"
-        Me.BtnStudio.Size = New System.Drawing.Size(112, 88)
+        Me.BtnStudio.Size = New System.Drawing.Size(146, 113)
         Me.BtnStudio.TabIndex = 1
         Me.BtnStudio.Text = "Studio"
         Me.BtnStudio.UseVisualStyleBackColor = True
@@ -201,10 +192,9 @@ Partial Class Film
         Me.BtnFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnFilm.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnFilm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(119, Byte), Integer))
-        Me.BtnFilm.Location = New System.Drawing.Point(758, 2)
-        Me.BtnFilm.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnFilm.Location = New System.Drawing.Point(985, 3)
         Me.BtnFilm.Name = "BtnFilm"
-        Me.BtnFilm.Size = New System.Drawing.Size(112, 88)
+        Me.BtnFilm.Size = New System.Drawing.Size(146, 113)
         Me.BtnFilm.TabIndex = 0
         Me.BtnFilm.Text = "Film"
         Me.BtnFilm.UseVisualStyleBackColor = True
@@ -216,10 +206,9 @@ Partial Class Film
         Me.Panel2.Controls.Add(Me.BtnUpdateFilm)
         Me.Panel2.Controls.Add(Me.BtnTambahFilm)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 731)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Location = New System.Drawing.Point(0, 936)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1714, 78)
+        Me.Panel2.Size = New System.Drawing.Size(2228, 100)
         Me.Panel2.TabIndex = 16
         '
         'BtnSelect
@@ -233,7 +222,7 @@ Partial Class Film
         Me.BtnSelect.Location = New System.Drawing.Point(45, 8)
         Me.BtnSelect.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSelect.Name = "BtnSelect"
-        Me.BtnSelect.Size = New System.Drawing.Size(178, 50)
+        Me.BtnSelect.Size = New System.Drawing.Size(231, 64)
         Me.BtnSelect.TabIndex = 14
         Me.BtnSelect.Text = "Select Film"
         Me.BtnSelect.UseVisualStyleBackColor = False
@@ -242,10 +231,9 @@ Partial Class Film
         '
         Me.LblUsername.AutoSize = True
         Me.LblUsername.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LblUsername.Location = New System.Drawing.Point(45, 112)
-        Me.LblUsername.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblUsername.Location = New System.Drawing.Point(58, 143)
         Me.LblUsername.Name = "LblUsername"
-        Me.LblUsername.Size = New System.Drawing.Size(130, 28)
+        Me.LblUsername.Size = New System.Drawing.Size(170, 36)
         Me.LblUsername.TabIndex = 17
         Me.LblUsername.Text = "Username"
         '
@@ -253,10 +241,9 @@ Partial Class Film
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(1518, 112)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(1973, 143)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 28)
+        Me.Label2.Size = New System.Drawing.Size(69, 36)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "ID :"
         '
@@ -264,10 +251,9 @@ Partial Class Film
         '
         Me.Lblid.AutoSize = True
         Me.Lblid.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Lblid.Location = New System.Drawing.Point(1572, 112)
-        Me.Lblid.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Lblid.Location = New System.Drawing.Point(2044, 143)
         Me.Lblid.Name = "Lblid"
-        Me.Lblid.Size = New System.Drawing.Size(27, 28)
+        Me.Lblid.Size = New System.Drawing.Size(34, 36)
         Me.Lblid.TabIndex = 19
         Me.Lblid.Text = "1"
         '
@@ -289,7 +275,7 @@ Partial Class Film
         '
         'Film
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1714, 809)
@@ -301,7 +287,6 @@ Partial Class Film
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DGFilm)
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Film"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Film"
