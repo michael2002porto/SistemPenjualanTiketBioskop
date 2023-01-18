@@ -163,7 +163,7 @@ Public Class Film
         Dim searchQuery As String = "SELECT id, nama_film, genre, director, duration, date_release, bahasa, harga_film, rating_usia FROM FILM WHERE nama_film like '%" & TxtSearch.Text & "%'
                                      OR genre like '%" & TxtSearch.Text & "%' OR director like '%" & TxtSearch.Text & "%' OR duration like '%" & TxtSearch.Text & "%' 
                                      OR bahasa like '%" & TxtSearch.Text & "%' OR harga_film like '%" & TxtSearch.Text & "%' OR rating_usia like '%" & TxtSearch.Text & "%' 
-                                     OR id like '%" & TxtSearch.Text & "%'"
+                                     OR id like '%" & TxtSearch.Text & "%' OR date_release like '%" & TxtSearch.Text & "%'"
 
         Dim command As New MySqlCommand(searchQuery, connection)
         Dim adapter As New MySqlDataAdapter(command)
