@@ -1,9 +1,17 @@
-﻿Imports Org.BouncyCastle.Asn1.Ocsp
+﻿Imports Microsoft.SqlServer
+Imports MySql.Data.MySqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports Org.BouncyCastle.Asn1.Ocsp
+
 
 Public Class Studio
     Public Shared data_studio As DataStudio
     Public Shared SelectedTableStudio As Integer
     Public Shared SelectedTableNamaStudio As String
+    Private server As String = "localhost"
+    Private username As String = "root"
+    Private password As String = ""
+    Private database As String = "bioskop"
 
 
     Public Sub New()
@@ -113,36 +121,34 @@ Public Class Studio
         signIn.Show()
         Me.Close()
     End Sub
-    Private Sub ReloadDataTableDatabase(Optional search As String = "")
-        'DataGridViewJadwalTayang.DataSource = data_jadwal_tayang.GetDataJadwalTayangDatabase()
-        'DataGridStudio.Rows.Clear()
-        'DataGridStudio.RowTemplate.Height = 100
+    Public Sub FilterData(valueToSearch As String)
+        Dim connection As New MySqlConnection
 
-        'Dim source
-        'If search.Length > 0 Then
-        '    source = data_studio.GetDataStudioDatabaseList(
-        '        "WHERE s.nama_studio LIKE '%" + search + "%'
-        '        OR s.kapasitas LIKE '%" + search + "%'
-        '        OR s.harga_kursi LIKE '%" + search + "%'"
-        '    )
-        'Else
-        '    source = data_studio.GetDataStudioDatabaseList()
-        'End If
+        connection.ConnectionString = "server =" + server + ";" _
+                                   + "user id=" + username + ";" _
+                                   + "password=" + password + ";" _
+                                   + "database =" + database
 
-        'For Each rowJadwalTayang In source
-        '    Dim dataTable = {
-        '        rowJadwalTayang(0), 'Id Studio
-        '        rowJadwalTayang(1), 'Nama Studio
-        '        rowJadwalTayang(2), 'Jenis Studio
-        '        rowJadwalTayang(3), 'Kapasitas Studio
-        '        rowJadwalTayang(4) 'Harga Kursi
-        '    }
-        '    DataGridStudio.Rows.Add(dataTable)
-        'Next
+        Dim searchQuery As String = "SELECT id, nama_studio, jenis_studio, kapasitas, harga_kursi FROM studio WHERE nama_studio like '%" & TextBoxSearch.Text & "%'"
 
-        'SelectedTableStudio = Nothing
+        Dim command As New MySqlCommand(searchQuery, connection)
+        Dim adapter As New MySqlDataAdapter(command)
+        Dim table As New DataTable
+
+        adapter.Fill(table)
+
+        DataGridStudio.DataSource = table
     End Sub
-    Private Sub TextBoxSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
-        'ReloadDataTableDatabase(TextBoxSearch.Text)
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        FilterData(TextBoxSearch.Text)
+    End Sub
+
+    Private Sub Film_Load(sender As Object, e As EventArgs) Handles Me.Load
+        FilterData("")
+    End Sub
+
+    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
+        FilterData(TextBoxSearch.Text)
     End Sub
 End Class
