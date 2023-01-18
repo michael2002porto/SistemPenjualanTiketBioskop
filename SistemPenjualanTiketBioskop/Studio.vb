@@ -1,7 +1,17 @@
-﻿Public Class Studio
+﻿Imports Microsoft.SqlServer
+Imports MySql.Data.MySqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports Org.BouncyCastle.Asn1.Ocsp
+
+
+Public Class Studio
     Public Shared data_studio As DataStudio
     Public Shared SelectedTableStudio As Integer
     Public Shared SelectedTableNamaStudio As String
+    Private server As String = "localhost"
+    Private username As String = "root"
+    Private password As String = ""
+    Private database As String = "bioskop"
 
 
     Public Sub New()
@@ -20,6 +30,8 @@
 
     Private Sub studio_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataStudioDatabase()
+        LblUsername.Text = SignIn.data_user(1).ToString()
+
     End Sub
 
     Private Sub DataGridStudio_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridStudio.CellClick
@@ -108,5 +120,35 @@
         Dim signIn = New SignIn()
         signIn.Show()
         Me.Close()
+    End Sub
+    Public Sub FilterData(valueToSearch As String)
+        Dim connection As New MySqlConnection
+
+        connection.ConnectionString = "server =" + server + ";" _
+                                   + "user id=" + username + ";" _
+                                   + "password=" + password + ";" _
+                                   + "database =" + database
+
+        Dim searchQuery As String = "SELECT id, nama_studio, jenis_studio, kapasitas, harga_kursi FROM studio WHERE nama_studio like '%" & TextBoxSearch.Text & "%'"
+
+        Dim command As New MySqlCommand(searchQuery, connection)
+        Dim adapter As New MySqlDataAdapter(command)
+        Dim table As New DataTable
+
+        adapter.Fill(table)
+
+        DataGridStudio.DataSource = table
+    End Sub
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        FilterData(TextBoxSearch.Text)
+    End Sub
+
+    Private Sub Film_Load(sender As Object, e As EventArgs) Handles Me.Load
+        FilterData("")
+    End Sub
+
+    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
+        FilterData(TextBoxSearch.Text)
     End Sub
 End Class
