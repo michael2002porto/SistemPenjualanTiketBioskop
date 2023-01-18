@@ -14,6 +14,8 @@ Public Class DataFilm
     Private harga_film As String
     Private rating_usia As String
 
+    Private validateJudulFilm As String
+
     'Database Global Variable
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
@@ -418,6 +420,37 @@ Public Class DataFilm
         Finally
             dbConn.Dispose()
         End Try
+    End Function
+
+    Public Function CheckJudulFilm(judulFilm As String) As List(Of String)
+        Dim result As New List(Of String)
+
+        Try
+            DBConnection()
+
+            dbConn.Open()
+
+            sqlCommand.Connection = dbConn
+            validateJudulFilm = "SELECT nama_film FROM film WHERE nama_film='" & judulFilm & "'"
+
+            sqlCommand.CommandText = validateJudulFilm
+            Debug.WriteLine(validateJudulFilm)
+            sqlRead = sqlCommand.ExecuteReader
+
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString())
+            End While
+
+            'Return result
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            dbConn.Dispose()
+        End Try
+
     End Function
 
 End Class
