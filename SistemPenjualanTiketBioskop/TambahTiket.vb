@@ -73,7 +73,6 @@ Public Class TambahTiket
     End Sub
 
     Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles BtnSelect.Click
-
         Try
             namaFilm = CbBoxFilm.SelectedItem()
 
