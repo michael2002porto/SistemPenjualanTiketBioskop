@@ -114,7 +114,7 @@ Public Class SignUp
                     SignIn.Show()
                     Me.Close()
                 Else
-                    MessageBox.Show("Error")
+                    MessageBox.Show("Password doesn't match")
                 End If
 
             Else
