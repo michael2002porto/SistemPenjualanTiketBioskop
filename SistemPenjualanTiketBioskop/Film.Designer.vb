@@ -38,6 +38,8 @@ Partial Class Film
         Me.LblUsername = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Lblid = New System.Windows.Forms.Label()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.BtnSearch = New System.Windows.Forms.Button()
         CType(Me.DGFilm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -80,11 +82,12 @@ Partial Class Film
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DGFilm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGFilm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGFilm.Location = New System.Drawing.Point(58, 212)
+        Me.DGFilm.Location = New System.Drawing.Point(45, 250)
+        Me.DGFilm.Margin = New System.Windows.Forms.Padding(2)
         Me.DGFilm.Name = "DGFilm"
         Me.DGFilm.RowHeadersWidth = 62
         Me.DGFilm.RowTemplate.Height = 33
-        Me.DGFilm.Size = New System.Drawing.Size(2109, 699)
+        Me.DGFilm.Size = New System.Drawing.Size(1622, 462)
         Me.DGFilm.TabIndex = 9
         '
         'BtnTambahFilm
@@ -216,8 +219,8 @@ Partial Class Film
         Me.BtnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSelect.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtnSelect.ForeColor = System.Drawing.Color.White
-        Me.BtnSelect.Location = New System.Drawing.Point(58, 10)
-        Me.BtnSelect.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.BtnSelect.Location = New System.Drawing.Point(45, 8)
+        Me.BtnSelect.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSelect.Name = "BtnSelect"
         Me.BtnSelect.Size = New System.Drawing.Size(231, 64)
         Me.BtnSelect.TabIndex = 14
@@ -254,12 +257,30 @@ Partial Class Film
         Me.Lblid.TabIndex = 19
         Me.Lblid.Text = "1"
         '
+        'TxtSearch
+        '
+        Me.TxtSearch.Location = New System.Drawing.Point(45, 180)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(397, 31)
+        Me.TxtSearch.TabIndex = 20
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Location = New System.Drawing.Point(448, 177)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(112, 34)
+        Me.BtnSearch.TabIndex = 21
+        Me.BtnSearch.Text = "Search"
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
         'Film
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(2228, 1036)
+        Me.ClientSize = New System.Drawing.Size(1714, 809)
+        Me.Controls.Add(Me.BtnSearch)
+        Me.Controls.Add(Me.TxtSearch)
         Me.Controls.Add(Me.Lblid)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.LblUsername)
@@ -294,4 +315,6 @@ Partial Class Film
     Friend WithEvents Label2 As Label
     Friend WithEvents Lblid As Label
     Friend WithEvents BtnSelect As Button
+    Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents BtnSearch As Button
 End Class
