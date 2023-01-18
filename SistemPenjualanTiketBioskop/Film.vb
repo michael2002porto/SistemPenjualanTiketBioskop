@@ -1,4 +1,7 @@
 ﻿Imports System.IO
+Imports Microsoft.SqlServer
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports MySql.Data.MySqlClient
 
 Public Class Film
 
@@ -6,6 +9,11 @@ Public Class Film
 
     Public Shared selectedTableFilm As Integer
     Public Shared selectedTableNamaFilm As String
+
+    Private server As String = "localhost"
+    Private username As String = "root"
+    Private password As String = ""
+    Private database As String = "bioskop"
 
     Public Sub New()
 
@@ -144,5 +152,34 @@ Public Class Film
         tiket.Show()
         Me.Close()
     End Sub
+    Public Sub FilterData(valueToSearch As String)
+        Dim connection As New MySqlConnection
 
+        connection.ConnectionString = "server =" + server + ";" _
+                                   + "user id=" + username + ";" _
+                                   + "password=" + password + ";" _
+                                   + "database =" + database
+
+        Dim searchQuery As String = "SELECT id, nama_film, genre, director, duration, date_release, bahasa, harga_film, rating_usia FROM FILM WHERE nama_film like '%" & TxtSearch.Text & "%'"
+
+        Dim command As New MySqlCommand(searchQuery, connection)
+        Dim adapter As New MySqlDataAdapter(command)
+        Dim table As New DataTable
+
+        adapter.Fill(table)
+
+        DGFilm.DataSource = table
+    End Sub
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+        FilterData(TxtSearch.Text)
+    End Sub
+
+    Private Sub Film_Load(sender As Object, e As EventArgs) Handles Me.Load
+        FilterData("")
+    End Sub
+
+    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles TxtSearch.TextChanged
+        FilterData(TxtSearch.Text)
+    End Sub
 End Class
